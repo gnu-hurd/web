@@ -71,6 +71,14 @@ The `.deb` packages will then drop out at the `../` directory.
 
 ## Building, but not the Debian Way
 
+First create configure file:
+
+    $ cd hurd-VERSION/
+    $ autoreconf --install
+    $ cd ..
+
+Note: You need GNU MiG to compile the GNU Hurd [TODO: add how]
+
 The Hurd has to be built in a separate directory:
 
     $ mkdir hurd-build
