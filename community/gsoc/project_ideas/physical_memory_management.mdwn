@@ -56,3 +56,24 @@ Useful links :
  * <http://git.sceen.net/rbraun/x15.git/>
 
  * <https://git.sceen.net/rbraun/librbraun.git/plain/rdxtree.h>
+
+
+# Current Status 2018-10-25
+
+Recent GNU Mach releases have replaced the physical allocator for a more standard buddy allocator, and the kernel can service much more memory for its objects, making kernel memory exhaustion very unlikely.  Justus Winter contributed to this project by using radix-tree based IPC spaces and various bug fixes (page queue management) to the kernel.  Richard Braun helped see the project through to completion.
+
+For those that are curious about the details, the buddy allocator provides efficient allocation of continuous chunks of memory at the cost of high internal fragmentation.  To avoid the fragmentation overhead, we do not use it directly, but through the slab allocator that is already used for most of the allocations inside the kernel.
+
+The "biosmem" provides three different segments, DMA, DIRECTMAP, and HIGHMEM.  The DMA segment provides memory at low addresses for drivers that need buffers that devices can read from and write into using DMA.
+
+The DIRECTMAP segment is directly mapped into the kernels address space.  We can use this segment for kernel objects and can directly access it in inter-task memory copies.  You can see its size capped at 880M because the kernel is using a 1G kernel / 3G userspace split (the stock Debian kernel uses a 2/2 split to maximize the amount of mappable physical memory).
+
+We cannot use the HIGHMEM segment for kernel objects, but we can give it out to userspace tasks.
+
+You can then see the drivers probing for devices, modules being loaded and the Hurd server bootstrap running.  The system then deadlocks, with a custom message being emitted right before that.
+
+Useful links:
+
+  * <http://lists.gnu.org/archive/html/bug-hurd/2016-02/msg00118.html>
+  
+  * <http://lists.gnu.org/archive/html/bug-hurd/2015-09/msg00081.html>
