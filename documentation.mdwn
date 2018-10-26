@@ -90,6 +90,7 @@ from userlandish interfaces (Hurd) or from the micro kernel itself (Mach).
 
 ## 2017
 
+  * FOSDEM: {{$community/meetings/fosdem_2017#ragkousis_guix_hurd}}
   * FOSDEM: {{$community/meetings/fosdem_2017#winter_hurd}}
 
 ## 2016

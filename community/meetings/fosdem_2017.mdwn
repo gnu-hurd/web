@@ -17,6 +17,12 @@ FOSDEM took place on February 4rd/5th at the Université Libre de
 Bruxelles.
 
 
+# GNU Guile room
+
+<https://archive.fosdem.org/2017/schedule/track/gnu_guile/>
+
+  * {{$ragkousis_hurd}}
+
 
 
 # Microkernels devroom
@@ -27,6 +33,10 @@ Bruxelles.
 
 
 [[!ymlfront data="""
+
+ragkousis_guix_hurd:
+
+  "presentation by Manolis Ragkousis: [*Adding GNU/Hurd support to GNU Guix and GuixSD*](https://archive.fosdem.org/2017/schedule/event/guixhurd/) ([slides](https://archive.fosdem.org/2017/schedule/event/guixhurd/attachments/slides/1850/export/events/attachments/guixhurd/slides/1850/guix_to_hurd_fosdem_2017.pdf))"
 
 winter_hurd:
 
