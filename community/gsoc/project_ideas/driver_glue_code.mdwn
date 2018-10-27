@@ -27,7 +27,7 @@ This is [[!GNU_Savannah_task 5488]].
 [[open issues/user-space device drivers]].
 [[open issues/device drivers and io systems]].
 
-The most promising approach for getting newer drivers seems to be the [[Rump_Kernel]]:
+The most promising approach for getting newer drivers seems to be the [[Rump_kernel]]:
 it already does the hard work of providing an environment
 where the foreign drivers can run,
 and offers the additional benefit of being externally maintained.

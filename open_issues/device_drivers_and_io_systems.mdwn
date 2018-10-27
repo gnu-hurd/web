@@ -68,6 +68,8 @@ Also see [[user-space device drivers]].
 
 # External Projects
 
+  * [[Rump_kernel]]
+
   * [[/DDE]]
 
   * [Building Linux Device Drivers on

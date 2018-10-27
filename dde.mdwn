@@ -8,6 +8,15 @@ Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
 is included in the section entitled [[GNU Free Documentation
 License|/fdl]]."]]"""]]
 
+
+[[!template id=highlight text="""/!\ Obsolete /!\
+
+---
+
+DDE is no longer being updated or maintained.  The [[Rump_kernel]] is a better alternative.
+"""]]
+
+
   * [[community/gsoc/project ideas/driver glue code]]
 
   * [[open issues/user-space device drivers]]
