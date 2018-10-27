@@ -20,7 +20,7 @@ drivers for wireless chips, which are old drivers from an old version of linux. 
 lwip for a wifi connection on more modern hardware, one would also need modern
 device drivers to access the internet.  The promising approach to this is using
 a rump kernel.  This is essentially the New Driver Framework google summer of
-code project idea.  Hopefully, one day soon the Hurd project will completely replace pfinit
+code project idea.  Hopefully, one day soon the Hurd project will completely replace pfinet
 with lwip.
 
 A true hurdish network stack will use a set of [[hurd/translator]] processes,
