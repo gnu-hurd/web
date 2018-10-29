@@ -9,6 +9,11 @@ Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
 is included in the section entitled [[GNU Free Documentation
 License|/fdl]]."]]"""]]
 
+Pfinet is a TCP/IP stack from an old linux version.  It works but lacks some important
+features like PPP/PPPoE.  Recently Recently [[hurd/translator/lwip]], which is
+an userspace tcp/ip library, was ported to the Hurd, which can serve as a direct
+replacement for pfinet.
+
 To configure Internet connectivity, the `pfinet` (*Protocol Family Internet*)
 [[translator]] must be configured.  This is done using the
 [[`settrans`|settrans]] command, for example like this:
