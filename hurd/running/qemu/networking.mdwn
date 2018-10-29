@@ -12,7 +12,7 @@ License|/fdl]]."]]"""]]
 ## User mode network
 
 This is the default networking option for qemu.  This does not require root
-previleges.  If you have DHCP running it will take the ip as 10.0.2.15
+privileges.  If you have DHCP running it will take the ip as 10.0.2.15
 
 You can setup an ip 10.0.2.*
 Gateway is 10.0.2.2

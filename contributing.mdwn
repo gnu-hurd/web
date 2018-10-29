@@ -177,12 +177,11 @@ I'll have to think about it some more.
 *This is a very brief guide to get your development environment set up. Pester ArneBab @ irc.freenode.net on IRC if something does not work :)*
 ([[!taglink open_issue_documentation]])
 
-* Install qemu-kvm via your distros packages.
-* Download the [qemu image](https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/debian-hurd.img.tar.gz): `wget https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/debian-hurd.img.tar.gz`
-* Unpack it: `tar xf debian-hurd.img.tar.gz`
-* Run it: `kvm -m 512 -drive cache=writeback,file=debian-hurd.img -redir tcp:2222::22` # Optionally use `--curses` to keep your keyboard layout. If need be modprobe kvm_amd, kvm intel and kvm to get kvm support (which is much, much faster). See also: [kvm FAQ](http://www.linux-kvm.org/page/FAQ).
-* login as root
-* set a root password with `passwd`
+
+First run the hurd in [[qemu|hurd/running/qemu#index1h2]]
+
+After you have a Hurd vm set up and running:
+
 * `apt-get update`
 * `apt-get install -y git mercurial emacs vim`
 * `apt-get build-dep -y hurd gnumach`

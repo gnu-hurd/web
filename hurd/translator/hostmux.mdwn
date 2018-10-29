@@ -1,4 +1,4 @@
-Multiplexes arbitrary host names, making access to many differnt host fast and easy.
+Multiplexes arbitrary host names, making access to many different host fast and easy.
 
 For each host accessed via a directory an new translator is started with the hostname as option. Say, /hostmuxdemo should let you access your favourite host with your translator mytranslatorfs.
 

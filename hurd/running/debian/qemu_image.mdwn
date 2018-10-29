@@ -14,9 +14,16 @@ as <https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/debian-hurd.img.ta
 
 Usage:
 
-    $ wget https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/debian-hurd.img.tar.gz
-    $ tar -xz < debian-hurd.img.tar.gz
-    $ kvm -m 1G -drive cache=writeback,file=$(echo debian-hurd-*.img)
+* Install qemu-kvm via your distros packages.
+* Download the debian image
+    $ `wget https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/debian-hurd.img.tar.gz`
+* Unpack it.
+    $ `tar -xz < debian-hurd.img.tar.gz`
+* Run it
+    $ `kvm -m 1G -drive cache=writeback,file=$(echo debian-hurd-*.img) -redir tcp:2222::22` 
+    # Optionally use --curses to keep your keyboard layout. If need be modprobe kvm_amd, kvm intel and kvm to get kvm support (which is much, much faster).
+* Login as root (the root password is empty)
+* set up a root password with passwd
 
 Please also read the README file: <https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/README>
 
@@ -26,8 +33,6 @@ the zip version <https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/debia
 or even the plain version <https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/debian-hurd.img> (5GiB!)
 
 See the discussion about [[hurd/running/qemu/writeback_caching]].
-
-Just in case you were wondering: the *root* password is empty.
 
 [[!if test="destpage(hurd/running/qemu)" then="" else="For more detailed
 instructions, please see the [[hurd/running/QEMU]] page."]]
