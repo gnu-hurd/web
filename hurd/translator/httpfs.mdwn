@@ -10,6 +10,7 @@ License|/fdl]]."]]"""]]
 
 `httpfs` is a virtual filesystem allowing you to access web pages and files.
 
+While the httpfs translator works, it is only suitable for very simple use cases: it just provides the actual file contents downloaded from the URL, but no additional status information that are necessary for interactive use. (Progress indication, error codes, HTTP redirects etc.)
 
 # Source
 

@@ -15,6 +15,23 @@ License|/fdl]]."]]"""]]
 
 # Deficiencies
 
+Mach is a first generational microkernel, and many of mach's implementations are poor.
+The result is a complicated code base with many issues. Problems include resource accounting,
+scheduling, and too many features inside the kernel. Another problem is mach's IPC is
+too flexible and has numerous features.  The more features and complex the message passing is,
+the slower performance becomes. Mach's IPC ought to be simple enough to maximize performance.
+
+Mach also doesn't support any read-ahead techniques, so its I/O performance suffers.
+Read ahead will have to be implemented inside the kernel.
+
+There are many optimizations that can be done:
+
+We could easily get rid of the ihash library making the message provide the address of
+the object associated to a receive right, so the only real indirection is the capability,
+like in other systems, and yes, buffering adds a bit of complexity. Another example is
+merging structures to improve locality or having rights close to their target port,
+when there are only a few.  This would increase cache efficiency.
+
 ## IRC, freenode, #hurd, 2012-06-29
 
     <henrikcozza> I do not understand what are the deficiencies of Mach, the
@@ -265,6 +282,19 @@ License|/fdl]]."]]"""]]
 
 
 # X15
+
+X15 is an in-development hurd-like operating system.  It's developer, Richard
+Braun, decided that GNU/Hurd running on the mach microkernel has many short-comings.
+Namely to make the Hurd "better" required deep changes to gnumach. He decided to start
+a new project from scratch.  Instead of running the Hurd on top of gnumach, he started
+building his own microkernel: X15, which is like gnumach.  Originally he had intended
+to port the gnuhurd to run ontop of X15, but X15 has since made some design decisions
+that make porting the Hurd to run on top of X15 very unlikely.  Occasionally some X15
+code can be used on the GNU/Hurd, which is what happened with the buddy allocator.
+
+Currently X15 is a real-time microkernel with low-level performance monitoring system,
+local atomic operations, lockless synchronization, RCU, and it can scale well on any 32-bit,
+64-bit target.  It currently runs on x86 and ARM processors, but it lacks userspace support.
 
 ## IRC, freenode, #hurd, 2012-09-04
 

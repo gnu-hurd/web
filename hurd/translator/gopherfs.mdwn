@@ -10,6 +10,12 @@ License|/fdl]]."]]"""]]
 
 `gopherfs` is a virtual filesystem allowing you to access Gopher sites.
 
+[[!template id=highlight text="""/!\ Obsolete /!\
+
+---
+The gopher protocol has largely been replaced by the hypertext transfer protocol ([[http|hurd/translator/httpfs]]).
+
+"""]]
 
 # Source
 

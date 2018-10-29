@@ -11,10 +11,14 @@ License|/fdl]]."]]"""]]
 
 [[!meta title="xattr: extended attributes"]]
 
-[[!tag open_issue_glibc open_issue_hurd]]
+[[!meta title="Implement xattr Support"]]
 
-This task is listed as a [[Google Summer of Code project
-idea|community/gsoc/project_ideas/xattr]].
+[[!template id=highlight text="""/!\ Obsolete /!\
+
+This project is finished."""]]
+
+This task was listed as a [[Google Summer of Code project
+idea|community/gsoc/project_ideas/xattr]], but it has been completed.
 
 IRC, freenode, #hurd, 2011-06-01:
 
