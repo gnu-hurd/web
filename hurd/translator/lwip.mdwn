@@ -17,3 +17,8 @@ To configure lwip for internet connectivity, use the
 The argument /server/socket/2 is the node that the translator is to be attached to. This is followed by the translator program to run and any arguments to give it.
 
 There, -i, -a, -g and -m are, quite obviously, the (Mach) device to use, the IP address, the gateway and netmask.
+
+
+More information can be found on Joan Lledo's blog:
+
+* <http://darnassus.sceen.net/~jlledom/en/>
