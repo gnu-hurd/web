@@ -34,12 +34,25 @@ To try out the simplest of translators, you can go the following simple steps:
 	"Hello World!"  
 	$ settrans -g hello  
 	$ cat hello  
+	$
+	$ fsysopts hello
+	/hurd/hello --contents='Hello World!
+	'
+	$ fsysopts hello --contents='Hello GNU!
+	> '
+	$ cat hello
+	Hello GNU!
+	$
 
 What you do with these steps is first verifying that the file "hello" is empty. 
 
 Then you setup the translator /hurd/hello in the file/node hello. 
 
 After that you check the contents of the file, and the translator returns "Hello World!". 
+
+Because you are a curious hacker, you wonder what filesystem options this node has.  It turns
+out that the hello translator uses a "contents" option.  We can change what the hello
+translator returns with another call to fsysopts.
 
 To finish it,
 you remove the translator from the file "hello"

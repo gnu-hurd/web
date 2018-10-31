@@ -31,8 +31,9 @@ gnumeric, iceweasel, and advanced server applications like the Apache webserver.
 
 The DDE environment allows for reusing half of the Linux 2.6.32 network device
 drivers, and experimental support for SATA devices was added in May 2013.
-On the other side, support for character devices (like sound
-cards) and other hardware (USB, multicore) is mostly missing.
+Robert Millan worked on a port of the Rump kernel, which allowed to run a
+sound driver in userland. This work now needs to be extended. Support for
+character devices and other hardware (USB, multicore) is mostly missing.
 
 Although the [[POSIX
 interface|faq/posix_compatibility]] is provided, some additional interfaces

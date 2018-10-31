@@ -12,6 +12,21 @@ Get or set command line options for a running [[translator]].
 
 See [[documentation/translators#manage]].
 
+# A Simple Example
+
+	$ touch hello
+	$ cat hello
+	$ settrans hello /hurd/hello
+	$ cat hello
+	"Hello World!"
+	$ fsysopts hello
+	/hurd/hello --contents='Hello World!
+	'
+	$ fsysopts hello --contents='Hello GNU!
+	> '
+	$ cat hello
+	Hello GNU!
+	$
 
 # Open Issues
 
