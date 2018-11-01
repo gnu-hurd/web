@@ -10,6 +10,10 @@ License|/fdl]]."]]"""]]
 
   * [[RPC]]
 
+[[Genode|https://genode.org/]] is an operating system framework with the goal
+of creating a general purpose multiserver operating system running on a microkernel.
+The source code is dual licensed: AGPLv3 and a commercial license.
+
 
 # IRC, freenode, #hurd, 2012-08-02
 

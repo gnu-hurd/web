@@ -19,9 +19,9 @@ enabled) is around 50 MiB.
 
 ## Getting the Source Code
 
-You can either use the git repository (see <http://git.savannah.gnu.org/cgit/hurd/>),
+You can either use the git repository (see <http://git.savannah.gnu.org/git/hurd/>),
 
-    $ git clone http://git.savannah.gnu.org/cgit/hurd/gnumach.git/
+    $ git clone https://git.savannah.gnu.org/git/hurd/gnumach.git/
 
 ... or get the Debian sources, if you're using Debian. (See
 [here](http://packages.debian.net/source/unstable/gnumach).)

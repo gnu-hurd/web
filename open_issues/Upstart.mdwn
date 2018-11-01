@@ -8,11 +8,19 @@ Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
 is included in the section entitled [[GNU Free Documentation
 License|/fdl]]."]]"""]]
 
+
+[[!template id=highlight text="""/!\ Obsolete /!\
+
+---
+
+[[systemd|Systemd]] has almost universally replaced upstart."""]]
+
 Upstart is an event based init system that is GPL licensed, however upstream
 contributions are under a CLA that permits proprietary relicensing.
 
-As of Jan 2 2013, Debian is considering adopting Upstart as an init system on
-GNU/Linux, and on GNU/kFreeBSD when the port to kFreeBSD is finished.
+Most major GNU/Linux distributions are choosing systemd as their init system
+instead of upstart.  The original upstart developers seem to have stopped
+developing it.
 
 The following are the words of Colin Watson on the debian-ctte@lists.debian.org
 mailing list and list the requirements of a potential HURD port:

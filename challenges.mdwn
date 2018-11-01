@@ -14,7 +14,11 @@ Some of these are explained in the [[hurd/critique]].
 
 Even though they're quite popular in the simpler embedded space, there is no
 successful true multi-server [[microkernel]] system for general-purpose desktop
-use yet.  This is still an ongoing research effort.  (TODO: add references.)
+use yet.  This is still an ongoing research effort.  Also the Hurd is not the
+only multiserver operating system. Other examples include:
+[[Genode OS|https://genode.org/]] (FOSS),  [[MINIX 3|https://www.minix3.org/]] (FOSS), 
+[[HELON OS|http://www.helenos.org/]] (FOSS), and [[QNX|https://blackberry.qnx.com/en]] 
+(proprietary).
 
 Likewise, resource scheduling in distributed operating system kernels is a
 research topic.  For example, read more about it on the relevant [[Open Issues

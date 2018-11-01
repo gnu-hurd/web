@@ -17,9 +17,9 @@ using a pre-built package, follow these instructions.
 ## <a name="Getting_the_Source_Code"> Getting the Source Code </a>
 
 You can chose between getting the [sources from the developers'
-RCS](http://git.savannah.gnu.org/cgit/hurd/):
+RCS](https://git.savannah.gnu.org/git/hurd/):
 
-    $ git clone http://git.savannah.gnu.org/cgit/hurd/mig.git/
+    $ git clone https://git.savannah.gnu.org/git/hurd/mig.git/
 
 ... or (if you are working on a Debian system) get the sources that are used for the
 [current Debian mig package](http://packages.debian.net/source/unstable/mig):

@@ -24,8 +24,10 @@ Introduction: [*Ressourcen-Verwaltung mit Control Groups (cgroups)*
 (german)](http://www.pro-linux.de/artikel/2/1464/ressourcen-verwaltung-mit-control-groups-cgroups.html),
 Daniel Gollub, Stefan Seyfried, 2010-10-14.
 
-Likely there's also some other porting needed.
-
+Systemd uses Linux kernel specific mechanisms, which are not readily available
+on gnumach or the GNU/Hurd.  Porting systemd to work on the Hurd is a
+daunting task.  A better option is to use a portable init system, like the
+the [[GNU Shepherd|open_issues/shepherd]], which is used in GuixSD.
 
 # Discussion
 
