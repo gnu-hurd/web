@@ -54,7 +54,8 @@ test-drive the Hurd, and about 78% of the Debian software archive are
 available.  Along with the official Debian "jessie" release (but not as an
 official Debian release), in April 2015 the [[Debian
 GNU/Hurd|hurd/running/debian]] team released [[Debian GNU/Hurd
-2015|news/2015-04-29-debian_gnu_hurd_2015]].
+2015|news/2015-04-29-debian_gnu_hurd_2015]]. Similarly, along Debian "stretch",
+in June 2017 [[Debian GNU/Hurd 2017|news/2017-06-18-debian_gnu_hurd_2017]] was released.
 
 [[hurd/running/Arch_Hurd]] offers *LiveCDs* for testing and installation.
 
