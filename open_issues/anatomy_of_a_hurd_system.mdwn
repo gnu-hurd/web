@@ -17,37 +17,52 @@ like Bushnell's Hurd paper.  All this should be unfied and streamlined.
 [[!toc]]
 
 
-# IRC, freenode, #hurd, 2011-03-08
+# Introduction to the Hurd System
 
-    <foocraft> I've a question on what are the "units" in the hurd project, if
-      you were to divide them into units if they aren't, and what are the
-      dependency relations between those units(roughly, nothing too pedantic
-      for now)
-    <antrik> there is GNU Mach (the microkernel); there are the server
-      libraries in the Hurd package; there are the actual servers in the same;
-      and there is the POSIX implementation layer in glibc
-    <antrik> relations are a bit tricky
-    <antrik> Mach is the base layer which implements IPC and memory management
-    <foocraft> hmm I'll probably allocate time for dependency graph generation,
-      in the worst case
-    <antrik> on top of this, the Hurd servers, using the server libraries,
-      implement various aspects of the system functionality
-    <antrik> client programs use libc calls to use the servers
-    <antrik> (servers also use libc to communicate with other servers and/or
-      Mach though)
-    <foocraft> so every server depends solely on mach, and no other server?
-    <foocraft> s/mach/mach and/or libc/
-    <antrik> I think these things should be pretty clear one you are somewhat
-      familiar with the Hurd architecture... nothing really tricky there
-    <antrik> no
-    <antrik> servers often depend on other servers for certain functionality
+The lowest base of the GNU/Hurd system is GNU Mach.  GNU Mach is a microkernel,
+which provides interprocess communication (IPC), memory management, and a scheduler.
+The Hurd servers runs on top of GNU Mach to implement various userspace servers that
+would ordinarily reside in the kernel, including the filesystem, device drivers,
+TCP/IP stack, and others.  The GNU/Hurd system implements POSIX with glibc.  Almost all
+POSIX calls to glibc are re-routed to the Hurd servers.  Some of the Hurd servers
+depend on GNU Mach, while other Hurd servers depend on other Hurd servers.
+
+                                  The Hurd
+
+                        ---------------------------
+                        |         glibc           |
+                        |                         |
+                        | read                    |
+                        ---------------------------
+                           \
+                            \
+                             \
+                              \
+                        ---------------------------------------
+                        |      \     Hurd Servers             |
+                        |     ext2fs   auth --- other servers |
+                        |       \                             |
+                        --------------------------------------
+                                  \
+                              libdiskfs
+                                   \    /
+                                    \  /
+                                     \/
+                                   GNU Mach
 
 
 # Bootstrap
 
 ## [[hurd_init]]
 
-## IRC, freenode, #hurd, 2011-03-12
+## Hurd Booting Process
+
+When grub starts running, it loads the root filesystem, the exec server, and
+starts GNU Mach.  GNU Mach then starts the servers in turn according to the
+multiboot information grub gave it.  Additionally the rootfs server
+does some bootstrapping work to bring the start the other servers.
+
+### IRC, freenode, #hurd booting process, 2011-03-12
 
     <dEhiN> when mach first starts up, does it have some basic i/o or fs
       functionality built into it to start up the initial hurd translators?

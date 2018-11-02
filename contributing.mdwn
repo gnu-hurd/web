@@ -158,10 +158,7 @@ reports to open-ended research questions.
 <a name="insta-dev-env"></a>
 ## Instant Development Environment
 
-<!-- I don't like this being here.  At least not in this form.  This just
-duplicates information that is available in other places.  (Or should be
-available in other places, in more elaborate form.)
-
+<!--
 The idea of a one-stop development environment is not bad (I like that), but
 I'd do this differently.  For example, we should add some Git submodules to the
 master hurd.git repository (which is currently empty), to branches that are
