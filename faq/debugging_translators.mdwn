@@ -12,7 +12,7 @@ License|/fdl]]."]]"""]]
 [[!tag faq/development]]
 
 In order to [[debug|debugging]] translators and being able to step into glibc
-during it, on Debian you need the `hurd-dbg` and `libc0.3-dbg` packages installed.
+during it, on Debian you need the `hurd-dbgsym` and `libc0.3-dbg` packages installed.
 If you need to debug the initialization of the translator, start the translator
 like
 

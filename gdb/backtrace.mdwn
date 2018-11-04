@@ -25,5 +25,5 @@ Run the faulting program like this:
 libraries) contain debugging symbols, or those are available separartely.
 
 If you're one a [[Debian_GNU/Hurd_system|hurd/running/debian]], you'll have
-to have the *hurd-dbg* package installed for debugging Hurd stuff, and perhaps
+to have the *hurd-dbgsym* package installed for debugging Hurd stuff, and perhaps
 *libc0.3-dbg* as well if it's inside the glibc.
