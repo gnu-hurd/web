@@ -11,8 +11,6 @@ License|/fdl]]."]]"""]]
 
 [[!tag open_issue_gnumach]]
 
-There is a [[!FF_project 266]][[!tag bounty]] on this task.
-
 [[!toc]]
 
 
@@ -2389,3 +2387,17 @@ There is a [[!FF_project 266]][[!tag bounty]] on this task.
     <braunr> well, there is also a locking error in the slab allocator,
       although not a problem for a non preemptible kernel like gnumach
     <braunr> non preemptible / uniprocessor
+
+## IRC freenode, #hurd, 2016-12-29
+
+    <braunr> i've identified a fundamental flaw with the default pager
+    <braunr> and actually, with mach in general i suppose
+    <braunr> i assumed that it was necessary to trust the server only
+    <braunr> that a server didn't need to trust its client
+    <braunr> but mach messages carry memory that is potentially mapped from unprivileged pagers
+    <braunr> which means faulting on that memory effectively makes the faulting process a client to the unprivileged pager
+    <braunr> and that's something that can happen to the default pager during heavy memory pressure
+    <braunr> in which case it deadlocks on itself because the copyout hangs on a fault, waiting for the unprivileged pager to provide the data
+    <braunr> (which it can't because of heavy memory pressure and because it's unprivileged, it's blocked, waiting until allocations resume)
+    <braunr> the pageout daemon will keep paging out to the default pager in the hope those pages get freed
+    <braunr> but sending to the default pager is now impossible because its map is locked on the never-ending fault

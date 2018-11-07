@@ -19,7 +19,7 @@ What is left for initial support (32-on-64) is
   * adding 64bit boot support from grub
   * implement 32/64 RPC compatibility for RPCs served by kernel.
 
-See http://lists.gnu.org/archive/html/bug-hurd/2012-04/msg00000.html
+See [[http://lists.gnu.org/archive/html/bug-hurd/2012-04/msg00000.html]]
 
 For pure 64bit support, we need to
 
