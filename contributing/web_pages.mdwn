@@ -24,6 +24,9 @@ projects:
   * Install your changes *early* and *often*: don't hold your contribution back
     until you think it is perfect.
 
+(!) An occasional Hurd contributer has a long [[youtube video|https://www.youtube.com/watch?v=56JLJvzUkQo]]
+where he shows one how to contribute to editing these web pages.
+
 ## Syntax
 
 Before doing any changes, you are encouraged to play a bit in the
@@ -248,11 +251,11 @@ want to publish.
 Finally, publish the good ones.  If you have a local mail transfer agent
 running, the following is all you have to do:
 
-    $ git send-email --to web-hurd@gnu.org *.patch
+    $ git send-email --to bug-hurd@gnu.org *.patch
     [...]
 
 If you don't have an MTA running, you'll have to find another way: either post
-the `*.patch` files to <web-hurd@gnu.org> or upload them somewhere for us to
+the `*.patch` files to <bug-hurd@gnu.org> or upload them somewhere for us to
 download them from.
 
 

@@ -13,6 +13,14 @@ License|/fdl]]."]]"""]]
 
 [[General Information|/dde]].
 
+[[!template id=highlight text="""/!\ Obsolete /!\
+
+---
+
+DDE is no longer being updated or maintained.  The [[Rump_kernel]] is a better alternative.
+"""]]
+
+
 Still waiting for interface finalization and proper integration.
 
 [[!toc]]
