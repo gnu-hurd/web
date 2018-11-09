@@ -10,8 +10,79 @@ License|/fdl]]."]]"""]]
 
 [[!tag open_issue_hurd]]
 
-For [[DDE]]/X.org/...
+For [[DDE]]/[[Rump_kernel]]/X.org/...
 
+PCI stands for Peripheral Component Interconnect, and it is a hardware standard
+for allowing multiple devices to communicate together and with the rest of the
+system smoothly.  This is a little bit like multiple people speaking over one
+telephone: only one person can talk at a time.  In the same way, a software
+PCI Arbiter, ensures that every devices gets a chance to communicate and ensure
+maximum performance.
+
+A current example is Xorg, rump sound drivers, and netdde wifi drivers, etc. All
+need to access PCI config space at bootup.  Currently, at bootup PCI access is
+sequential: gnumach, netdde, and then Xorg. The PCI Arbiter will eventually allow
+concurrent access to the PCI config space.
+
+The Hurd now has a PCI Arbiter, but it could use some more polishing.  You can find
+its TODO file [[here|http://git.savannah.gnu.org/cgit/hurd/hurd.git/tree/pci-arbiter/TODO]].
+
+Samuel also gave a presentation explaining some of the awesome possibilities
+that the PCI Arbiter can provide.  You can watch his fosdem talk
+[[here|https://archive.fosdem.org/2018/schedule/event/microkernel_hurd_pci_arbiter/]]
+
+The end goal is to allow different userland drivers to access PCI devices concurrently,
+while paving the way for fine-grain per-user, per-session, etc. permission management
+over PCI access, and IOMMUs allow us to do that very safely.  Imagine a user being
+able to access a PCI card as a user! A IO-MMU can control that safely, because it's just
+like PCI passthrough with a hypervisor.
+
+# Documentation
+
+## Accessing PCI Cards
+
+ - `/servers/pci/<dom>/<bus>/<dev>/<fn>`
+ - provides `pci_conf_read/write`, `get_dev_regions`, `get_dev_rom`
+ - The translator provides libpciaccess & pciutils backends
+
+## Accessing PCI Cards as user
+
+  This is a list of some things that we would like to do, but may not be able to
+  currently.
+
+  - Give PCI card access on the fly with
+    - `fsysopts /servers/pci --uid 1234 --p 00:1f.3`
+    - (or configure it permantly with settrans)
+  - User app can then
+    - Read/Write config
+    - TODO: map resources / ROM
+    - TODO: get i/o port access token
+
+## An awesome example
+
+[[!img images/pci_possibilities.png]]
+
+In the above image, a user has complete control over his software stack.  The PCI
+Arbiter on the far left has to run as root, because it needs to be able to access
+devices.  Everything else has the exact permissions that the user wants. This user
+is running Xorg, and the TCP/IP stack as the user "nobody".  Nobody is a uid
+that runs with essentially no permissions.  It only has the permissions granted to it.
+This means one can run Xorg (which is not the most secure display server) in a confined
+way.  Xorg won't even have permission to open a file, unless you allow it.  In the
+above picture, the same is true for pfinit, and eth0.
+
+Things get more interesting, as we move along further to the right of the image.
+The user has decided that he wants to run pcm, the rump sound daemon, as a normal
+user, so he can better configure it, but there is a problem.  The user doesn't trust the pcm
+daemon.  The pcm daemon could open and read the user's gpg keys. The same is true for
+Firefox, since it may have flash or other non-safe code. Luckily the Hurd has a solution!
+Just start a [[subhurd|hurd/subhurd]]that contains firefox and pcm.  Now the user
+can configure which files Firefox and pcm can access.
+
+There is one final detail.  The graphic has two PCI arbiters.  There is the system
+provided one on the far left, which the user is allowed to access.  The user can then
+configure another PCI arbiter (on the far right) that allows pcm to only access the sound
+board.  Of course, Firefox can still use pcm to play sound.
 
 # IRC, freenode, #hurd, 2012-02-19
 
