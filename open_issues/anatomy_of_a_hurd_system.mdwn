@@ -27,28 +27,7 @@ TCP/IP stack, and others.  The GNU/Hurd system implements POSIX with glibc.  Alm
 POSIX calls to glibc are re-routed to the Hurd servers.  Some of the Hurd servers
 depend on GNU Mach, while other Hurd servers depend on other Hurd servers.
 
-                                  The Hurd
-
-                        ---------------------------
-                        |         glibc           |
-                        |                         |
-                        | read                    |
-                        ---------------------------
-                           \
-                            \
-                             \
-                              \
-                        ---------------------------------------
-                        |      \     Hurd Servers             |
-                        |     ext2fs   auth --- other servers |
-                        |       \                             |
-                        --------------------------------------
-                                  \
-                              libdiskfs
-                                   \    /
-                                    \  /
-                                     \/
-                                   GNU Mach
+[[!img images/overview.svg]]
 
 
 # Bootstrap
