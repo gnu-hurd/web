@@ -199,7 +199,7 @@ Call readlink(), check return value and set the null char in the linkname:
     len = readlink(filename, linkname, sb.st_size + 1);
     if (len < 0 || len > sb.st_size) {
     ...
-    linkname[sb.st_size] = '\0';
+    linkname[len] = '\0';
 
 
 ### Alternative use of readlink(): readlink_malloc()
