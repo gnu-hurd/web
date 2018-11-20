@@ -25,4 +25,4 @@
 
 * I am learning skills to finish what RMS started, GNU/Hurd microkernel. Then replace Linux kernel with Hurd, with GPLv3 of course. 
 
-* Yes, I want to learn Jeet-Kuan-Do. I love it as much as I love the copyleft. 
+* Yes, I want to learn Jeet Kune Do. I love it as much as I love the copyleft. 
