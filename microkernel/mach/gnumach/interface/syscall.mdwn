@@ -14,3 +14,5 @@ License|/fdl]]."]]"""]]
 
 [[!map pages="microkernel/mach/gnumach/interface/syscall/* and !microkernel/mach/gnumach/interface/syscall/*/*"
 show=title]]
+
+- [[mach_msg|https://www.gnu.org/software/hurd/gnumach-doc/Mach-Message-Call.html#Mach-Message-Call]]

@@ -9,7 +9,20 @@ Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
 is included in the section entitled [[GNU Free Documentation
 License|/fdl]]."]]"""]]
 
-RPC stands for remote procedure call.
+RPC stands for remote procedure call.  It is generally one userspace processes
+communicating with another userspace process.  For example, a user may use
+emacs to open a text file for editing.  On the Hurd, glibc turns the C function
+call into appropriate RPC calls to ext2fs. It is important to remember that
+gnumach's IPC facilitates this communication between emacs and ext2fs (with
+the gnumach mach_msg () syscall: one to send the message and one to receive
+the reply).
+
+It is also important to distinguish an RPC from a [[system call|system_call]].
+A system call, happens when a userspace process requests something of the kernel.
+An RPC is generally one userspace process requesting something from another
+userspace process.
+
+
 
 
 # See Also
