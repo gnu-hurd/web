@@ -14,13 +14,12 @@ communicating with another userspace process.  For example, a user may use
 emacs to open a text file for editing.  On the Hurd, glibc turns the C function
 call into appropriate RPC calls to ext2fs. It is important to remember that
 gnumach's IPC facilitates this communication between emacs and ext2fs (with
-the gnumach mach_msg () syscall: one to send the message and one to receive
-the reply).
+the gnumach mach_msg () syscall).
 
 It is also important to distinguish an RPC from a [[system call|system_call]].
-A system call, happens when a userspace process requests something of the kernel.
+A system call is always a userspace process requesting something from the kernel.
 An RPC is generally one userspace process requesting something from another
-userspace process.
+userspace process, but it can also be from the kernel. Devices, for instance, can live both in the kernel or in userspace processes, RPCs are used to discuss with them in both cases.
 
 
 
