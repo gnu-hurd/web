@@ -21,7 +21,7 @@ Bruxelles.
 
 <https://archive.fosdem.org/2017/schedule/track/gnu_guile/>
 
-  * {{$ragkousis_hurd}}
+  * {{$ragkousis_guix_hurd}}
 
 
 
@@ -29,7 +29,7 @@ Bruxelles.
 
 <https://archive.fosdem.org/2017/schedule/track/microkernels_and_component_based_os/>
 
-  * {{$thibault_hurd}}
+  * {{$winter_hurd}}
 
 
 [[!ymlfront data="""

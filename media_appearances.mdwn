@@ -28,7 +28,7 @@ A lot of stuff is missing here.
 ## February
 
   * FOSDEM: {{$community/meetings/fosdem_2017#ragkousis_guix_hurd}}
-  * FOSDEM: {{$community/meetings/fosdem_2017#thibault_hurd}}
+  * FOSDEM: {{$community/meetings/fosdem_2017#winter_hurd}}
 
 
 # 2016
