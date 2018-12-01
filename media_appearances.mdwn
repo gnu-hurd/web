@@ -16,6 +16,21 @@ A lot of stuff is missing here.
 [[!toc levels=2]]
 
 
+# 2018
+
+## February
+
+  * FOSDEM: {{$community/meetings/fosdem_2018#thibault_hurd}}
+
+
+# 2017
+
+## February
+
+  * FOSDEM: {{$community/meetings/fosdem_2017#ragkousis_guix_hurd}}
+  * FOSDEM: {{$community/meetings/fosdem_2017#thibault_hurd}}
+
+
 # 2016
 
 ## January
