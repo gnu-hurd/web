@@ -32,7 +32,7 @@ competitive state.  Nowadays, it's only unpaid (apart from some
 In contrast to the Linux kernel, there is no industry involvement in
 development.  For one, this is a good thing: independency; no conflicts of
 interests.  For another, it is also a bad thing: no dedicated full-time
-manpower -- which matters a lot.
+workforce -- which matters a lot.
 
 This also answers the question why [[the Hurd still does not do [...] after so
 many years of development|so_many_years]].
