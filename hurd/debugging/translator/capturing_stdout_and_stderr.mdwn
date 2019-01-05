@@ -16,7 +16,7 @@ silently dying all the time, without any console output:
     $ sudo settrans -fgap ↩
       /servers/socket/2 ↩
       /bin/sh -c 'exec >> /root/pfinet.log 2>&1 && date && ↩
-        /hurd/pfinet -i eth0 -a [...]'
+        /hurd/pfinet -i /dev/eth0 -a [...]'
     $ [...]
     $ cat /root/pfinet.log
     [date]

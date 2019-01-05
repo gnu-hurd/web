@@ -83,7 +83,7 @@ eth1 is the interface that is connected to the Internet on the LAN:
 
 ## Doing settrans on domU
 
-    settrans -fgap /servers/socket/2 /hurd/pfinet -i eth0 -a 192.168.1.210 -g 192.168.1.1 -m 255.255.255.0
+    settrans -fgap /servers/socket/2 /hurd/pfinet -i /dev/eth0 -a 192.168.1.210 -g 192.168.1.1 -m 255.255.255.0
 
 ## /sbin/ifconfig on dom0 
 

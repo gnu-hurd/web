@@ -18,7 +18,7 @@ To configure Internet connectivity, the `pfinet` (*Protocol Family Internet*)
 [[`settrans`|settrans]] command, for example like this:
 
     # settrans -fgap /servers/socket/2 /hurd/pfinet ↩
-        -i eth0 -a 192.168.0.50 -g 192.168.0.1 -m 255.255.255.0
+        -i /dev/eth0 -a 192.168.0.50 -g 192.168.0.1 -m 255.255.255.0
 
 The argument `/server/socket/2` is the node that the translator is to be
 attached to.  This is followed by the translator program to run and any
