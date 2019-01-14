@@ -69,11 +69,11 @@ Ideally, specific handling for RPCs needing it should also be implemented.
 
 Completing this project will require digging into Valgrind's handling of [[system call]]s (in C),
 and into Hurd RPCs.
-It is not an easy task, but a fairly predictable one --
+It is really not an easy task, but a fairly predictable one --
 there shouldn't be any unexpected difficulties,
 and no major design work is necessary.
 It doesn't require any specific previous knowledge:
-only good programming skills in general.
+only very good programming skills in general.
 On the other hand,
 the student will obtain a good understanding of Hurd RPCs while working on this task,
 and thus perfect qualifications for Hurd development in general :-)
