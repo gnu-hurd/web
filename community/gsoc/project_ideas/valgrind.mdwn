@@ -83,3 +83,7 @@ Possible mentors: Samuel Thibault (youpi)
 Exercise: As a starter,
 students can try to teach valgrind a couple of Linux ioctls,
 as this will make them learn how to use the read/write primitives of valgrind.
+
+Note: Some work exists in
+https://github.com/sprkv5/valgrind-hurd/tree/main
+and would welcome rebasing on a more recent version of valgrind.
