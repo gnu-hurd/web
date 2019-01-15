@@ -18,7 +18,10 @@ completely usable.
 Take care when running the Hurd in fully-virtualized machines: virtualization
 software use ugly heuristics to make Linux run faster, which will not work on
 the Hurd (or BSD, etc.) so comparisons in virtualized environments do not really
-hold.
+hold. Also take care of not comparing Hurd (which is currently 32bit) with a
+64bit Linux execution: 64bit has *much* more computational and optimization
+possibilities than 32bit. At least, use -m32 to build a 32bit Linux version of a
+test for comparison.
 
 The main reason for slowness is *not* because of the overhead of RPCs. It's
 mostly simply because less care has been done on implementing what makes Linux
