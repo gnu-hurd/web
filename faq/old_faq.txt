@@ -91,12 +91,6 @@ completion, there is not a lot of guess work.
 
 {ST} The usual rule of thumb applies: the same amount as RAM, for instance.
 
-??	Can I share swap space between GNU/Linux and GNU/Hurd?
-
-{NHW} Yes.  The default pager recognises and respects Linux swap
-partitions.  It will also swap to a raw partition, i.e. anything that it
-does not recognize as Linux swap.  Therefore: BE CAREFUL.
-
 ??	Why do I get ``Operation not permitted error''?
 
 {MB} You forgot to set the file system owner of the GNU/Hurd partition to
@@ -186,14 +180,6 @@ You can find them, among others, at:
 
 	http://www.gnu.org/software/hurd/docs.html
 
-??	What is a translator?
-
-{MB} There is a text about translators available at:
-
-	http://www.debian.org/ports/hurd/hurd-doc-translator
-
-Read this and ask further questions on the mailing lists.
-
 ??	What is the login shell?
 
 {MB} The Hurd has the concept of a not-logged in user.  This user has
@@ -234,13 +220,6 @@ terminal to `mach-gnu-color'.  For instance:
 
 If something went wrong, or if you just wish to exit the Hurd console
 then hitting C-A-<backspace> will exit it.
-
-??	What is the status of X?
-
-{MB} It works!  The packages are available at any Debian ftp mirror.
-Xorg is available, as are some of the v3 servers.  Instructions
-on how to use the packages are in the mailing list archive (link follow
-later).
 
 ??	What are these strange pids `0`, `2', `3', `4`, and `5`?
 
@@ -315,17 +294,6 @@ happens.  Thomas explains:
 	and probably something else should be chosen instead.
 
 If you can reproduce this error message, please report it.
-
-??	What does ``computer bought the farm'' mean ?
-
-{FH} This message is the text that corresponds to the errno code
-`EIEIO'.  Roland McGrath explains:
-
-	That message is not output by any particular servers at
-	particular times; rather it is the perror text for the errno
-	code EIEIO, which is returned by various RPCs and functions
-	for a variety of "hopeless" error conditions.
-
 
 ??	What does ``/dev/hd0s1: MOUNTED READ-ONLY; MUST USE `fsysopts
 	--writable''' mean?
