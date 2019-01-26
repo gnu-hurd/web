@@ -28,6 +28,16 @@ sent a string to identify the file to B, the identifier lacks a
 than A intended.  By ensuring that [[designation]] and [[authorization]] are
 always bound together, these problems are avoided.
 
+If you found the above example a little too abstract, then consider the example
+found on the [[wikipedia|https://en.wikipedia.org/wiki/Confused_deputy_problem]]
+page.  Suppose a trusted server runs a compilation process, bills clients for
+using the service, and stores billing information in the "bills.txt" file. The
+compilation server needs clients to provide the name of the input and output
+files to compile the program.  Suppose a client calls the compilation server
+and specifies the output file as the "billing.txt" file.  The server compiles
+the program, and then overwrites the billing information.  Now the server does
+not know who to bill for the use of its services.
+
 Capability-based system architectures strive to meet the *principle of least
 privilege* ({{$wikipedia_polp}}).
 
