@@ -9,8 +9,11 @@ Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
 is included in the section entitled [[GNU Free Documentation
 License|/fdl]]."]]"""]]
 
-`libstore` is used to provide a generic interface to access data (read/write)
-on backing stores.
+`libstore` is used to provide a generic interface to access data (read/write) on
+backing stores. This library implements many different backends which allow the
+abstract store interface to be used with common types of storage -- devices,
+files, memory, tasks, etc.  It also allows stores to be combined and filtered in
+various ways.
 
 It more than just a thin layer between [[GNU Mach|microkernel/mach/gnumach]]
 devices (`hd0` for example) and the device node below `/dev/`...
