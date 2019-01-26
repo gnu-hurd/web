@@ -5,8 +5,26 @@ complete [[Unix]]-like operating system composed entirely of [free
 software](http://www.gnu.org/philosophy/free-sw.html).  The creation of the GNU
 System is one of the goals of the [GNU Project](http://www.gnu.org/), which was
 [launched in 1983](http://www.gnu.org/gnu/initial-announcement.html) by
-[Richard Stallman](http://www.stallman.org/).
+[Richard Stallman](http://www.stallman.org/).  It has many ambitious goals that
+the GNU/Hurd intends to address.
 
+These goals include increased security through the [[principle of least
+privilege|https://en.wikipedia.org/wiki/Principle%5Fof%5Fleast%5Fprivilege]], an
+[[extensible system|extensibility]], conformation to open operating standards
+including [[POSIX|https://en.wikipedia.org/wiki/POSIX]], modularity, and
+respecting user freedom.  Many of these goals are things that the GNU/Hurd can
+resolve, however the GNU/Hurd is not the most stable operating system yet.
+
+If you are looking for a production ready GNU system, then Debian GNU/Hurd may
+not be the best choice for you.  Debian GNU/Hurd currently lacks 64-bit support,
+many device drivers, sound support, SMP, and a few other essential bits that
+provide a flexible operating system.
+
+However, [[gnu.org|https://www.gnu.org/distros/free-distros.html]] maintains a
+list of freedom respecting and production ready GNU/Linux systems.  One of the
+most promising of these is [[guixSD|https://www.gnu.org/software/guix/]], which
+is the GNU Guix System Distribution, which eventually plans to support the GNU
+Hurd as the kernel! 
 
 ## Resources
 
