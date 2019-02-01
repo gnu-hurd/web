@@ -84,6 +84,10 @@ from userlandish interfaces (Hurd) or from the micro kernel itself (Mach).
 
 # Presentations
 
+## 2019
+
+  * FOSDEM: {{$community/meetings/fosdem_2019#thibault_hurd}}
+
 ## 2018
 
   * FOSDEM: {{$community/meetings/fosdem_2018#thibault_hurd}}
