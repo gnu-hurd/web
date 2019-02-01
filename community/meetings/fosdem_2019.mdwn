@@ -30,6 +30,6 @@ Bruxelles.
 
 thibault_hurd:
 
-  "presentation by Samuel Thibault: [*A roadmap for the Hurd?*](https://fosdem.org/2019/schedule/event/roadmap_for_the_hurd/) ([slides](https://fosdem.org/2019/schedule/event/roadmap_for_the_hurd/attachments/slides/2954/export/events/attachments/roadmap_for_the_hurd/slides/2954/2019_02_01_fosdem_roadmap.pdf))"
+  "presentation by Samuel Thibault: [*A roadmap for the Hurd?*](https://fosdem.org/2019/schedule/event/roadmap_for_the_hurd/) ([slides](https://fosdem.org/2019/schedule/event/roadmap_for_the_hurd/attachments/slides/2961/export/events/attachments/roadmap_for_the_hurd/slides/2961/2019_02_01_fosdem_roadmap.pdf))"
 
 """]]
