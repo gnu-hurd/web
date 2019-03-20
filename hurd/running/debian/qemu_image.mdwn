@@ -33,11 +33,20 @@ Usage:
 <!-- A world in which nobody washes their dishes is a dishtopia -->
 
 	$ kvm -m 1G -drive cache=writeback,file=$(echo debian-hurd-*.img) -net user,hostfwd=tcp:127.0.0.1:2222-:22
-	#Optionally use --curses to keep your keyboard layout. If need be modprobe kvm_amd, kvm intel and kvm to get kvm support (which is much, much faster).
 
 * Login as root (the root password is empty)
 
 * Set up a root password with passwd
+
+Optionally you may use `--curses` to keep your keyboard layout. If need be modprobe kvm_amd, kvm intel and kvm to get kvm support (which is much, much faster).
+
+Note that if you do not have a command named `kvm`, you can try something across the lines of:
+
+	$ qemu-system-i386 --enable-kvm -drive cche=writeback,file=$(echo debian-hurd-*.img) -net user,hostfwd=tcp:127.0.0.1:2222-:22
+
+Or, if your machine does not allow for KVM acceleration, omit `--enable-kvm` from the command.
+
+
 
 Please also read the README file: <https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/README>
 
