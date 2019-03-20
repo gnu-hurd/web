@@ -44,6 +44,9 @@ Continue reading about [[Mach's IPC system|microkernel/mach/IPC]].
 
   * [[RPC]]
 
+# Externel
+ * Wikipedia artile on [[!wikipedia Inter-process_communication]]
+
 
 [[!ymlfront data="""
 
