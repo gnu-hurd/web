@@ -1,6 +1,6 @@
 # <a name="The_GNU_Operating_System"> </a> The GNU Operating System
 
-The GNU Operating System, or GNU System as it is more commonly known, will be a
+The GNU Operating System, Commonly referred to as simply "The GNU System", is a
 complete [[Unix]]-like operating system composed entirely of [free
 software](http://www.gnu.org/philosophy/free-sw.html).  The creation of the GNU
 System is one of the goals of the [GNU Project](http://www.gnu.org/), which was
@@ -15,7 +15,7 @@ including [[POSIX|https://en.wikipedia.org/wiki/POSIX]], modularity, and
 respecting user freedom.  Many of these goals are things that the GNU/Hurd can
 resolve, however the GNU/Hurd is not the most stable operating system yet.
 
-If you are looking for a production ready GNU system, then Debian GNU/Hurd may
+If you are looking for a production ready GNU system, then [[hurd/running/Debian]] GNU/Hurd may
 not be the best choice for you.  Debian GNU/Hurd currently lacks 64-bit support,
 many device drivers, sound support, SMP, and a few other essential bits that
 provide a flexible operating system.
