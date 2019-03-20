@@ -14,7 +14,7 @@ as <https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/debian-hurd.img.ta
 
 Usage:
 
-Install qemu-kvm via your distribution's package manager (it might just be named qemu)
+* Install qemu-kvm via your distribution's package manager (it might just be named qemu)
 
 * Download the debian image:
 
@@ -35,9 +35,9 @@ Install qemu-kvm via your distribution's package manager (it might just be named
 	$ kvm -m 1G -drive cache=writeback,file=$(echo debian-hurd-*.img) -net user,hostfwd=tcp:127.0.0.1:2222-:22
 	#Optionally use --curses to keep your keyboard layout. If need be modprobe kvm_amd, kvm intel and kvm to get kvm support (which is much, much faster).
 
-Login as root (the root password is empty)
+* Login as root (the root password is empty)
 
-Set up a root password with passwd
+* Set up a root password with passwd
 
 Please also read the README file: <https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/README>
 
