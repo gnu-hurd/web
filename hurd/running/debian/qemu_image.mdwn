@@ -50,10 +50,14 @@ Or, if your machine does not allow for KVM acceleration, omit `--enable-kvm` fro
 
 Please also read the README file: <https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/README>
 
+<!-- It is unconventional, in wikis, to write external links like [...](http://...).
+     Usually a link to an external site should always be fully visible, but I think
+     people can understand where these lead, but revert if this is a bad idea.-->
+
 If you have troubles extracting the image, you can use
-the gz version <https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/debian-hurd.img.gz>,
-the zip version <https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/debian-hurd.img.zip>,
-or even the plain version <https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/debian-hurd.img> (5GiB!)
+the [gz version](https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/debian-hurd.img.gz),
+the [zip version](https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/debian-hurd.img.zip),
+or even the [plain version](https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/debian-hurd.img) (5GiB!)
 
 See the discussion about [[hurd/running/qemu/writeback_caching]].
 
