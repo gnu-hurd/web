@@ -16,3 +16,6 @@ not generally facilitate the hooking of [[system call]]s.  For instance, there i
 no way to hook into the virtual file system.  This has motivated the introduction
 of separate, parallel interfaces by both the GNOME and KDE projects to provide
 users a more integrated view of their objects.
+
+# External
+* The Wikipedia article on [[!wikipedia extensibility]]
