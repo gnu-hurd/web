@@ -8,7 +8,7 @@ Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
 is included in the section entitled [[GNU Free Documentation
 License|/fdl]]."]]"""]]
 
-The GNU General Public License (GPL) is a [Free Software](https://www.gnu.org/philosophy/free-sw.html) license created by Richard Stallman in 1989 by Richard Stallman for Free Software creators. The GPL grants users the Four Freedoms:
+The GNU General Public License (GPL) is a [Free Software](https://www.gnu.org/philosophy/free-sw.html) license created by Richard Stallman in 1989 for Free Software creators. The GPL grants users the Four Freedoms:
 
 
 * The freedom to run the program as you wish, for any purpose (freedom 0).
