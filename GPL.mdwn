@@ -8,7 +8,7 @@ Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
 is included in the section entitled [[GNU Free Documentation
 License|/fdl]]."]]"""]]
 
-The GNU General Public License (GPL) is a [[Free Software]] license created by Richard Stallman in 1989 by Richard Stallman for Free Software creators. The GPL grants users the Four Freedoms:
+The GNU General Public License (GPL) is a [Free Software](https://www.gnu.org/philosophy/free-sw.html) license created by Richard Stallman in 1989 by Richard Stallman for Free Software creators. The GPL grants users the Four Freedoms:
 
 
 * The freedom to run the program as you wish, for any purpose (freedom 0).
@@ -19,4 +19,4 @@ The GNU General Public License (GPL) is a [[Free Software]] license created by R
 
 Since then, the license has become extremely popular & wide-spread. The GPL has gone through 3 revisions, with GPLv3 being the latest.
 
-GPLv3 allows any user to access, modify, and redistribute the source code, given that the redistributed version of the software is also released as GPLv3.
+GPLv3 allows any user to access, modify, and redistribute the source code, given that the redistributed version of the software is also released as GPLv3. For example, if you create a pice of software named "FreedomJuice" under the GPLv3, and I download & moify it and name it "xFreedomJuicex", I cannot release xFreedomJuicex under the MIT license, it has to be GPLv3 as well.
