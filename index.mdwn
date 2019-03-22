@@ -62,8 +62,8 @@ See our [[source_repositories]] for the source code.
 
 ## Access to a GNU/Hurd System
 
-We provide accounts on our [[public_Hurd_boxen]], and there are also
-[[hurd/running/QEMU]] images available.
+We provide accounts on our [[public_Hurd_boxen]], and there are also several GNU/Hurd [[Distributions|hurd/running/distrib]] that allow for
+[[hurd/running/QEMU]] emulation.
 
 
 # Getting Help

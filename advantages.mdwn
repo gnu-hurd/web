@@ -14,7 +14,7 @@ License|/fdl]]."]]"""]]
 The GNU Hurd has a number of enticing features:
 
 It's free software, so anybody can use, modify, and redistribute it under the
-terms of the [[GNU General Public License (GPL)|GPL]].
+terms of the [[GNU General Public License v3 (GPLv3)|GPL]].
 
 It's compatible as it provides a familiar programming and user environment.
 For all intents and purposes, the Hurd provides the same facilities as a modern

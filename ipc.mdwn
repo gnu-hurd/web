@@ -11,6 +11,8 @@ License|/fdl]]."]]"""]]
 
 *IPC* stands for *inter-process communication*.
 
+Inter-process communication refers to the mechanisms, provided by the operating system, that allow allow processes to manage shared data.
+
 On [[Unix]], inter-process communication can be achieved using pipes.
 This is inefficient for large amounts of data as the data must be
 copied.  This is generally not a problem as most services are
@@ -41,6 +43,9 @@ Continue reading about [[Mach's IPC system|microkernel/mach/IPC]].
 # See Also
 
   * [[RPC]]
+
+# Externel
+ * Wikipedia artile on [[!wikipedia Inter-process_communication]]
 
 
 [[!ymlfront data="""

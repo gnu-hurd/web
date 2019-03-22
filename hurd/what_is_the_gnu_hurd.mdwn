@@ -11,8 +11,7 @@ License|/fdl]]."]]"""]]
 
 [[!meta title="What Is the GNU Hurd?"]]
 
-The Hurd is the GNU project's replacement for [[UNIX]], a popular operating
-system [[kernel]].
+The Hurd is the GNU project's replacement for the [[UNIX]] system's [[kernel]].
 
 The Hurd is firstly a collection of protocols formalizing how different
 components may interact.  The protocols are designed to reduce the mutual

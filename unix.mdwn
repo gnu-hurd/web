@@ -10,7 +10,7 @@ License|/fdl]]."]]"""]]
 
 [[!meta title="UNIX"]]
 
-*UNIX* is a [[kernel]] implementation.
+*UNIX* is a [[kernel]] implementation developed in Bell Labs, starting in the 1970's, by a group of programmers including Dennis Ritchie & Ken Thompson.
 
 
 # Concepts

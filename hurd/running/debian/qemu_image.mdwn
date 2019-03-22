@@ -14,23 +14,50 @@ as <https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/debian-hurd.img.ta
 
 Usage:
 
-* Install qemu-kvm via your distros packages.
-* Download the debian image
-    $ `wget https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/debian-hurd.img.tar.gz`
-* Unpack it.
-    $ `tar -xz < debian-hurd.img.tar.gz`
-* Run it
-    $ `kvm -m 1G -drive cache=writeback,file=$(echo debian-hurd-*.img) -net user,hostfwd=tcp:127.0.0.1:2222-:22`
-    # Optionally use --curses to keep your keyboard layout. If need be modprobe kvm_amd, kvm intel and kvm to get kvm support (which is much, much faster).
+* Install qemu-kvm via your distribution's package manager (it might just be named qemu)
+
+* Download the debian image:
+
+<!-- Codeblocks nested in lists are garbage in Markdown. The only clean way to do this is by adding a comment after every list entry. Sorry about this!-->
+
+	$ wget https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/debian-hurd.img.tar.gz
+
+* Unpack it:
+
+<!-- Yes, another comment. I can leave these empty but then again I can fill them. -->
+
+	$ tar -xz < debian-hurd.img.tar.gz
+
+* Run it:
+
+<!-- A world in which nobody washes their dishes is a dishtopia -->
+
+	$ kvm -m 1G -drive cache=writeback,file=$(echo debian-hurd-*.img) -net user,hostfwd=tcp:127.0.0.1:2222-:22
+
 * Login as root (the root password is empty)
-* set up a root password with passwd
+
+* Set up a root password with passwd
+
+Optionally you may use `--curses` to keep your keyboard layout. If need be modprobe kvm_amd, kvm intel and kvm to get kvm support (which is much, much faster).
+
+Note that if you do not have a command named `kvm`, you can try something across the lines of:
+
+	$ qemu-system-i386 --enable-kvm -drive cche=writeback,file=$(echo debian-hurd-*.img) -net user,hostfwd=tcp:127.0.0.1:2222-:22
+
+Or, if your machine does not allow for KVM acceleration, omit `--enable-kvm` from the command.
+
+
 
 Please also read the README file: <https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/README>
 
+<!-- It is unconventional, in wikis, to write external links like [...](http://...).
+     Usually a link to an external site should always be fully visible, but I think
+     people can understand where these lead, but revert if this is a bad idea.-->
+
 If you have troubles extracting the image, you can use
-the gz version <https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/debian-hurd.img.gz>,
-the zip version <https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/debian-hurd.img.zip>,
-or even the plain version <https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/debian-hurd.img> (5GiB!)
+the [gz version](https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/debian-hurd.img.gz),
+the [zip version](https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/debian-hurd.img.zip),
+or even the [plain version](https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/debian-hurd.img) (5GiB!)
 
 See the discussion about [[hurd/running/qemu/writeback_caching]].
 

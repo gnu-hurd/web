@@ -8,7 +8,7 @@ Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
 is included in the section entitled [[GNU Free Documentation
 License|/fdl]]."]]"""]]
 
-Get or set command line options for a running [[translator]].
+fsysopts, or <strong>F</strong>ile<strong>SYS</strong>tem<strong>OPT</strong>ions, Gets or sets command line options for a running [[translator]].
 
 See [[documentation/translators#manage]].
 

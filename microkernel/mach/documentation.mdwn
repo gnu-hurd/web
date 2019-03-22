@@ -52,8 +52,7 @@ License|/fdl]]."]]"""]]
 # IRC, freenode, #hurd, 2013-09-15
 
     <teythoon> braunr: btw, are there multiple kernel threads in gnumach?
-    <teythoon> and is it safe to do a synchronous rpc call to a userspace
-      server?
+    <teythoon> and is it safe to do a synchronous rpc call to a userspace server?
     <braunr> teythoon: there are yes, but few
     <braunr> teythoon: the main (perhaps only) kernel thread is the page daemon
     <braunr> and no, it's not safe to do synchronous calls to userspace
