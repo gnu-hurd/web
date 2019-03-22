@@ -102,4 +102,4 @@ participated on our own, instead of as a suborganization of the GNU project.
 Read about our five students' success on the [[2008]] page.  In the next years,
 we again participated under the GNU umbrella with one slot in [[2009]], three
 in [[2010]], one in [[2011]], two in [[2012]], three in [[2013]] (one GNU, one
-GCC, one Debian), one in [[2014]], two in [[2015]], two in [[2016]].
+GCC, one Debian), one in [[2014]], two in [[2015]], two in [[2016]], one in [[2017]].

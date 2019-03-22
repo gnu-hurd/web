@@ -16,11 +16,7 @@ umbrella](http://www.gnu.org/software/soc-projects/).
 
 # Accepted projects
 
-## Porting GuixSD to GNU/Hurd (Manolis Ragkousis)
+## Porting LwIP to the GNU/Hurd (Joan Lledó)
 
-mentored by Justus Winter and Ludovic Courtès
-
-## Implement xattr Support of Hurd Project (Shengyu Zhang)
-
-mentored by Justus Winter and Richard Braun
+Mentored by Justus Winter and Thomas Schwinge
 
