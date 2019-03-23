@@ -1,5 +1,5 @@
-[[!meta copyright="Copyright © 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012,
-2013, 2014, 2016 Free Software Foundation, Inc."]]
+<!-- [[!meta copyright="Copyright © 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012,
+2013, 2014, 2016 Free Software Foundation, Inc."]] -->
 
 [[!meta license="""[[!toggle id="license" text="GFDL 1.2+"]][[!toggleable
 id="license" text="Permission is granted to copy, distribute and/or modify this
@@ -9,6 +9,8 @@ Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
 is included in the section entitled [[GNU Free Documentation
 License|/fdl]]."]]"""]]
 
+[[!meta title "QEMU Image"]]
+
 This page discusses things for [[Unix]] systems, there is a separate page for
 [[Microsoft_Windows]] systems.
 
@@ -16,6 +18,7 @@ See the discussion about [[hurd/running/qemu/writeback_caching]].
 
 [[!toc]]
 
+---
 # Readily Available Images
 
 You can use the following images to give the GNU/Hurd a try.
@@ -38,18 +41,21 @@ volunteers and may not have been tested extensively.
   with it, please have a look at [[its_wikipage|hurd/running/qemu/babhurd_image]]. And when 
   you use it, please [tell me your experience with it](http://draketo.de/contact)! - [[community/weblogs/ArneBab]]
 
+---
 # Arch Hurd Live CD
 
 Also you can use QEMU to easily try one of the
 [[Hurd_LiveCDs|hurd/running/live_cd/]].
 
 
+---
 # What is Needed to create a QEMU image
 
 ## Debian Installer
 
 Instructions for creating a qemu image from the install CDs from debian installer can be found in the README alongside the d-i Hurd images: <http://people.debian.org/~sthibault/hurd-i386/installer/cdimage/>
 
+---
 # KVM acceleration
 
 Check if your CPU supports kvm:
@@ -97,6 +103,7 @@ More info on kvm at: http://www.linux-kvm.org/page/FAQ
 
 If your machine supports hardware acceleration, you should really use the kvm variant of qemu, as it speeds things quite a lot.
 
+---
 # HAP/EPT/NPT acceleration
 
 Performance will be yet better if HAP (EPT or NPT) is available:
@@ -104,6 +111,7 @@ Performance will be yet better if HAP (EPT or NPT) is available:
     $ grep ept /proc/cpuinfo
     $ grep npt /proc/cpuinfo
 
+---
 # Installing Debian/Hurd with QEMU using the Debian installer
 
 Note: If you have hardware support, replace the qemu commands below with kvm, e.g. qemu-ing -> kvm-img.
@@ -195,7 +203,7 @@ During the graphical emulation, you can use the following keys:
     3 Serial port
     <Ctrl><Alt> Toggle mouse and keyboard grab.
 
-
+---
 # Transferring Files
 
 ## Mounting Disk Image on Host
@@ -230,7 +238,7 @@ loop-mounting the file systems images.  (Also you don't need `root' rights.)
 However, note that there is a bug in [[translator/fatfs]]: [[!GNU_Savannah_bug
 25961]].
 
-
+---
 # Networking in QEMU
 
 Some further notes about [[networking]] and home hints about
@@ -352,7 +360,8 @@ Once you have logged in as `root` run the `pfinet` translator with values that a
 
 That should do it! Do not forget to edit/update `/etc/resolv.conf` to get DNS working.
 
-# <a name="multiboot">Multiboot</a>
+---
+# Multiboot
 
 See "Linux/Multiboot boot specific" section on QEMU manpage.
 
@@ -381,6 +390,7 @@ You can also use `--append [...]`, which will show up in `/proc/cmdline`.
 
 Command line above crashes with old qemu versions, for instance qemu 1.1.2 on Debian Wheezy, fixed by upgrading to wheezy-backports currently qemu 1.7.0, see [[!debbug 741873]]
 
+---
 # Related Links
 
 These are links that users may find helpful.
