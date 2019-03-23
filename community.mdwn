@@ -12,36 +12,24 @@ License|/fdl]]."]]"""]]
 There is an ever expanding community of people developing and running GNU/Hurd
 systems! This page tries to list all the places on the Web where we commonly hang out.
 
-[[Communication]] -- How communication and coordination works within the group.
+---
+# Online Communities
 
-Further ways of getting in contact or getting information: 
-
-[[Shared-Wiki-Weblog|Weblogs]] -- A shared weblog by Hurd developers and enthusiasts. 
-
-[[User Pages|/user]]
-
-[[Meetings]] -- Meetings with Hurd developer attendance.
-
-[[GSoC]] -- Participation in the Google Summer of Code
-
-[[Hurd/HurdDevelopers]] -- Who's who?
-
-[Hurd User's Guide](http://www.gnu.org/software/hurd/users-guide/using_gnuhurd.html).
-
-[[Orkut]]
-
-[[FaceBook]]
-
-[Advogato.org -- Hurd Project page](http://advogato.org/proj/HURD/)
-
-[Google+](https://plus.google.com/114942488385711891227)
-
-[reddit](http://www.reddit.com/r/hurd)
-
-[[Media_Appearances]]
+* [[Communication]] -- How communication and coordination works within the group.
+* [[Shared-Wiki-Weblog|Weblogs]] -- A shared weblog by Hurd developers and enthusiasts. 
+* [[User Pages|/user]]
+* [[Meetings]] -- Meetings with Hurd developer attendance.
+* [[GSoC]] -- Participation in the Google Summer of Code
+* [[Hurd/HurdDevelopers]] -- Who's who?
+* [Hurd User's Guide](http://www.gnu.org/software/hurd/users-guide/using_gnuhurd.html).
+* [[Orkut]]
+* [[FaceBook]]
+* [Advogato.org -- Hurd Project page](http://advogato.org/proj/HURD/)
+* [Google+](https://plus.google.com/114942488385711891227)
+* [reddit](http://www.reddit.com/r/hurd)
+* [[Media_Appearances]]
 
 ---
-
 # Hurd User Groups
 
 * [[THUG]] - Toronto (GNU/)Hurd User Group
