@@ -83,3 +83,4 @@ One noteable difference in this port, is that `/etc/mtab` -> `/proc/mounts`
 * Debian [[FAQ]] — Frequently Asked Questions
 * [Presentation](http://people.debian.org/~mbanck/talks/hurd_lt2004/html/) -Debian GNU/Hurd*, [[MichaelBanck]], LinuxTag 2004 Karlsruhe
 * [Archive Qualification](http://wiki.debian.org/ArchiveQualification/hurd-i386)
+* [[!wikipedia Debian_GNU/Hurd]] on Wikipedia
