@@ -33,8 +33,8 @@ development closely tracks [[standards such as ANSI/ISO, BSD, POSIX, Single
 Unix, SVID, and X/Open|faq/posix_compatibility]].
 
 ## GPLv3 Compliant
-It's free software, so anybody can use, modify, and redistribute it under the
-terms of the [[GNU General Public License v3 (GPLv3)|GPL]].
+The Hurd is built from the ground up as 100% Free Software, so anybody can use, modify, and redistribute it as they please, under the
+terms of the [[GNU General Public License v3 (GPLv3)|GPL]]!
 
 
 ## Object-Orriented Design
