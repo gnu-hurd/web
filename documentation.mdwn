@@ -15,7 +15,7 @@ or specific components of it?  Here is a collection of texts to read.
 
 [[!toc levels=3]]
 
-
+---
 # Basic Knowledge
 
 Before you can go details, you have to learn the basics about operating system
@@ -50,17 +50,18 @@ text="*[[shapiro\_capintro\_1999|capability]]*:
     does a good job at describing general principles of a [[capability]]-based
     system architecture.
 
-
+---
 # Quick overview
 
 You may want to start reading a [[quick overview|overview]] of how the GNU/Hurd system
 starts, and thus how it is structured.
 
+---
 # FAQ
 
 [[FAQ]]
 
-
+---
 # Specific Components
 
 The GNU/Hurd system is composed of the Hurd servers running on top of the
@@ -80,7 +81,7 @@ from userlandish interfaces (Hurd) or from the micro kernel itself (Mach).
 
   * [[UNIX]]
 
-
+---
 # Presentations
 
 ## 2019
@@ -137,10 +138,12 @@ from userlandish interfaces (Hurd) or from the micro kernel itself (Mach).
     <http://debian.fmi.uni-sofia.bg/~ogi/hurd/liofest-20040702-hurd.ppt>, in
     Bulgarian.
 
+---
 # General
 
   * [[Media_Appearances]]
 
+---
 # IRC Logs
 
 The IRC logs contain wealth of information.  Many topics have been covered before in the IRC logs.  You can use wget to
