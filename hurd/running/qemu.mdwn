@@ -21,7 +21,7 @@ See the discussion about [[hurd/running/qemu/writeback_caching]].
 ---
 # Readily Available Images
 
-You can use the following images to give the GNU/Hurd a try.
+You can use the following images to give the Hurd a try.
 
 ## Debian GNU/Hurd
 
