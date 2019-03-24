@@ -1,4 +1,4 @@
-[[!meta title="NG Hurd"]]
+[[!meta title="Hurd NG"]]
 
 Hurd-ng is an effort to build a new, "Next Generation" operating system that preserves
 the main design goals of the Hurd while fixing some of the Hurd's
