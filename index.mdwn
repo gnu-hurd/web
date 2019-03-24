@@ -33,7 +33,7 @@ computing environment as possible.
 
 [[!toc levels=2]]
 
-
+---
 # News
 
 [[!inline
@@ -51,7 +51,7 @@ Older news entries can be found in the [[news archive|news]].  For Hurd
 developers' musings have a look at the [[shared weblog|community/weblogs]].
 The [[recent changes]] page lists the latest changes of this website.
 
-
+---
 # Contributing
 
 So, you are interested in contributing to the GNU Hurd project?  Welcome!
@@ -65,7 +65,7 @@ See our [[source_repositories]] for the source code.
 We provide accounts on our [[public_Hurd_boxen]], and there are also several GNU/Hurd [[Distributions|hurd/running/distrib]] that allow for
 [[hurd/running/QEMU]] emulation.
 
-
+---
 # Getting Help
 
 There are a couple of different [[FAQ lists|FAQ]].
@@ -77,7 +77,7 @@ answer your own question using a search engine and reading the introductory
 information.  If you have done this and you cannot find the answer to your
 question, feel free to ask on a mailing list or on IRC.
 
-
+---
 <a name="run"> </a>
 # Running the Hurd
 
@@ -95,7 +95,7 @@ Three of them are
 And these web pages are a living proof of the usability of the Hurd, as they
 are rendered on a [[Debian_GNU/Hurd|hurd/running/debian]] system.
 
-
+---
 # Current Status
 
 The latest releases are [[GNU Hurd 0.9, GNU Mach 1.8, GNU MIG
