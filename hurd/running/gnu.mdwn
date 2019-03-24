@@ -22,7 +22,7 @@ provide a flexible operating system.
 
 However, [[gnu.org|https://www.gnu.org/distros/free-distros.html]] maintains a
 list of freedom respecting and production ready GNU/Linux systems.  One of the
-most promising of these is [[guixSD|https://www.gnu.org/software/guix/]], which
+most promising of these is [[GuixSD|https://www.gnu.org/software/guix/]], which
 is the GNU Guix System Distribution, which eventually plans to support the GNU
 Hurd as the kernel! 
 
