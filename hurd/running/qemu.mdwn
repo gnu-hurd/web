@@ -269,14 +269,11 @@ but note that `ping` doesn't work with QEMU's user-networking stack.
 If you want to connect from the host system to the Hurd system running in QEMU, you can use port forwarding in QEMU or to setup something more advanced, like bridged networking.
 
 
-### IRC, freenode, #hurd, 2014-02-12
+#### IRC, freenode, #hurd, 2014-02-12
 
-    <braunr> youpi: also, the problems i had with regard to accessing the
-      debian repository were caused by a qemu bug where, in nat mode, qemu is
-      unable to handle dns requests if the host dns servers are ipv6 ones
+    <braunr> youpi: also, the problems i had with regard to accessing the debian repository were caused by a qemu bug where, in nat mode, qemu is unable to handle dns requests if the host dns servers are ipv6 ones
     <youpi> yes, we've noticed that with a student of mine
-    <youpi> you may be interested by a patch we submitted to qemu-devel, that
-      adds ipv6 support to -net user :)
+    <youpi> you may be interested by a patch we submitted to qemu-devel, that adds ipv6 support to -net user :)
     <braunr> :)
     <braunr> for now i directly change resolv.conf
     <youpi> braunr: the issue is that you have only ipv6 nameservers, right?
