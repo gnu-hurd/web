@@ -1,3 +1,5 @@
+[[!meta title="Mission Statement"]]
+
 For a while I have been thinking about the lack of a roadmap for the
 Hurd; but now I realized that we lack something even more fundamental: a
 simple mission statement -- i.e. saying where we want to go, rather
