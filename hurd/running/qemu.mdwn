@@ -9,7 +9,7 @@ Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
 is included in the section entitled [[GNU Free Documentation
 License|/fdl]]."]]"""]]
 
-[[!meta title "QEMU Image"]]
+[[!meta title="QEMU Image"]]
 
 This page discusses things for [[Unix]] systems, there is a separate page for
 [[Microsoft_Windows]] systems.
