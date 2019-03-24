@@ -19,7 +19,7 @@ either.
 
 [[!toc levels=2]]
 
-
+---
 # Free Software Foundation
 
 The Free Software Foundation is the GNU project's principal organizational
@@ -27,7 +27,7 @@ sponsor.  [Donations to the FSF](http://donate.fsf.org/) are tax deducible.
 However, they can't accept donations addressed directly to/specifically for the
 GNU Hurd project.
 
-
+---
 <a name="FOSS_Factory"></a>
 # FOSS Factory -- a Bounty System for GNU Hurd Work
 
@@ -92,14 +92,14 @@ Please don't hesitate to ask [[Thomas Schwinge|tschwinge]] if you need help.
 
 Continue to explore the [[list of open bounties|tag/bounty]].
 
-
+---
 # Hurd Developer Meetings
 
 Another possibility is to meet with the Hurd developers at a
 [[meeting|community/meetings]] and buy them a pizza or beer or both or
 similar.
 
-
+---
 # Individual Developers
 
 Sorted alphabetically.
