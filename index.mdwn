@@ -26,6 +26,8 @@ computing environment as possible.
 </div>
 </div>
 
+Download latest stable release [here](https://ftp.gnu.org/gnu/hurd/hurd-0.9.tar.gz) or [browse the Git repository](https://git.savannah.gnu.org/cgit/hurd).
+
 ---
 
 [[!toc levels=2]]
