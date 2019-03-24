@@ -32,6 +32,9 @@ For all intents and purposes, the Hurd provides the same facilities as a modern
 development closely tracks [[standards such as ANSI/ISO, BSD, POSIX, Single
 Unix, SVID, and X/Open|faq/posix_compatibility]].
 
+What this means, on a higher level, is that any program written for another POSIX-compliant system (such as Linux or newer UNIX systems), 
+can be built, installed, and run on the Hurd. This means that, unlike, say, Plan 9 or Haiku, there's a huge library of programs already availble for the Hurd (and we mean *natively*, not under an emulator or a compatibility layer)!
+
 ## GPLv3 Compliant
 The Hurd is built from the ground up as 100% Free Software, so anybody can use, modify, and redistribute it as they please, under the
 terms of the [[GNU General Public License v3 (GPLv3)|GPL]]!
