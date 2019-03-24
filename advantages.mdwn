@@ -16,31 +16,34 @@ The GNU Hurd is an incredible kernel, which has a number of enticing features:
 
 * POSIX compliant
 * GPLv3 compliant
-* Modularity
-* Scalability
-* Extensibility
 * Object-orriented design
-* Servers can be written with different languages
-* Educational, due to easy modification
-* Can develop/use modules without needing a reboot
+* Modularity
+* Extensibility
+* Educational
+* No-reboot Design
 * And of course, Translators
 
-For more details on these advantages, refer to the paragraphs below:
+For more details on these advantages, refer to the sections below:
 
-It's free software, so anybody can use, modify, and redistribute it under the
-terms of the [[GNU General Public License v3 (GPLv3)|GPL]].
-
+## POSIX Compliant
 It's compatible as it provides a familiar programming and user environment.
 For all intents and purposes, the Hurd provides the same facilities as a modern
 [[Unix]]-like kernel.  The Hurd uses the [[GNU C Library|glibc]], whose
 development closely tracks [[standards such as ANSI/ISO, BSD, POSIX, Single
 Unix, SVID, and X/Open|faq/posix_compatibility]].
 
+## GPLv3 Compliant
+It's free software, so anybody can use, modify, and redistribute it under the
+terms of the [[GNU General Public License v3 (GPLv3)|GPL]].
+
+
+## Object-Orriented Design
 Unlike other popular kernel software, the Hurd has an object-oriented structure
 that allows it to evolve without compromising its design.  This structure will
 help the Hurd undergo major redesign and modifications without having to be
 entirely rewritten.
 
+## Modularity
 The Hurd is built in a very modular fashion.  Other Unix-like kernels (Linux,
 for example) are also modular in that they allow loading (and unloading) some
 components as kernel modules, but the Hurd goes one step further in that most
@@ -52,6 +55,7 @@ the [[TCP/IP stack|hurd/translator/pfinet]] can bring down the whole kernel,
 and thus the whole system, which is a real problem in a monolithic Unix kernel
 architecture.
 
+## Extensibility
 One advantage of the Hurd's separation of kernel-like functionality into
 separate components ([[servers|hurd/translator]]) is that these can be
 constructed using different programming languages -- a feature that is not
@@ -71,10 +75,13 @@ See also [[unsorted/hurd-migr]] ([[!taglink open_issue_documentation]]).
 
 -->
 
+## Educational
 The Hurd is an attractive platform for learning how to become a kernel hacker
 or for implementing new ideas in kernel technology.  Every part of the system
 is designed to be [[easily modified and extended|extensibility]].
 
+
+## No-Reboot Design
 It is possible to develop and test new Hurd kernel components without rebooting
 the machine.  Running your own kernel components doesn't interfere with other
 users, and so no special system privileges are required.  The mechanism for
