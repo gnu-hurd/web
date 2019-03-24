@@ -13,15 +13,10 @@ License|/fdl]]."]]"""]]
 
 
 # Essential Documentation
-
   * [[Frequently Asked Questions|faq]]
-
       * [[faq/Multiserver_Microkernel]]
-
   * GNU Mach's [[microkernel/mach/gnumach/Hardware_Compatibility_List]]
-
   * [[Documentation]]
-
 
 # Forums
 
