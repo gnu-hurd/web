@@ -83,6 +83,8 @@ The Hurd is an attractive platform for learning how to become a kernel hacker
 or for implementing new ideas in kernel technology.  Every part of the system
 is designed to be [[easily modified and extended|extensibility]].
 
+For more learning resources, see the [[/Documentation]] page.
+
 
 ## No-Reboot Design
 It is possible to develop and test new Hurd kernel components without rebooting
