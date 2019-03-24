@@ -12,7 +12,20 @@ License|/fdl]]."]]"""]]
 
 [[!tag stable_URL]]
 
-The GNU Hurd has a number of enticing features:
+The GNU Hurd is an incredible kernel, which has a number of enticing features:
+
+* POSIX compliant
+* GPLv3 compliant
+* Modularity
+* Scalability
+* Extensibility
+* Object-orriented design
+* Servers can be written with different languages
+* Educational, due to easy modification
+* Can develop/use modules without needing a reboot
+* And of course, Translators
+
+For more details on these advantages, refer to the paragraphs below:
 
 It's free software, so anybody can use, modify, and redistribute it under the
 terms of the [[GNU General Public License v3 (GPLv3)|GPL]].
