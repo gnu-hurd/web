@@ -8,6 +8,8 @@ Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
 is included in the section entitled [[GNU Free Documentation
 License|/fdl]]."]]"""]]
 
+[[!meta title="Challenges"]]
+
 The GNU Hurd has a lot of [[advantages]], but there are challenges, too.
 
 Some of these are explained in the [[hurd/critique]].
