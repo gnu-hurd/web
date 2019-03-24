@@ -48,3 +48,7 @@ A 2002 article about [[microkernel_FUD|FUD]] (Fear, Uncertainty, Doubt).
   * [[Barrelfish]]
   * [[Viengoos]]
   * [[Genode]]
+
+---
+# External Links
+* [[!wikipedia Microkernel]] on Wikipedia
