@@ -9,6 +9,8 @@ Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
 is included in the section entitled [[GNU Free Documentation
 License|/fdl]]."]]"""]]
 
+[[!meta title="Microkernel"]]
+
 A *microkernel* is one kind of a [[kernel]] implementation.
 
 [[Liedtke]] explains in [On Microkernel Construction](http://l4ka.org/publications/paper.php?docid=642)
