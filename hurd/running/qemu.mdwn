@@ -27,7 +27,11 @@ You can use the following images to give the GNU/Hurd a try.
 
 [[!inline pages=hurd/running/debian/qemu_image raw=yes feeds=no]]
 
-## [[Nix]]
+## Arch Hurd Live CD
+
+[[!inline pages=hurd/running/live_cd raw=yes feeds=no]]
+
+## [[NixOS and GuixSD|Nix]]
 
 ## Unofficial Images
 
@@ -41,11 +45,7 @@ volunteers and may not have been tested extensively.
   with it, please have a look at [[its_wikipage|hurd/running/qemu/babhurd_image]]. And when 
   you use it, please [tell me your experience with it](http://draketo.de/contact)! - [[community/weblogs/ArneBab]]
 
----
-# Arch Hurd Live CD
 
-Also you can use QEMU to easily try one of the
-[[Hurd_LiveCDs|hurd/running/live_cd/]].
 
 
 ---
