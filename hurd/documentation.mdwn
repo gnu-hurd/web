@@ -11,8 +11,8 @@ is included in the section entitled
 
 # Introductory Material
   * [[What_Is_the_GNU_Hurd]]
-  * [[Advantages]]
-  * [[FAQ]]
+  * [[Advantages of the Hurd|Advantages]]
+  * [[The Hurd FAQ|FAQ]]
   * [[*The_Hurd_and_Linux*|/hurd-and-linux]], a comment by Richard Stallman.
 
 <!-- This comment "pushes" RMS's comment back into the list. Markdown is just great. -->
