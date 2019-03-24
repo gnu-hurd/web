@@ -28,4 +28,6 @@ Hurd as the kernel!
 
 ## Resources
 
-  * [[mailing_lists/gnu-system-discuss]] mailing list
+* [[mailing_lists/gnu-system-discuss]] mailing list
+* [Free as in Freedom 2.0 (PDF)](https://static.fsf.org/nosvn/faif-2.0.pdf)
+* [Free Software, Free Society](https://www.gnu.org/philosophy/fsfs/rms-essays.pdf)
