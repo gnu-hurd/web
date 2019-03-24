@@ -18,4 +18,4 @@ Arch Hurd is a port of Arch Linux to the GNU Hurd, founded on 2010-01-04 by Mich
 * Installation Guide: <http://wiki.archhurd.org/wiki/Installation_Guide>
 * Mailing Lists: <http://lists.archhurd.org>
 * Forum: <http://bbs.archhurd.org>
-* IRC: #archhurd on irc.freenode.net
+* IRC: #archhurd on [irc.freenode.net](https://freenode.net)
