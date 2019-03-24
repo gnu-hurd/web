@@ -9,6 +9,8 @@ Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
 is included in the section entitled [[GNU Free Documentation
 License|/fdl]]."]]"""]]
 
+[[!meta title="Donate to the Hurd"]]
+
 If you feel like donating goods or money for the work the developers are doing,
 then we're happy to confirm that this is indeed possible.  Of course we'd
 really like to have you working with us on the system and become a
