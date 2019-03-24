@@ -1,5 +1,5 @@
-[[!meta copyright="Copyright © 2011, 2012, 2014, 2016 Free Software Foundation,
-Inc."]]
+<!-- [[!meta copyright="Copyright © 2011, 2012, 2014, 2016 Free Software Foundation,
+Inc."]] -->
 
 [[!meta license="""[[!toggle id="license" text="GFDL 1.2+"]][[!toggleable
 id="license" text="Permission is granted to copy, distribute and/or modify this
@@ -9,34 +9,24 @@ Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
 is included in the section entitled [[GNU Free Documentation
 License|/fdl]]."]]"""]]
 
+[[!meta title="Debian's QEMU Image"
+
 There is a QEMU image with [[Debian GNU/Hurd|debian]] pre-installed available
-as <https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/debian-hurd.img.tar.gz>.
+at <https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/debian-hurd.img.tar.gz>.
 
 Usage:
 
 * Install qemu-kvm via your distribution's package manager (it might just be named qemu)
+* Download the image, unpack it, and run it:
 
-* Download the debian image:
-
-<!-- Codeblocks nested in lists are garbage in Markdown. The only clean way to do this is by adding a comment after every list entry. Sorry about this!-->
+<!-- Code snippits embedded in lists are garbage. Do not remove this comment. -->
 
 	$ wget https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/debian-hurd.img.tar.gz
-
-* Unpack it:
-
-<!-- Yes, another comment. I can leave these empty but then again I can fill them. -->
-
 	$ tar -xz < debian-hurd.img.tar.gz
-
-* Run it:
-
-<!-- A world in which nobody washes their dishes is a dishtopia -->
-
 	$ kvm -m 1G -drive cache=writeback,file=$(echo debian-hurd-*.img) -net user,hostfwd=tcp:127.0.0.1:2222-:22
 
 * Login as root (the root password is empty)
-
-* Set up a root password with passwd
+* Set up a root password with `passwd`
 
 Optionally you may use `--curses` to keep your keyboard layout. If need be modprobe kvm_amd, kvm intel and kvm to get kvm support (which is much, much faster).
 
