@@ -1,3 +1,5 @@
+[[!meta title="The GNU System"]]
+
 # <a name="The_GNU_Operating_System"> </a> The GNU Operating System
 
 The GNU Operating System, Commonly referred to as simply "The GNU System", is a
