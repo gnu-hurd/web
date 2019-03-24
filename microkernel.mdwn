@@ -37,25 +37,15 @@ An [introduction](http://www.cs.cornell.edu/Info/People/ulfar/ukernel/ukernel.ht
 
 A 2002 article about [[microkernel_FUD|FUD]] (Fear, Uncertainty, Doubt).
 
-
-# Implementations
-
+---
+# Microkernel Implementations
   * [[Hydra]]
-
   * [[KeyKOS]]
-
   * [[Mach]] -- used by the GNU/Hurd
-
   * [[EROS]]
-
   * [[CapROS]]
-
   * [[Coyotos]]
-
   * [[L4]]
-
   * [[Barrelfish]]
-
   * [[Viengoos]]
-
   * [[Genode]]
