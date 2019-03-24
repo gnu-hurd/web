@@ -1,4 +1,6 @@
-Hurd-ng is an effort to build a new operating system that preserves
+[[!meta title="NG Hurd"]]
+
+Hurd-ng is an effort to build a new, "Next Generation" operating system that preserves
 the main design goals of the Hurd while fixing some of the Hurd's
 shortcomings.  There is not yet an official roadmap or a concrete
 specification; indeed, much of the work is research oriented.
