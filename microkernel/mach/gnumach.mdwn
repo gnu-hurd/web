@@ -1,4 +1,4 @@
-[comment]: <> [[!meta copyright="Copyright © 2001, 2002, 2007, 2008, 2011, 2013, 2015, 2016 Free Software Foundation, Inc."]]
+[//]: # (meta copyright="Copyright © 2001, 2002, 2007, 2008, 2011, 2013, 2015, 2016 Free Software Foundation, Inc.")
 
 [[!meta license="""[[!toggle id="license" text="GFDL 1.2+"]][[!toggleable
 id="license" text="Permission is granted to copy, distribute and/or modify this
@@ -27,7 +27,7 @@ GNU Mach runs on x86 machines.  See the
 
 The latest release is [[GNU Mach 1.8|news/2016-12-18-releases]].
 
-
+---
 # Advantages of GNU Mach
 
 GNU Mach is not the most advanced [[microkernel]] known to the planet, nor is
@@ -65,7 +65,7 @@ features which make it useful as the base of the [[Hurd]] system.
     Mach is the base of a functional multi-server operating system, the
     [[Hurd]].
 
-
+---
 # Booting
 
 To actually use the kernel and boot the GNU operating system, you need a boot
@@ -74,7 +74,7 @@ that supports the multiboot standard.  The bootloader of the GNU system is
 [[GNU_GRUB|grub]], which supports a broad range of operating systems including
 GNU/Hurd.
 
-
+---
 # Development
 
   * [[Reference_Manual]]
