@@ -17,10 +17,7 @@ KeyKOS is secure. Every operating system wants to be "secure", but what is the "
 The article "KeyKOS - A Secure, High-Performance Environment for S/370" describes that there are some aspects of KeyKOS which are difficult to understand, as they stray from OS convention. It advises the reader, when learning about KeyKOS, to think of the Monty Python quote "And now for something completely different".
 
 # External Links
-<!-- I'm getting tired. Usually I'd be able to write a few pages and then some, but I guess I was up too late yesterday & too early today.
-     Going to finish up doing research on KeyKOS and write the rest of this page tomorrow morning. -->
-[KeyKOS](https://web.archive.org/web/20110621235952/https://www.cis.upenn.edu/~KeyKOS/KeyKOS.html) on the Wayback Machine.
-
-[Roots of KeyKOS](http://www.cap-lore.com/CapTheory/KK/EKK.html) - A short but comprehensive history.
-
-[The DOD Orange Book (PDF)](https://csrc.nist.gov/csrc/media/publications/conference-paper/1998/10/08/proceedings-of-the-21st-nissc-1998/documents/early-cs-papers/dod85.pdf) - The book itself is really expensive to buy, so here's some PDF file of it.
+* [KeyKOS](https://web.archive.org/web/20110621235952/https://www.cis.upenn.edu/~KeyKOS/KeyKOS.html) on the Wayback Machine.
+* [Roots of KeyKOS](http://www.cap-lore.com/CapTheory/KK/EKK.html) - A short but comprehensive history.
+* [The DOD Orange Book (PDF)](https://csrc.nist.gov/csrc/media/publications/conference-paper/1998/10/08/proceedings-of-the-21st-nissc-1998/documents/early-cs-papers/dod85.pdf) - The book itself is really expensive to buy, so here's some PDF file of it.
+* [The DOD Orange Book - 2014 print (PDF)](https://web.archive.org/web/20140429193839/http://www.dtic.mil/whs/directives/corres/pdf/850001_2014.pdf) - The re-issue.
