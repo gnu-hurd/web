@@ -23,7 +23,7 @@ Usage:
 
 	$ wget https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/debian-hurd.img.tar.gz
 	$ tar -xz < debian-hurd.img.tar.gz
-	$ kvm -m 1G -drive cache=writeback,file=$(echo debian-hurd-*.img) -net user,hostfwd=tcp:127.0.0.1:2222-:22
+	$ kvm -m 1G -drive cache=writeback,file=$(echo debian-hurd-*.img) -no-reboot -net user,hostfwd=tcp:127.0.0.1:2222-:22
 
 * Login as root (the root password is empty)
 * Set up a root password with `passwd`
