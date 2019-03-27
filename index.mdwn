@@ -87,9 +87,9 @@ Find more information about it at the
 Along with it there are [[various_ways|hurd/running]] to run a GNU/Hurd system. 
 Three of them are
 
-* installing a [[GNU/Hurd_distribution|hurd/running/distrib]], 
-* running it [[in_Xen|microkernel/mach/gnumach/ports/xen]] and 
-* starting a Hurd [[QEMU_image|hurd/running/qemu]] or [[LiveCD|hurd/running/live_cd/]].
+* Installing a [[GNU/Hurd_distribution|hurd/running/distrib]], 
+* Running it [[in_Xen|microkernel/mach/gnumach/ports/xen]] and 
+* Starting a Hurd [[QEMU_image|hurd/running/qemu]] or [[LiveCD|hurd/running/live_cd/]].
 
 And these web pages are a living proof of the usability of the Hurd, as they
 are rendered on a [[Debian_GNU/Hurd|hurd/running/debian]] system.
