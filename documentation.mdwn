@@ -8,12 +8,12 @@ License|/fdl]]."]]"""]]
 
 [[!meta title="Documentation"]]
 
-You are interested in getting familiar with the GNU/Hurd system architecture,
+Are you interested in getting familiar with the GNU/Hurd system architecture,
 or specific components of it?  Here is a collection of texts to read.
 
 /!\ A lot of stuff is still missing (see the list of [[!taglink Documentation_Issues|open_issue_documentation]]).
 
-[[!toc levels=3]]
+[[!toc levels=1]]
 
 ---
 # Basic Knowledge
@@ -31,38 +31,15 @@ architecture.  Yes, really. You needn't go through all of these, but they're all
 * [Modern Operating Systems](https://en.wikipedia.org/wiki/Modern_Operating_Systems) - This book has achieved world-wide praise. Of course [the Plan-9 people don't like it](http://harmful.cat-v.org/software/andy_tanenbaum).
 
 ## GNU/Hurd System Architecture
-
+You may want to start reading a [[quick overview|overview]] of how the GNU/Hurd system
+starts, and thus how it is structured. Also see our [[FAQ]]
 
 ### Capabilities
+  * Read up on [[Capabilities|capability]], [[!wikipedia Capability_Based_Security]],
+    and, [What is a Capability, Anyway?](https://archive.is/20130112225523/http://www.eros-os.org/essays/capintro.html)
 
-[[!toggleable id=shapiro_capintro_1999 text="""[[!template id=note
-text="*[[shapiro\_capintro\_1999|capability]]*:
-{{$capability#shapiro_capintro_1999}}.
-{{$capability#shapiro_capintro_1999_text}}."]]"""]]
-
-  * Our use of [[capabilities|capability]].  The
-    {{$capability#wikipedia_capability-based_security}} article.
-    Alternatively/additionally, [[!toggle id=shapiro_capintro_1999
-    text="[shapiro\_capintro\_1999]"]].
-
-    In the GNU/Hurd system, a [[capability]] is represented by a [[Mach
+    In the GNU/Hurd system, a capability is represented by a [[Mach
     port|microkernel/mach/port]].
-
-  * {{$capability#wikipedia_object-capability_model}}.  Albeit not directly
-    tailored at the GNU/Hurd operating system architecture, this article anyway
-    does a good job at describing general principles of a [[capability]]-based
-    system architecture.
-
----
-# Quick overview
-
-You may want to start reading a [[quick overview|overview]] of how the GNU/Hurd system
-starts, and thus how it is structured.
-
----
-# FAQ
-
-[[FAQ]]
 
 ---
 # Specific Components
@@ -77,11 +54,8 @@ Depending on your background, you may want to start reading the documentation
 from userlandish interfaces (Hurd) or from the micro kernel itself (Mach).
 
   * [[GNU_Hurd|hurd/documentation]]
-
   * [[Mach|microkernel/mach/documentation]]
-
   * [[MIG|microkernel/mach/mig/documentation]]
-
   * [[UNIX]]
 
 ---
@@ -152,4 +126,4 @@ from userlandish interfaces (Hurd) or from the micro kernel itself (Mach).
 The IRC logs contain wealth of information.  Many topics have been covered before in the IRC logs.  You can use wget to
 download all of the logs and grep for the information that you want.
 
-`wget --mirror --no-parent -A "hurd-*" -e robots=off http://richtlijn.be/~larstiq/hurd/`
+     `wget --mirror --no-parent -A "hurd-*" -e robots=off http://richtlijn.be/~larstiq/hurd/`
