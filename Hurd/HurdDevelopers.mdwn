@@ -13,4 +13,5 @@ The Hurd has very few people working on it. This is a list of people who are (or
 * Samuel Thibault - Maintainer
 * Thomas Bushnell - Original maintainer
 * Joshua Branson - Developer
+* Richard Braun - Owner of darnassus.sceen.net
 * Manolis Ragkousis - Hurd support for Guix
