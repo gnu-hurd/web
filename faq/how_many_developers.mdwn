@@ -34,7 +34,7 @@ development.  For one, this is a good thing: independency; no conflicts of
 interests.  For another, it is also a bad thing: no dedicated full-time
 workforce -- which matters a lot.
 
-This also answers the question "[[How_come_the Hurd still does not do_(...)_after so
+This also answers the question "[[How_come_the Hurd still can't do_(...)_after so
 many years of development?|so_many_years]]"
 
 
