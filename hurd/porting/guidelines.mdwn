@@ -198,7 +198,7 @@ kernel. This should be replaced by `#if defined(__MACH__) && defined(__APPLE__)`
 
 Some applications unconditionally use Darwin-specific functions coming
 from `mach/clock.h` to get the clock.  This is unnecessarily unportable,
-`clock_gettime` can simply be used instead, and the `#ifdef __MACH__` guard for the `mach/clock.h`
+`clock` or `clock_gettime` can simply be used instead, and the `#ifdef __MACH__` guard for the `mach/clock.h`
 inclusion be fixed as explained above.
 
 ## <a name="GNU_specific_define_tt_"> </a> GNU specific `#define`
