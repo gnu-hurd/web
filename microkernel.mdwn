@@ -1,5 +1,4 @@
-[[!meta copyright="Copyright © 2007, 2008, 2010, 2012, 2013, 2014 Free Software
-Foundation, Inc."]]
+[//]: # ([[meta copyright="Copyright © 2007, 2008, 2010, 2012, 2013, 2014 Free Software Foundation, Inc."]])
 
 [[!meta license="""[[!toggle id="license" text="GFDL 1.2+"]][[!toggleable
 id="license" text="Permission is granted to copy, distribute and/or modify this
@@ -8,6 +7,8 @@ any later version published by the Free Software Foundation; with no Invariant
 Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
 is included in the section entitled [[GNU Free Documentation
 License|/fdl]]."]]"""]]
+
+[[!meta title="Microkernel"]]
 
 A *microkernel* is one kind of a [[kernel]] implementation.
 
@@ -35,25 +36,19 @@ An [introduction](http://www.cs.cornell.edu/Info/People/ulfar/ukernel/ukernel.ht
 
 A 2002 article about [[microkernel_FUD|FUD]] (Fear, Uncertainty, Doubt).
 
-
-# Implementations
-
+---
+# Microkernel Implementations
   * [[Hydra]]
-
   * [[KeyKOS]]
-
   * [[Mach]] -- used by the GNU/Hurd
-
   * [[EROS]]
-
   * [[CapROS]]
-
   * [[Coyotos]]
-
   * [[L4]]
-
   * [[Barrelfish]]
-
   * [[Viengoos]]
-
   * [[Genode]]
+
+---
+# External Links
+* [[!wikipedia Microkernel]] on Wikipedia

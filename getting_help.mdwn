@@ -9,17 +9,14 @@ Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
 is included in the section entitled [[GNU Free Documentation
 License|/fdl]]."]]"""]]
 
+[[!meta title="Getting Help"]]
+
 
 # Essential Documentation
-
   * [[Frequently Asked Questions|faq]]
-
       * [[faq/Multiserver_Microkernel]]
-
   * GNU Mach's [[microkernel/mach/gnumach/Hardware_Compatibility_List]]
-
   * [[Documentation]]
-
 
 # Forums
 

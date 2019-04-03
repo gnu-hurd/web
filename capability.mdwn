@@ -1,5 +1,4 @@
-[[!meta copyright="Copyright © 2007, 2008, 2010, 2011, 2013 Free Software
-Foundation, Inc."]]
+[//]: # ([[meta copyright="Copyright © 2007, 2008, 2010, 2011, 2013 Free Software Foundation, Inc."]])
 
 [[!meta license="""[[!toggle id="license" text="GFDL 1.2+"]][[!toggleable
 id="license" text="Permission is granted to copy, distribute and/or modify this
@@ -8,6 +7,8 @@ any later version published by the Free Software Foundation; with no Invariant
 Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
 is included in the section entitled [[GNU Free Documentation
 License|/fdl]]."]]"""]]
+
+[[!meta title="Capability"]]
 
 A capability is a protected reference.  It is a reference in that
 it designates an object; it is protected in that in cannot be
@@ -89,37 +90,22 @@ port|microkernel/mach/port]].  As in UNIX (see above), they are not
 
 ## IRC, freenode, #hurd, 2013-07-01
 
-    <nlightnfotis> I have read plenty of documents, and wrapped my head around
-      most Hurd concepts, but I still have not understood well what
-      capabilities are.
+    <nlightnfotis> I have read plenty of documents, and wrapped my head around most Hurd concepts, but I still have not understood well what capabilities are.
     <youpi> Mmm, which capabilities?
-    <youpi> AIUI, the Hurd doesn't really have a notion of capabilites, just a
-      notion of owning a port right
-    <nlightnfotis> From what I have understood (from the critique) they
-      reference ports so they objects can be referenced via them
+    <youpi> AIUI, the Hurd doesn't really have a notion of capabilites, just a notion of owning a port right
+    <nlightnfotis> From what I have understood (from the critique) they reference ports so they objects can be referenced via them
     <youpi> (which provides processes a way for doing things)
     <youpi> ok, so we are talking about the same thing, I guess
-    <nlightnfotis> ahh, that's cool. I thought there was more to the story that
-      I couldn't understand
+    <nlightnfotis> ahh, that's cool. I thought there was more to the story that I couldn't understand
 
 
 # Further Reading
+* [[Mach port|microkernel/mach/port]]
+* {{$wikipedia_capability-based_security}}
+* {{$wikipedia_object-capability_model}}
+* {{$wikipedia_polp}}
 
-  * [[Mach port|microkernel/mach/port]]
-
-[[!toggleable id=shapiro_capintro_1999 text="""[[!template id=note
-text="*[[shapiro\_capintro\_1999|capability]]*:
-{{$capability#shapiro_capintro_1999}}.
-{{$capability#shapiro_capintro_1999_text}}."]]"""]]
-
-  * [[!toggle id=shapiro_capintro_1999 text="[shapiro\_capintro\_1999]"]]
-
-  * {{$wikipedia_capability-based_security}}
-
-  * {{$wikipedia_object-capability_model}}
-
-  * {{$wikipedia_polp}}
-
+<!-- This comment "pushes" polp into the list -->
 
 [[!tag open_issue_documentation]] <!--
 <http://www.eros-os.org/essays/wherefrom.html>,

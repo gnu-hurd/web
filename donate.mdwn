@@ -1,5 +1,4 @@
-[[!meta copyright="Copyright © 2003, 2006, 2007, 2008, 2011, 2016 Free Software
-Foundation, Inc."]]
+[//]: # ([[meta copyright="Copyright © 2003, 2006, 2007, 2008, 2011, 2016 Free Software Foundation, Inc."]])
 
 [[!meta license="""[[!toggle id="license" text="GFDL 1.2+"]][[!toggleable
 id="license" text="Permission is granted to copy, distribute and/or modify this
@@ -9,6 +8,8 @@ Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
 is included in the section entitled [[GNU Free Documentation
 License|/fdl]]."]]"""]]
 
+[[!meta title="Donate to the Hurd"]]
+
 If you feel like donating goods or money for the work the developers are doing,
 then we're happy to confirm that this is indeed possible.  Of course we'd
 really like to have you working with us on the system and become a
@@ -17,7 +18,7 @@ either.
 
 [[!toc levels=2]]
 
-
+---
 # Free Software Foundation
 
 The Free Software Foundation is the GNU project's principal organizational
@@ -25,7 +26,7 @@ sponsor.  [Donations to the FSF](http://donate.fsf.org/) are tax deducible.
 However, they can't accept donations addressed directly to/specifically for the
 GNU Hurd project.
 
-
+---
 <a name="FOSS_Factory"></a>
 # FOSS Factory -- a Bounty System for GNU Hurd Work
 
@@ -90,14 +91,14 @@ Please don't hesitate to ask [[Thomas Schwinge|tschwinge]] if you need help.
 
 Continue to explore the [[list of open bounties|tag/bounty]].
 
-
+---
 # Hurd Developer Meetings
 
 Another possibility is to meet with the Hurd developers at a
 [[meeting|community/meetings]] and buy them a pizza or beer or both or
 similar.
 
-
+---
 # Individual Developers
 
 Sorted alphabetically.

@@ -1,3 +1,5 @@
+[[!meta title="The GNU System"]]
+
 # <a name="The_GNU_Operating_System"> </a> The GNU Operating System
 
 The GNU Operating System, Commonly referred to as simply "The GNU System", is a
@@ -22,10 +24,12 @@ provide a flexible operating system.
 
 However, [[gnu.org|https://www.gnu.org/distros/free-distros.html]] maintains a
 list of freedom respecting and production ready GNU/Linux systems.  One of the
-most promising of these is [[guixSD|https://www.gnu.org/software/guix/]], which
+most promising of these is [[GuixSD|https://www.gnu.org/software/guix/]], which
 is the GNU Guix System Distribution, which eventually plans to support the GNU
 Hurd as the kernel! 
 
 ## Resources
 
-  * [[mailing_lists/gnu-system-discuss]] mailing list
+* [[mailing_lists/gnu-system-discuss]] mailing list
+* [Free as in Freedom 2.0 (PDF)](https://static.fsf.org/nosvn/faif-2.0.pdf)
+* [Free Software, Free Society (PDF)](https://www.gnu.org/philosophy/fsfs/rms-essays.pdf)

@@ -8,9 +8,11 @@ Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
 is included in the section entitled [[GNU Free Documentation
 License|/fdl]]."]]"""]]
 
+[[!meta title="Translator Primer"]]
+
 # Small Examples on Using Translators
 
-The [[concept|concepts]] of user-space servers, [[translator]]s, is a very
+The [[concept|concepts]] of user-space servers, [[Translators|translator]], is a very
 powerful one.  Here is an introductionary text.
 
 

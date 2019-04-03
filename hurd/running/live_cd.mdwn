@@ -1,3 +1,5 @@
+[[!meta title="Arch Hurd Live CD"]]
+
 [[Arch Hurd|hurd/running/arch_hurd/]] offers Hurd LiveCDs at <http://www.archhurd.org/download/>.
 
 A less recent Live CD can be found at <http://teythoon.cryptobitch.de/hurd/livecd/hurd-live-install-1273300101.iso.xz>. 

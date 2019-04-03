@@ -7,20 +7,23 @@ Debian GNU/Hurd is an effort to port the Debian distribution to the Hurd. Around
 
 One noteable difference in this port, is that `/etc/mtab` -> `/proc/mounts`
 
-## QEMU Image
+---
+# QEMU Image
 [[!inline pages=hurd/running/debian/qemu_image raw=yes feeds=no]]
 
+---
 # Installing
 - [Installation Instructions](http://www.debian.org/ports/hurd/hurd-install)
   - [Upgrading K11 or K14 based systems to unstable](http://lists.debian.org/debian-hurd/2007/09/msg00007.html)
 - [[After_install]] — Do this to get networking, new console and X
 
+---
 # Contributing
 - [[Porting]] — Helping with porting packages
   * [[Patch_submission]] — How to submit patches for build failures
 - [[Creating_image_tarball]]
 
-## IRC, freenode, #hurd, 2014-02-12
+### IRC, freenode, #hurd, 2014-02-12
 
     <braunr> hm, there is something weird
     <braunr> after successfully installing (with the new installer cd), and rebooting, system init fails because fsck can't be run on /home (a separate partition)
@@ -34,7 +37,7 @@ One noteable difference in this port, is that `/etc/mtab` -> `/proc/mounts`
     <braunr> hm, /etc/mtab isn't a link to /proc/mounts here, might explain
 
 
-## IRC, freenode, #hurd, 2014-02-12
+### IRC, freenode, #hurd, 2014-02-12
 
     <braunr> yes, better with a proper symlink :)
     <teythoon> good
@@ -52,7 +55,7 @@ One noteable difference in this port, is that `/etc/mtab` -> `/proc/mounts`
     <azeem> maybe pere or rleigh in #debian-hurd can help
 
 
-## IRC, freenode, #hurd, 2014-02-13
+### IRC, freenode, #hurd, 2014-02-13
 
     <braunr>   6<--60(pid1698)->dir_lookup ("var/run/mtab" 4194305 0) = 0 3 "/run/mtab"  (null)
     <braunr> looks like /etc/mtab isn't actually used anymore
@@ -64,7 +67,7 @@ One noteable difference in this port, is that `/etc/mtab` -> `/proc/mounts`
     <braunr> they can't find the info they're looking for
 
 
-## IRC, freenode, #hurd, 2014-02-17
+### IRC, freenode, #hurd, 2014-02-17
 
     <braunr> i still don't have mtab at the proper location on darnassus
     <pere> is there something missing with sysvinit on hurd?
@@ -78,8 +81,10 @@ One noteable difference in this port, is that `/etc/mtab` -> `/proc/mounts`
     <braunr> but doesn't that mean it will use /etc/mtab ?
     <pere> if I was a hurd porter, I would fix it in hurd while waiting for a fix in coreutils, just to save people for wondering about the breakage, but I am not the most patient of developers. :)
 
+---
 # Externel
 * Official page about the Debian GNU/Hurd port: [Debian GNU/Hurd](http://www.debian.org/ports/hurd/)
 * Debian [[FAQ]] — Frequently Asked Questions
 * [Presentation](http://people.debian.org/~mbanck/talks/hurd_lt2004/html/) -Debian GNU/Hurd*, [[MichaelBanck]], LinuxTag 2004 Karlsruhe
 * [Archive Qualification](http://wiki.debian.org/ArchiveQualification/hurd-i386)
+* [[!wikipedia Debian_GNU/Hurd]] on Wikipedia

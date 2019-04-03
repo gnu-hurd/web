@@ -1,5 +1,4 @@
-[[!meta copyright="Copyright © 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008,
-2010, 2013 Free Software Foundation, Inc."]]
+[//]: # ([[meta copyright="Copyright © 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2010, 2013 Free Software Foundation, Inc."]])
 
 [[!meta license="""[[!toggle id="license" text="GFDL 1.2+"]][[!toggleable
 id="license" text="Permission is granted to copy, distribute and/or modify this
@@ -8,6 +7,8 @@ any later version published by the Free Software Foundation; with no Invariant
 Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
 is included in the section entitled [[GNU Free Documentation
 License|/fdl]]."]]"""]]
+
+[[!meta title="Mach Documentation"]]
 
   * Mach's [[concepts]].
 
@@ -49,7 +50,7 @@ License|/fdl]]."]]"""]]
   - [A Programmers' Guide to Mach System Call](http://shakthimaan.com/downloads/hurd/A.Programmers.Guide.to.the.Mach.System.Calls.pdf)
 
 
-# IRC, freenode, #hurd, 2013-09-15
+### IRC, freenode, #hurd, 2013-09-15
 
     <teythoon> braunr: btw, are there multiple kernel threads in gnumach?
     <teythoon> and is it safe to do a synchronous rpc call to a userspace server?
