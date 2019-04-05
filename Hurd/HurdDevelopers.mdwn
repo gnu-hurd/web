@@ -11,9 +11,9 @@ License|/fdl]]."]]"""]]
 The Hurd has very few people working on it. This is a list of people who are (or were) large contributors to the project.
 <!-- Who the heck is the current maintainer, anyway? Schwinge? Thibault? -->
 
+* Thomas Schwinge - Maintainer
 * Samuel Thibault - Developer
-* Thomas Schwinge - Developer
-* Thomas Bushnell - Original maintainer
-* Joshua Branson - Developer
-* Richard Braun - Owner of darnassus.sceen.net
+* Joshual Branson - Developer
 * Manolis Ragkousis - Hurd support for Guix
+* Richard Braun - Owner of darnassus.sceen.net
+* Thomas Bushnell - Original maintainer
