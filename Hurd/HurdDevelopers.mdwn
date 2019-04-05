@@ -14,6 +14,8 @@ The Hurd has very few people working on it. This is a list of people who are (or
 * Thomas Schwinge - Maintainer
 * Samuel Thibault - Developer
 * Joshual Branson - Developer
+* Marcus Brinkman - Co-author of the Critique
+* Neal H. Walfield - Co-author of the Critique
 * Manolis Ragkousis - Hurd support for Guix
 * Richard Braun - Owner of darnassus.sceen.net
 * Thomas Bushnell - Original maintainer
