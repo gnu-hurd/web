@@ -97,7 +97,7 @@ are rendered on a [[Debian_GNU/Hurd|hurd/running/debian]] system.
 ---
 # Current Status
 
-The latest releases are **GNU Hurd 0.9**, **GNU Mach 1.8**, **GNU MIG
+The latest releases are **GNU Hurd 0.9**, **GNU Mach 1.8**, and **GNU MIG
 1.8** [[(Release Notes)|news/2016-12-18-releases]], 2016-12-18.
 
 The Hurd is developed by [[a few volunteers in their spare time|faq/how_many_developers]].
