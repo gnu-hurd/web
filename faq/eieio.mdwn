@@ -20,3 +20,8 @@ that it serves.
 You can thus think of it as an equivalent of the "blue screen of the death" or
 "Oops"... except that it's just an error!  It doesn't take your whole system
 away with it, only the particular operations that was going on.
+
+
+The term "Buy the farm" is synonymous to "Kick the bucket," meaning "to die". More specifically, "Bought the farm" was used by the US Air Force to denote a *fatal crash*. To say "Computer bought the farm" is simply saying "Your computer crashed".
+
+Sure, we could just say "Crash!", but then again, so could the Air Force.
