@@ -26,7 +26,7 @@ hints as to why this is so.)
 
 There are a few hundred packages in Debian GNU/Hurd failing to build because of
 this -- simply grep for the offending macros in the
-[list_of_build_failures](http://unstable.buildd.net/buildd/hurd-i386_Failed.html).
+[list_of_build_failures](https://people.debian.org/~sthibault/failed_packages.txt).
 
 Fixing these issues usually boils down to replacing `char foo[PATH_MAX]`
 by `char *foo`, and using dynamic memory allocation, i.e. e.g. a loop
