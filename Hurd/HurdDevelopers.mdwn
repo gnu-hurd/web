@@ -8,15 +8,28 @@ License|/fdl]]."]]"""]]
 
 [[!meta title="Hurd Developers"]]
 
-The Hurd has very few people working on it. This is a list of people who are (or were) large contributors to the project.
+The Hurd has very few people working on it. This is a list of people who are  large contributors to the project.
 <!-- Who the heck is the current maintainer, anyway? Schwinge? Thibault? -->
 
 * Thomas Schwinge - Maintainer
 * Samuel Thibault - Developer
 * Joshual Branson - Developer
+* Justus Winter - Developer
+* Joan Lledó - PCI arbiter and lwip port
+* Damien Zammit - ACPI arbiter
+* Svante Signell - pfinet/fakeroot fixes
+* Flávio Cruz - fixes
+* Manolis Ragkousis - Hurd support for Guix
+
+Here is a list of people who were large contributors:
+
+* Zheng Da - netdde
+* Jeremie Koenig - Debian installer
 * Marcus Brinkman - Co-author of the Critique
 * Neal H. Walfield - Co-author of the Critique
-* Manolis Ragkousis - Hurd support for Guix
 * Richard Braun - Owner of darnassus.sceen.net
+* Miles Bader - Original developer
 * Thomas Bushnell - Original maintainer
-* [See the full list at Savannah](https://savannah.gnu.org/project/memberlist.php?group=hurd)
+* Roland McGrath - Original maintainer
+
+[See the full list at Savannah](https://savannah.gnu.org/project/memberlist.php?group=hurd)
