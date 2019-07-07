@@ -22,7 +22,7 @@ It is with huge pleasure that the Debian GNU/Hurd team announces the
 **release of Debian GNU/Hurd 2019**.
 
 This is a snapshot of Debian "sid" at the time of the stable Debian
-"stretch" release (July 2019), so it is mostly based on the same
+"buster" release (July 2019), so it is mostly based on the same
 sources. It is not an official Debian release, but it is an official
 [[Debian GNU/Hurd|hurd/running/debian]] port release.
 
