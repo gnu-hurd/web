@@ -76,7 +76,7 @@ is included in the section entitled
     [[Position_paper_*Improving_Usability_via_Access_Decomposition_and_Policy*|ng/position_paper]]
     Neal Walfield and Marcus Brinkmann give an overview about how a future,
     subsequent system may be architected.
-  * [*Generalizing mobility for the Hurd*](http://users.student.lth.se/cs07fh9/2009-hammar-hurd-mobility.pdf),
+  * [*Generalizing mobility for the Hurd*](https://pdfs.semanticscholar.org/4cce/9abb177cc58c199e13b82d498f37010c2bfc.pdf),
     a thesis written by Carl Fredrik Hammar,
     investigates the mobility aspect of stores
     and how it can be generalized and used for other applications.
