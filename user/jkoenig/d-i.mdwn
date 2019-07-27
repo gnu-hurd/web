@@ -350,7 +350,7 @@ it works great and it's beautiful**
       * use busybox from my osports-debian branch (see link above)
       * tweak the d-i image build scripts
       * the symlink /lib/ld.so -> ld.so.1 needs to be created somehow
-        (youpi mentionned it being the job of libc0.3-udeb I think)
+        (youpi mentioned it being the job of libc0.3-udeb I think)
       * fix the poll() issue in libdebian-installer
         (patch to be submitted soon),
         also there is some hurd doxygen short-circuiting stuff
