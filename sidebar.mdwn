@@ -41,6 +41,7 @@ Welcome to... [[!img /logo/boxes-redrawn.png link=/logo]] ... the GNU Hurd!
 ---
 
   * **[[Debian GNU/Hurd|hurd/running/debian]]**
+  * **[[Arch GNU/Hurd|hurd/running/live_cd/]]**
   * **[[GNU System|hurd/running/gnu]]**
 
 ---
