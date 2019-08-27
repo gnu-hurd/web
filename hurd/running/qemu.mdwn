@@ -394,4 +394,4 @@ system after installation.
 
 [[Image_for_L4]] -- a QEMU image for the Hurd/L4 project.
 
-<http://eyeside.net/hurd/Hurd-on-QEMU.html>
+[Hurd Installation Guide from eyeside.net](https://web.archive.org/web/20130516025306/http://www.eyeside.net/index.htm)
