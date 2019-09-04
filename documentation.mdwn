@@ -35,7 +35,7 @@ You may want to start reading a [[quick overview|overview]] of how the GNU/Hurd 
 starts, and thus how it is structured. Also see our [[FAQ]]
 
 ### Capabilities
-  * Read up on [[Capabilities|capability]], [[!wikipedia Capability_Based_Security]],
+  * Read up on [[Capabilities|capability]], [[!wikipedia Capability-based_security]],
     and, [What is a Capability, Anyway?](https://archive.is/20130112225523/http://www.eros-os.org/essays/capintro.html)
 
     In the GNU/Hurd system, a capability is represented by a [[Mach
