@@ -124,6 +124,6 @@ from userlandish interfaces (Hurd) or from the micro kernel itself (Mach).
 # IRC Logs
 
 The IRC logs contain wealth of information.  Many topics have been covered before in the IRC logs.  You can use wget to
-download all of the logs and grep for the information that you want.
+download all of the logs and grep for the information that you want (~100MB):
 
      `wget --mirror --no-parent -A "hurd-*" -e robots=off http://richtlijn.be/~larstiq/hurd/`
