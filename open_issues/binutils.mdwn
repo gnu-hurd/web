@@ -33,7 +33,7 @@ though, as explained below.
 
 ## [[/GDB]]
 
-GDB needs an processor architecture as well as operating system port.
+GDB needs a processor architecture as well as operating system port.
 
 
 # Configuration
