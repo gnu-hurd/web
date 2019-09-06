@@ -12,7 +12,9 @@ License|/fdl]]."]]"""]]
 
 A *microkernel* is one kind of a [[kernel]] implementation.
 
-[[Liedtke]] explains in [On Microkernel Construction](http://l4ka.org/publications/paper.php?docid=642)
+<!-- The link below is commented out because I'm not sure if the server is permanently down or if it's temporary -->
+<!-- [[Liedtke]] explains in [On Microkernel Construction](http://l4ka.org/publications/paper.php?docid=642) -->
+[[Liedtke]] explains in [On Microkernel Construction](https://os.itec.kit.edu/downloads/publ_1995_liedtke_ukernel-construction.pdf)
 (or from [TU Dresden](http://www.tud-os.org/papers_ps/jochen/Mikern.ps),
 or from [ACM](http://dl.acm.org/citation.cfm?id=224075))
 that a microkernel attempts to minimize the mandatory part of the operating
