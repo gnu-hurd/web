@@ -14,9 +14,7 @@ A *microkernel* is one kind of a [[kernel]] implementation.
 
 <!-- The link below is commented out because I'm not sure if the server is permanently down or if it's temporary -->
 <!-- [[Liedtke]] explains in [On Microkernel Construction](http://l4ka.org/publications/paper.php?docid=642) -->
-[[Liedtke]] explains in [On Microkernel Construction](https://os.itec.kit.edu/downloads/publ_1995_liedtke_ukernel-construction.pdf)
-(or from [TU Dresden](http://www.tud-os.org/papers_ps/jochen/Mikern.ps),
-or from [ACM](http://dl.acm.org/citation.cfm?id=224075))
+[[Liedtke]] explains in [On Microkernel Construction](https://os.itec.kit.edu/downloads/publ_1995_liedtke_ukernel-construction.pdf)*
 that a microkernel attempts to minimize the mandatory part of the operating
 system by providing the minimal number of [[mechanism]]s that
 maximize the flexibility of implementation (by imposing minimal
@@ -54,3 +52,5 @@ A 2002 article about [[microkernel_FUD|FUD]] (Fear, Uncertainty, Doubt).
 ---
 # External Links
 * [[!wikipedia Microkernel]] on Wikipedia
+* *(or from [TU Dresden](http://www.tud-os.org/papers_ps/jochen/Mikern.ps) 
+or from [ACM](http://dl.acm.org/citation.cfm?id=224075))
