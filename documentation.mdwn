@@ -51,7 +51,7 @@ message passing. Eventually, the Hurd servers and Unix processes discuss with
 each other using these RPCs.
 
 Depending on your background, you may want to start reading the documentation
-from userlandish interfaces (Hurd) or from the micro kernel itself (Mach).
+from userlandish interfaces (Hurd) or from the microkernel itself (Mach).
 
   * [[GNU_Hurd|hurd/documentation]]
   * [[Mach|microkernel/mach/documentation]]
