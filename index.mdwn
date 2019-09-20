@@ -8,7 +8,7 @@ License|/fdl]]."]]"""]]
 
 <div id="statements">
 <div id="what-is">
-<p class="statement-title">What is the GNU Hurd?</p>
+<p class="statement-title"><strong>What is the GNU Hurd?</strong></p>
 <p>The GNU Hurd is the GNU project's replacement for the Unix kernel.
 It is a collection of servers that run on the Mach microkernel
 to implement file systems, network protocols, file access control, and
@@ -17,7 +17,7 @@ kernels (such as Linux).
 <em>[[More_detailed|hurd/documentation]].</em></p>
 </div>
 <div id="mission">
-<p class="statement-title">What is the mission of the GNU Hurd project?</p>
+<p class="statement-title"><strong>What is the mission of the GNU Hurd project?</strong></p>
 <p>Our mission is to create a general-purpose kernel suitable 
 for the GNU operating system, which is viable for everyday use, 
 and gives users and programs as much control over their 
