@@ -9,7 +9,7 @@ Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
 is included in the section entitled [[GNU Free Documentation
 License|/fdl]]."]]"""]]
 
-Welcome to... [[!img /logo/boxes-redrawn.png link=/logo]] ... the GNU Hurd!
+<strong>Welcome to...</strong> [[!img /logo/boxes-redrawn.png link=/logo]] <strong>... the GNU Hurd!</strong>
 
 ---
 
