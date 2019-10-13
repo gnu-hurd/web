@@ -96,11 +96,8 @@ at the seminar *LIO and friends*, in Bulgarian.
 
 ---
 # General
-
   * [[Media_Appearances]]
-
----
-# IRC Logs
+  * [IRC Logs](http://richtlijn.be/~larstiq/hurd/)
 
 The IRC logs contain wealth of information.  Many topics have been covered before in the IRC logs.  You can use wget to
 download all of the logs and grep for the information that you want (~100MB):
