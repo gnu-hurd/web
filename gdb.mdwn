@@ -12,17 +12,13 @@ License|/fdl]]."]]"""]]
 [[!meta title="GNU GDB"]]
 
 
-# <http://www.gnu.org/software/gdb/>
+The [GNU Project Debugger](http://www.gnu.org/software/gdb/) (GDB) is a helpful tool for finding bugs, as it lets you know what a program is doing while it runs. This page is dedicated to the Hurd's port of GDB and how to use or help maintain it.
 
-  * [[Backtrace]]s
-
+  * [[Maintenance|open_issues/gdb]]
+  * [[Backtraces|backtrace]]
   * [Manual](http://sourceware.org/gdb/documentation/)
-
   * [When disassemble doesn't
     work](http://lists.gnu.org/archive/html/bug-hurd/2007-02/msg00039.html)
-
-
-# [[Maintenance|open_issues/gdb]]
 
 
 # Open Issues

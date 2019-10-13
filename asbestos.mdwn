@@ -21,5 +21,8 @@ information.  To propagate information outside of the machine, the
 releaser must first untaint the information.  This can only be done
 with the original principal's authorization.
 
-Asbestos is described in Efstathopoulos et al.'s 2005 paper [Labels and
-Event Processes in the Asbestos Operating System](http://pdos.csail.mit.edu/papers/asbestos-sosp05.pdf).
+#External Links
+
+* [The Asbestos homepage](https://web.archive.org/web/20070917071123/http://asbestos.cs.ucla.edu/doku.php) on the Wayback machine.
+* [Asbestos - An operating System for Mobile Devices](https://pdos.csail.mit.edu/papers/armasb:martijn-meng/armasb:martijn-meng.pdf)
+* [Labels and Event Processes in the Asbestos Operating System](http://pdos.csail.mit.edu/papers/asbestos-sosp05.pdf), Efstathopoulos et al. 2005

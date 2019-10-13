@@ -35,7 +35,7 @@ You may want to start reading a [[quick overview|overview]] of how the GNU/Hurd 
 starts, and thus how it is structured. Also see our [[FAQ]]
 
 ### Capabilities
-  * Read up on [[Capabilities|capability]], [[!wikipedia Capability_Based_Security]],
+  * Read up on [[Capabilities|capability]], [[!wikipedia Capability-based_security]],
     and, [What is a Capability, Anyway?](https://archive.is/20130112225523/http://www.eros-os.org/essays/capintro.html)
 
     In the GNU/Hurd system, a capability is represented by a [[Mach
@@ -51,7 +51,7 @@ message passing. Eventually, the Hurd servers and Unix processes discuss with
 each other using these RPCs.
 
 Depending on your background, you may want to start reading the documentation
-from userlandish interfaces (Hurd) or from the micro kernel itself (Mach).
+from userlandish interfaces (Hurd) or from the microkernel itself (Mach).
 
   * [[GNU_Hurd|hurd/documentation]]
   * [[Mach|microkernel/mach/documentation]]
@@ -124,6 +124,6 @@ from userlandish interfaces (Hurd) or from the micro kernel itself (Mach).
 # IRC Logs
 
 The IRC logs contain wealth of information.  Many topics have been covered before in the IRC logs.  You can use wget to
-download all of the logs and grep for the information that you want.
+download all of the logs and grep for the information that you want (~100MB):
 
      `wget --mirror --no-parent -A "hurd-*" -e robots=off http://richtlijn.be/~larstiq/hurd/`

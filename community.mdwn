@@ -10,7 +10,7 @@ License|/fdl]]."]]"""]]
 
 
 There is an ever expanding community of people developing and running GNU/Hurd
-systems! This page tries to list all the places on the Web where we commonly hang out.
+systems! This page tries to list all the places where we commonly hang out.
 
 ---
 # Online Communities

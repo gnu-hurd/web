@@ -12,10 +12,9 @@ is included in the section entitled
 [[!meta title="GNU Binutils"]]
 
 
-# <http://www.gnu.org/software/binutils/>
+[GNU Binutils](http://www.gnu.org/software/binutils/) (BINary UTILitieS) is a collection of, well, binary utilities, noteably the 'as' assembler and the 'ln' linker program.
 
-
-# [[Maintenance|open_issues/binutils]]
+For an in-depth view of the binutils port for the Hurd, take a look at [[Maintenance|open_issues/binutils]].
 
 
 # Open Issues
