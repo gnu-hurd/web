@@ -19,10 +19,10 @@ spend some time trying to solve the problem on your own (e.g. [search the
 web](http://duckduckgo.com/), search these web pages, etc.), and show us that you
 did so when you ask your question.
 
-When asking, (1) be details, and (2) demonstrate that you have made an effort,
-e.g., "I am having trouble frobbing the foo.  I searched the web and only found
+When asking, (1) be detailed, and (2) demonstrate that you made an effort,
+e.g. "I am having trouble frobbing the foo.  I searched the web and only found
 information regarding how to frob a bar, but that seems unrelated."  Provide as
-many relevant details as possible reproducing them as exactly as possible.
+many relevant details as possible, as well as how to reproduce the issue.
 
 This [document](http://www.catb.org/~esr/faqs/smart-questions.html) may help you
 understand some developers attitudes and social norms.
