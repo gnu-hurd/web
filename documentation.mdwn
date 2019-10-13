@@ -35,11 +35,13 @@ You may want to start reading a [[quick overview|overview]] of how the GNU/Hurd 
 starts, and thus how it is structured. Also see our [[FAQ]]
 
 ### Capabilities
-  * Read up on [[Capabilities|capability]], [[!wikipedia Capability-based_security]],
-    and, [What is a Capability, Anyway?](https://archive.is/20130112225523/http://www.eros-os.org/essays/capintro.html)
+  * [[Capabilities|capability]]
+  * [[!wikipedia Capability-based_security]] (Wikipedia)
+  * [What is a Capability, Anyway?](https://archive.is/20130112225523/http://www.eros-os.org/essays/capintro.html)
+  * [Capability Theory by Sound Bytes](http://www.cap-lore.com/CapTheory/)
+  * [What Are Capabilities?](http://habitatchronicles.com/2017/05/what-are-capabilities/)
 
-    In the GNU/Hurd system, a capability is represented by a [[Mach
-    port|microkernel/mach/port]].
+In the Hurd, a capability is represented by a [[Mach port|microkernel/mach/port]].
 
 ---
 # Specific Components
