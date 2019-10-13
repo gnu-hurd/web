@@ -64,58 +64,44 @@ from userlandish interfaces (Hurd) or from the microkernel itself (Mach).
 # Presentations
 
 ## 2019
-
   * FOSDEM: {{$community/meetings/fosdem_2019#thibault_hurd}}
 
 ## 2018
-
   * FOSDEM: {{$community/meetings/fosdem_2018#thibault_hurd}}
 
 ## 2017
-
   * FOSDEM: {{$community/meetings/fosdem_2017#ragkousis_guix_hurd}}
   * FOSDEM: {{$community/meetings/fosdem_2017#winter_hurd}}
 
 ## 2016
-
   * FOSDEM: {{$community/meetings/fosdem_2016#ragkousis_guix_hurd}}
   * FOSDEM: {{$community/meetings/fosdem_2016#thibault_hurd}}
 
 ## 2015
-
   * FOSDEM: {{$community/meetings/fosdem_2015#thibault_hurd}}
-  * Debconf 15: {{$community/meetings/debconf15#youpi_hurd}}
+  * Debconf: {{$community/meetings/debconf15#youpi_hurd}}
 
 ## 2014
-
   * FOSDEM: {{$community/meetings/fosdem_2014#thibault_hurd}}
 
 ## 2013
-
   * GNU Hackers Meeting in Paris: {{$community/meetings/ghm2013#thibault_hurd}}
-
   * FOSDEM: {{$community/meetings/fosdem_2013#thibault_hurd}}
 
 ## 2011
-
   * GNU Hackers Meeting in Paris: {{$community/meetings/ghm2011#thibault_hurd}}
 
 ## 2010
-
   * GNU Hackers Meeting in the Hague: {{$community/meetings/ghm2010#walfield_hurd}}
-
-  * Debconf 10: {{$community/meetings/debconf10#banck_hurd}}
-
-  * Fosdem 2010: {{$community/meetings/fosdem_2010#olaf_hurd1}}
-  * Fosdem 2010: {{$community/meetings/fosdem_2010#olaf_hurd2}}
+  * Debconf: {{$community/meetings/debconf10#banck_hurd}}
+  * FOSDEM: {{$community/meetings/fosdem_2010#olaf_hurd1}}
+  * FOSDEM: {{$community/meetings/fosdem_2010#olaf_hurd2}}
 
 ## 2004
+  * Ognyan Kulev, [*presentation of the Hurd*](http://debian.fmi.uni-sofia.bg/~ogi/hurd/liofest-20040702-hurd.ppt) 
+at the seminar *LIO and friends*, in Bulgarian.
 
-  * 2004-07-02
-
-    Ognyan Kulev, *presentation of the Hurd*, at the seminar *LIO and friends*,
-    <http://debian.fmi.uni-sofia.bg/~ogi/hurd/liofest-20040702-hurd.ppt>, in
-    Bulgarian.
+<!-- The above link is broken. My browser cannot load .ppt files so I do not know which wayback link should be used) -->
 
 ---
 # General
