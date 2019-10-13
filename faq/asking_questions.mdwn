@@ -15,8 +15,8 @@ License|/fdl]]."]]"""]]
 
 Before asking a question, first make an effort to find the answer to your
 question.  A lot of questions have been asked and answered before, so please
-spend some time trying to solve the problem on your own (e.g., [search the
-web](http://google.com/), search these web pages, etc.), and show us that you
+spend some time trying to solve the problem on your own (e.g. [search the
+web](http://duckduckgo.com/), search these web pages, etc.), and show us that you
 did so when you ask your question.
 
 When asking, (1) be details, and (2) demonstrate that you have made an effort,
