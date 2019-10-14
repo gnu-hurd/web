@@ -8,10 +8,10 @@ License|/fdl]]."]]"""]]
 
 [[!meta title="Documentation"]]
 
+/!\ Some stuff is missing (see [[!taglink Documentation_Issues|open_issue_documentation]]).
+
 Are you interested in getting familiar with the GNU/Hurd system architecture,
 or specific components of it?  Here is a collection of texts to read.
-
-/!\ A lot of stuff is still missing (see the list of [[!taglink Documentation_Issues|open_issue_documentation]]).
 
 [[!toc levels=1]]
 
