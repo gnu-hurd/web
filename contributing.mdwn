@@ -112,6 +112,7 @@ part:1:file:/home/samy/tmp/foo`). This would be libnetfs-based.
 * Strengthen httpfs: it should append '/' to URL automatically, it should not fallback index.html itself, etc. probably a lot more small easy issues.
 * Fix `O_NOATIME`, see <https://buildd.debian.org/status/fetch.php?pkg=borgbackup&arch=hurd-i386&ver=1.0.2-1&stamp=1460838100>
 * Add a /dev/rtc device
+* Implement `sched_setscheduler` in glibc by calling mach's `thread_policy`.
 
 <a name="porting"></a>
 ## Porting Packages
