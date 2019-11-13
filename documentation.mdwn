@@ -18,8 +18,7 @@ or specific components of it?  Here is a collection of texts to read.
 ---
 # Basic Knowledge
 
-Before you can go details, you have to learn the basics about operating system
-architecture.  Yes, really. You needn't go through all of these, but they're all very enjoyable if you wanted to do just that.
+Before diving in, you should learn basic operating system architecture (Yes, really). You needn't go through all of these, but they're very enjoyable if you want to.
 
 ## Operating Systems Basics
 
@@ -102,4 +101,4 @@ at the seminar *LIO and friends*, in Bulgarian.
 The IRC logs contain wealth of information.  Many topics have been covered before in the IRC logs.  You can use wget to
 download all of the logs and grep for the information that you want (~100MB):
 
-     `wget --mirror --no-parent -A "hurd-*" -e robots=off http://richtlijn.be/~larstiq/hurd/`
+     wget --mirror --no-parent -A "hurd-*" -e robots=off http://richtlijn.be/~larstiq/hurd/
