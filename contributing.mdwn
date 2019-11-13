@@ -17,8 +17,8 @@ There are various ways to contribute; read up on contributing to...
 
 [[!toc levels=2]]
 
-If someone of you is lurking around here and would like to contribute, but
-feels she / he could do so better under formal mentoring: please
+If you are lurking around here and would like to contribute, but
+feel you would do so better under formal mentoring: please
 [[contact_us]], or just speak up at one of the [[regular IRC
 meetings|IRC#regular_meetings]]!
 
