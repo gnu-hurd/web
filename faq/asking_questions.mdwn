@@ -24,5 +24,5 @@ e.g. "I am having trouble frobbing the foo.  I searched the web and only found
 information regarding how to frob a bar, but that seems unrelated."  Provide as
 many relevant details as possible, as well as how to reproduce the issue.
 
-This [document](http://www.catb.org/~esr/faqs/smart-questions.html) may help you
+[This document](http://www.catb.org/~esr/faqs/smart-questions.html#intro) may help you
 understand some developers attitudes and social norms.
