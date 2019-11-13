@@ -28,6 +28,7 @@ Posting_style#Interleaved_style]].
 
 Also see these general notes about [[community/communication]].
 
+---
 
 # Main Lists
 
@@ -121,6 +122,7 @@ Discussion about [[glibc]], where the Hurd's POSIX et al. interfaces are
 implemented, amongst a lot of other bits and pieces.  This list is *moderated*,
 but on-topic development topics will generally be accepted.
 
+---
 
 # Spam
 
