@@ -114,6 +114,7 @@ part:1:file:/home/samy/tmp/foo`). This would be libnetfs-based.
 * Add a /dev/rtc device
 * Implement `pthread_setschedparam` and `sched_setscheduler` in glibc by calling mach's `thread_policy` and `thread_priority`.
 * Add a `name` field to `thread` structure in Mach, and `thread_set_name` (like `task_set_name`), and use it to add `pthread_setname_np` to glibc.
+* Teach rsync to use `*getxattr` and friends on GNU/Hurd too, to enable the -X option, so as to preserve translator entries.
 
 <a name="porting"></a>
 ## Porting Packages
