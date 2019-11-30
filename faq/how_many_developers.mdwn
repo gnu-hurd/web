@@ -17,9 +17,9 @@ few?"]]
 
 # How Many Developers?
 
-Literally only one handful works on the core of the system in their free time, and another
-handful helps with [[Debian GNU/Hurd|hurd/running/debian]] and
-[[hurd/running/Arch_Hurd]] packaging.  Also, an additional handful of former
+Literally only half a handful works on the core of the system in their free time, and another
+half of handful helps with [[Debian GNU/Hurd|hurd/running/debian]] and
+[[hurd/running/Arch_Hurd]] packaging.  Also, an additional half of handful of former
 developers are still available for answering technical questions, but are not
 participating in the current development anymore.
 
