@@ -113,6 +113,7 @@ part:1:file:/home/samy/tmp/foo`). This would be libnetfs-based.
 * Fix our [[open_issues/symlink_translator]].
 * Fix `O_NOATIME`, see <https://buildd.debian.org/status/fetch.php?pkg=borgbackup&arch=hurd-i386&ver=1.0.2-1&stamp=1460838100>
 * Add a /dev/rtc device
+* Add gnumach support for EFI memory areas report through GetMemoryMap instead of the BIOS E820.
 
 <a name="porting"></a>
 ## Porting Packages
