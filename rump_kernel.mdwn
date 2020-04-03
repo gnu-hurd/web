@@ -34,6 +34,10 @@ License|/fdl]]."]]"""]]
 
     A tutorial introduction for those interested in using and deploying rump kernels.
 
+  * <https://core.ac.uk/display/41816390>
+
+    "User space approach to audio device driving on UNIX-like systems" by Robert Millan Hernandez.
+
 
 # Source Code
 
