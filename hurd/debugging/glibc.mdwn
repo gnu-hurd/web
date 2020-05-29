@@ -75,6 +75,16 @@ If your `mach_traps.h` does not have the declaration, use:
 
     extern void mach_print(const char *s);
 
+If you can't use the libc-provided `mach_print` for some reason, you can use as last resort:
+
+    asm("\
+    my_mach_print:\n\
+    mov $-30,%eax\n\
+    lcall $7,$0\n\
+    ret\n\
+    ");
+    extern void my_mach_print(const char *s);
+
 This call does not support any formatting. You can use this kind of helper to
 format a message before passing to gnumach:
 
