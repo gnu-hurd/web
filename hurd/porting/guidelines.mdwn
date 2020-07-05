@@ -158,7 +158,7 @@ Same rationale as `PATH_MAX`. There is no limit on the number of arguments.
 
 Same rationale as `PATH_MAX`. There is no limit on the number of iovec items.
 
-## <a name="MAXHOSTNAMELEN_tt_"> `MAXHOSTNAMELEN` </a>
+## <a name="MAXHOSTNAMELEN_tt_"> `MAXHOSTNAMELEN`, `HOST_NAME_MAX` </a>
 
 Same as `PATH_MAX`. When you find a `gethostname()` function, which acts on a static buffer, you can replace it with Neal's [xgethostname function](http://walfield.org/pub/people/neal/xgethostname/) which returns the hostname as a dynamic buffer. For example:
 
