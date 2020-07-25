@@ -1,0 +1,216 @@
+[[!meta copyright="Copyright © 2020 Free Software Foundation, Inc."]]
+
+[[!meta license="""[[!toggle id="license" text="GFDL 1.2+"]][[!toggleable
+id="license" text="Permission is granted to copy, distribute and/or modify this
+document under the terms of the GNU Free Documentation License, Version 1.2 or
+any later version published by the Free Software Foundation; with no Invariant
+Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
+is included in the section entitled [[GNU Free Documentation
+License|/fdl]]."]]"""]]
+
+[[!meta title="System bootstrap"]]
+
+[[!tag open_issue_documentation]] <!-- Someone still needs to make a pass over
+this text.  -->
+
+[[!toc]]
+
+# State at the beginning of the bootstrap
+
+After initializing itself, GNU Mach sets up tasks for the various bootstrap
+translators (which were loader by the GRUB bootloader). It notably makes
+variables replacement on their command lines and boot script function calls (see
+the details in `gnumach/kern/boot_script.c`). For instance, if the GRUB
+bootloader has the following configuration:
+
+    multiboot       /boot/gnumach-1.8-486-dbg.gz root=device:hd1 console=com0
+    module          /hurd/ext2fs.static ext2fs --readonly \
+                    --multiboot-command-line='${kernel-command-line}' \
+                    --host-priv-port='${host-port}' \
+                    --device-master-port='${device-port}' \
+                    --exec-server-task='${exec-task}' -T typed '${root}' \
+                    '$(task-create)' '$(task-resume)'
+    module          /lib/ld.so.1 exec /hurd/exec '$(exec-task=task-create)'
+
+
+GNU Mach will first make the `$(task-create)` function calls, and thus create a
+task for the ext2fs module and a task for the exec module (and store a port on
+that task in the `exec-task` variable).
+
+It will then replace the variables (`${foo}`), i.e.
+
+* `${kernel-command-line}` with its own command line (`root=device:hd1 console=com0`),
+* `${host-port}` with a reference to the GNU Mach host port,
+* `${device-port}` with a reference to the GNU Mach device port,
+* `${exec-task}` with a reference to the exec task port.
+* `${root}` with `device:hd1`
+
+This typically results in:
+
+    task loaded: ext2fs --readonly --multiboot-command-line=root="device:hd1 console=com0" --host-priv-port=1 --device-master-port=2 --exec-server-task=3 -T typed device:hd1
+    task loaded: exec /hurd/exec
+
+(You will have noticed that `/hurd/exec` is not run directly, but through
+`ld.so.1`: Mach only knows to run statically-linked ELF binaries, so we could
+either load `/hurd/exec.static`, or load the dynamic loader `ld.so.1` and tell
+it to load `/hurd/exec`)
+
+GNU Mach will eventually make the `$(task-resume)` function calls, and thus
+resume the ext2fs task only.
+
+# ext2fs initialization
+
+ext2fs's `main` function starts by calling `diskfs_init_main`.
+
+`diskfs_init_main` parses the ext2fs command line with `argp_parse`, to record
+the parameters set up by the kernel. It makes sure to have a working stdout by
+opening the Mach console.
+
+Since the multiboot command line is available, `diskfs_init_main` sets the
+ext2fs bootstrap port to `MACH_PORT_NULL`: it is the bootstrap filesystem which
+will be in charge of dancing with the exec translator.
+
+`diskfs_init_main` then initializes the libdiskfs library and spawns a thread to
+manage libdiskfs RPCs.
+
+ext2fs continues its initialization: creating a pager, opening the
+hypermetadata, opening the root inode to be set as root by libdiskfs.
+
+ext2fs then calls `diskfs_startup_diskfs` to really run the startup.
+
+# diskfs bootstrap
+
+Since the bootstrap port is `MACH_PORT_NULL`, `diskfs_startup_diskfs` calls
+`diskfs_start_bootstrap`.
+
+TODO: we want `diskfs_startup_diskfs` to also call `task_get_bootstrap_port` to
+call `fsys_startup` on its real bootstrap port once `diskfs_start_bootstrap` is
+finished, for bootstrap translators before the root filesystem to know when the
+root filesystem is ready, and register themselves as translators in the root
+filesystem, register for shutdown notification, etc.
+
+`diskfs_start_bootstrap` starts by creating a open port on itself for the
+current and root directory, all other processes will inherit it.
+
+`diskfs_start_bootstrap` does have a port on the exec task, so it can dance with
+it. It calls `start_execserver` that sets the bootstrap port of the exec task
+to a port of the `diskfs_execboot_class`, and resumes the exec task.
+`diskfs_start_bootstrap` then waits for `execstarted`.
+
+# exec bootstrap
+
+exec's `main` function starts and calls `task_get_bootstrap_port` to get
+its bootstrap port and `getproc` to get a port on the proc translator (thus
+`MACH_PORT_NULL` at this point since the proc translator is not started yet).
+
+exec initializes the trivfs library, and eventually calls `trivfs_startup` on
+its bootstrap port.
+
+`trivfs_startup` creates a control port for the exec translator, and calls
+`fsys_startup` on the bootstrap port to notify ext2fs that it is ready, give it
+the control port, and get back a port on the underlying node for the exec
+translator (we want to make it show up on `/servers/exec`).
+
+# diskfs taking back control
+
+`diskfs_execboot_fsys_startup` is thus called. It calls `dir_lookup` on
+`/servers/exec` to return the underlying node for the exec translator, and
+stores the control port in `diskfs_exec_ctl`. It can then signal `execstarted`.
+
+`diskfs_start_bootstrap` thus takes back control, It calls `fsys_getroot` on the
+control port of exec, and uses `dir_lookup` and `file_set_translator` to attach
+it to `/servers/exec`.
+
+`diskfs_start_bootstrap` then looks for which startup process to run. It may
+be specified on the multiboot command line, but otherwise it will default to
+`/hurd/startup`.
+
+Now that exec is up and running, the startup process can be created with
+`exec_exec`. `diskfs_start_bootstrap` takes a lot of care in this: this is
+the first unix-looking process, it notably inherits the root directory and
+current working directory initialized above, it gets stdin/out/err on the mach
+console. It is passed as bootstrap port a port from the `diskfs_control_class`.
+
+# startup 
+
+startup's `main` function starts and calls `task_get_bootstrap_port` to get its
+bootstrap port, and `fsys_getpriv` to get a port on the ext2fs translator. It
+clears the bootstrap port so children do not inherit it. It sets itself up with
+output on the Mach console, and wires itself against swapping. It requests
+notification for ext2fs translator dying to detect it and print a warning in
+case that happens during boot. It creates a `startup` port which it will get
+RPCs on.
+
+startup can then complete the unixish initialization, and run `/hurd/proc` and
+`/hurd/auth`, giving them as bootstrap port the `startup` port.
+
+# proc
+
+proc's `main` function starts. It initializes itself, and calls
+`task_get_bootstrap_port` to get a port on startup. It can then call
+`startup_procinit` to pass it the proc port that will represent the startup
+task, and get ports on the auth server, the host privileged port, and device
+master port.
+
+Eventually, proc calls `startup_essential_task` to tell startup that it is
+ready.
+
+# auth
+
+auth's `main` function starts. It creates the initial root auth handle (all
+permissions allowed). It calls `task_get_bootstrap_port` to get a port on
+startup.  It can then call `startup_authinit` to pass the initial root auth
+handle, and get a port on the proc server. It can then register itself to proc.
+
+Eventually, auth calls `startup_essential_task` to tell startup that it is ready.
+
+# startup getting back control
+
+startup notices initialization of auth and proc from `S_startup_procinit` and
+`S_startup_authinit`. Once both have been called, it calls `launch_core_servers`.
+
+`launch_core_servers` starts by calling `startup_procinit_reply` to actually
+reply to the `startup_procinit` RPC with a port on auth.
+
+`launch_core_servers` then tells proc that the bootstrap processes are
+important, and how they relate to each other.
+
+`launch_core_servers` then calls `install_as_translator` to show up in the
+filesystem on `/servers/startup`.
+
+`launch_core_servers` calls `startup_authinit_reply` to actually reply to the
+`startup_authinit` RPC with a port on proc. 
+
+`launch_core_servers` eventually calls `fsys_init` on its bootstrap port
+
+# diskfs taking back control
+
+diskfs' `diskfs_S_fsys_init` gets called, it thus knows that proc and auth are
+ready, and can call `exec_init`. It initializes the default proc and auth ports
+to be given to processes.
+
+diskfs calls `startup_essential_task` to tell startup that it is
+ready.
+
+Eventually, it calls `_diskfs_init_completed` to finish its initialization, and
+notably call `startup_request_notification` to get notified by startup when the
+system is shutting down.
+
+# exec taking back control
+
+exec's `S_exec_init` gets called, it can register itself with proc, and
+eventually call `startup_essential_task` to tell startup that it is ready.
+
+# startup monitoring bootstrap progress
+
+As mentioned above, the different essential tasks (ext2fs, proc, auth, exec)
+call `startup_essential_task` when they are ready. startup's
+`S_startup_essential_task` function thus gets called each time, and startup
+records each of them as essential, monitoring their death to crash the whole
+system.
+
+Once all of proc, auth, exec have called `startup_essential_task`, startup
+replies to their respective RPCs, so they actually start working altogether. It
+also calls `launch_system`, which calls `launch_something`, which "launches
+something", which by default is `/libexec/runsystem`, but if that can not be
+found, launches a shell instead, so the user can fix it.

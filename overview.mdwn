@@ -25,10 +25,20 @@ interprocess communication (details can be read on
 [[microkernel/mach/gnumach/boot_trace]]).  It also initializes drivers for
 disk. It then creates two tasks for the ext2fs and exec servers.
 
+# bootstrap
+
+A bootstrap dance happens between the disk translator, ext2fs and exec, one can
+read [[the details on the system bootstrap|hurd/bootstrap]].
+
+# disk translator
+
+The disk translator contains the disk drivers used to access the root
+filesystem. This is currently work in progress.
+
 # ext2fs
 
 ext2fs is given as a parameter the name of the device of the root filesystem. It
-opens it through the GNU Mach disk driver, and mounts the filesystem found on
+opens it through the GNU Mach disk driver or the disk translator, and mounts the filesystem found on
 it. When it is ready, it can start booting the system by starting the "startup",
 "proc", and "auth" servers. It does so by using the "exec" server already loaded
 by GNU Mach. We then have a posixish environment, ext2fs gives hand to
