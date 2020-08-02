@@ -10,6 +10,8 @@ License|/fdl]]."]]"""]]
 
 [[!tag open_issue_documentation]]
 
+The Hurd repository is following the [GNU Coding Standards](https://www.gnu.org/prep/standards/).
+
 Some coding style comments that are specific to Hurd systems.
 
 [[!toc]]
