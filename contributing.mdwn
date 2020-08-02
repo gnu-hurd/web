@@ -115,6 +115,7 @@ part:1:file:/home/samy/tmp/foo`). This would be libnetfs-based.
 * Fix `O_NOATIME`, see <https://buildd.debian.org/status/fetch.php?pkg=borgbackup&arch=hurd-i386&ver=1.0.2-1&stamp=1460838100>
 * Add a /dev/rtc device
 * Add gnumach support for EFI memory areas report through GetMemoryMap instead of the BIOS E820.
+* Implement `SA_NOCLDWAIT`. It means adding an RPC to proc to implement it, and then making glibc detect when setting `SIG_IGN` on `SIGCLD`, or setting the `SA_NOCLDWAIT` flag, and in that case call into `proc`, similarly to the `S_proc_mod_stopchild` RPC. proc's `S_proc_wait` shall then wait for all children and return `ECHILD`.
 
 <a name="porting"></a>
 ## Porting Packages
