@@ -8,13 +8,7 @@
 * Homepage: <http://www.lispmachine.wordpress.com>
 
 
-
-## Education
-
-Hobbyist Programmer
-
-
-## Professional
+## Experience
 
 Half a decade of C Programming on Linux
 
