@@ -11,18 +11,10 @@
 
 ## Education
 
-* B.Sc. (with Comp. App) - Panjab Univeristy, Chandigarh
-
+Hobbyist Programmer
 
 
 ## Professional
 
-* I was a Salesman (sold Financial Products) for 2 years
+Half a decade of C Programming on Linux
 
-
-
-## Future Plans
-
-* I am learning skills to finish what RMS started, GNU/Hurd microkernel. Then replace Linux kernel with Hurd, with GPLv3 of course. 
-
-* Yes, I want to learn Jeet Kune Do. I love it as much as I love the copyleft. 
