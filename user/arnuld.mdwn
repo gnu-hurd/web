@@ -10,5 +10,5 @@
 
 ## Experience
 
-Half a decade of C Programming on Linux
+Half a decade of C Programming on Linux. Trivial Toy programs in two dozen or more languages.
 
