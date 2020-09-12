@@ -2,7 +2,7 @@
 
 ## General 
 
-* Name:    arnuld uttre
+* Name:    arnuld
 * Email:   arnuld.mizong (at) gmail (dot) com
 * Country:  India
 * Homepage: <http://www.lispmachine.wordpress.com>
