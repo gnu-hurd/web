@@ -12,8 +12,7 @@ License|/fdl]]."]]"""]]
 
 While the httpfs translator works, it is only suitable for very simple use cases: it just provides the actual file contents downloaded from the URL, but no additional status information that are necessary for interactive use. (Progress indication, error codes, HTTP redirects etc.)
 
-# Intro
-INTRODUCTION:
+# Introduction
 
 Here we describe the structure of the /http filesystem for the Hurd.
 Under the Hurd, we provide a translator called 'httpfs' which is intended
@@ -48,7 +47,7 @@ So as of now we have not incorporated this method with this http translator.
 
 The translator uses the libxml2 library for doing the parsing of HTML
 stream. The libxml2 provides SAX interfaces for the parser which are used for
-finding the begining of anchor tags <A href="i.html>. So the translator has
+finding the begining of anchor tags `<A href="i.html">`. So the translator has
 dependency on the libxml2 library.
 
 If the connection to the Internet through a proxy, then the user must explicitly
