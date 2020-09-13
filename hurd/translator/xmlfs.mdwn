@@ -60,29 +60,29 @@ Comments are welcome.
      - perhaps we shouldn't store the node informations from
        first access to end and have a pool of them. That might come
        with next entries though.
- - Handle changes of the backing store (XML document) while running.
+- Handle changes of the backing store (XML document) while running.
     (Idea: we should probably attach to the XML node and handle
      read()/write() operations ourselves, with libxml primitives.)
- - Write support. Making things like echo >, sed and so on work is
+- Write support. Making things like echo >, sed and so on work is
    quite obvious. Editing is not -that- simple, 'cause we could
    want to save a not XML well-formed, and libxml will just return
    an error. Perhaps we should use something like 'sync'.
- - Handle error cases in a more clever way ; there are many error
+- Handle error cases in a more clever way ; there are many error
    conditions that will just cause xmlfs to crash or do strange
    things. We should review them.
- - Make sorting *really* stable.
+- Make sorting *really* stable.
 
 # TODO WISHLIST
 --------
 
- - Kilobug suggested a --xslt option that would make xmlfs provide
+- Kilobug suggested a --xslt option that would make xmlfs provide
    a tree matching the XSLT-modified document.
    (Problem: In this case we cannot attach easily to the .xml 'cause
     the user would loose access to theirs original document. Perhaps
     we should allow an optional "file.xml" argument and check if it
     is not the same as the file we are attaching to when --xslt is
     specified.)
- - DTD support ; perhaps XML schema/RelaxNG when I'm sure I understand
+- DTD support ; perhaps XML schema/RelaxNG when I'm sure I understand
    them ;-)
 
 
