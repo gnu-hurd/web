@@ -110,7 +110,6 @@ part:1:file:/home/samy/tmp/foo`). This would be libnetfs-based.
 `utils/{,u}mount.c` into [[glibc]].
 * Add a tool to trace system calls, by using gnumach's Syscall-Emulation, see <http://www.gnu.org/software/hurd/gnumach-doc/Syscall-Emulation.html>
 * Improve our [[FUSE library|hurd/libfuse]].
-* Add a relatime or lazytime option to ext2fs.
 * Fix our [[open_issues/symlink_translator]].
 * Fix `O_NOATIME`, see <https://buildd.debian.org/status/fetch.php?pkg=borgbackup&arch=hurd-i386&ver=1.0.2-1&stamp=1460838100>
 * Add a /dev/rtc device
