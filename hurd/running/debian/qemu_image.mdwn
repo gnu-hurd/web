@@ -24,8 +24,11 @@ Usage:
 	$ tar -xz < debian-hurd.img.tar.gz
 	$ kvm -m 1G -drive cache=writeback,file=$(echo debian-hurd-*.img) -no-reboot -net user,hostfwd=tcp:127.0.0.1:2222-:22 -net nic,model=e1000
 
-* Login as root (the root password is empty)
+* Log in as root (the root password is empty)
 * Set up a root password with `passwd`
+
+* Log in as demo (the demo password is empty)
+* Set up a demo password with `passwd`
 
 Optionally you may use `--curses` to keep your keyboard layout. If need be modprobe kvm_amd, kvm intel and kvm to get kvm support (which is much, much faster).
 
