@@ -9,8 +9,6 @@ Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
 is included in the section entitled [[GNU Free Documentation
 License|/fdl]]."]]"""]]
 
-[[!tag open_issue_porting]]
-
   * <http://www.freedesktop.org/wiki/Software/systemd>
 
   * <http://0pointer.de/blog/projects/systemd.html>,
