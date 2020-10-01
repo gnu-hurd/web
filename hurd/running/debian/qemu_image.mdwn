@@ -30,6 +30,12 @@ Usage:
 * Log in as demo (the demo password is empty)
 * Set up a demo password with `passwd`
 
+* You can also create another non-root user with `adduser <username>`
+* and set the non-root user password with `passwd <username>`
+* and add the non-root user to the sudo group via `gpasswd -a <user> sudo`
+
+* logout via `logout`
+
 Optionally you may use `--curses` to keep your keyboard layout. If need be modprobe kvm_amd, kvm intel and kvm to get kvm support (which is much, much faster).
 
 Note that if you do not have a command named `kvm`, you can try something across the lines of:
