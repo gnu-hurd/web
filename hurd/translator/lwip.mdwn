@@ -16,7 +16,10 @@ To configure lwip for internet connectivity, use the
 
 The argument /server/socket/2 is the node that the translator is to be attached to. This is followed by the translator program to run and any arguments to give it.
 
-There, -i, -a, -g and -m are, quite obviously, the (Mach) device to use, the IP address, the gateway and netmask.
+There, -i, -a, -g and -m are, quite obviously, the (Mach) device to use, the IP
+address, the gateway and netmask.  You can discover these values via the
+`ifconfig` command (You need to run this command on the host system and NOT in
+the qemu environment).
 
 
 More information can be found on Joan Lledo's blog:
