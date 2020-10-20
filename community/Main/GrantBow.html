@@ -1,0 +1,29 @@
+Hello!
+I'm new one in hurd community. I just use hurd system and got two problem I can't resolve:
+The <b>first</b> problem is software compilation:
+<pre>
+In file included from ../deps/v8/src/base/bounded-page-allocator.h:9,
+                 from ../deps/v8/src/base/bounded-page-allocator.cc:5:
+../deps/v8/src/base/platform/mutex.h:63:3: error: ‘NativeHandle’ does not name a type
+   NativeHandle& native_handle() {
+   ^~~~~~~~~~~~
+../deps/v8/src/base/platform/mutex.h:66:9: error: ‘NativeHandle’ does not name a type
+   const NativeHandle& native_handle() const {
+         ^~~~~~~~~~~~
+../deps/v8/src/base/platform/mutex.h:73:3: error: ‘NativeHandle’ does not name a type
+   NativeHandle native_handle_;
+   ^~~~~~~~~~~~
+../deps/v8/src/base/platform/mutex.h:163:3: error: ‘NativeHandle’ does not name a type
+   NativeHandle native_handle_;
+   ^~~~~~~~~~~~
+../deps/v8/src/base/platform/mutex.h:251:3: error: ‘NativeHandle’ does not name a type
+   NativeHandle native_handle_;
+   ^~~~~~~~~~~~
+tools/v8_gypfiles/v8_libbase.target.mk:161: recipe for target '/root/src/node-src/out/Release/obj.target/v8_libbase/deps/v8/src/base/bounded-page-allocator.o' failed
+make[1]: *** [/root/src/node-src/out/Release/obj.target/v8_libbase/deps/v8/src/base/bounded-page-allocator.o] Error 1
+Makefile:104: recipe for target 'node' failed
+make: *** [node] Error 2
+</pre>
+This is the failure log of nodejs make. It doesn't appear in GNU/Linux or FreeBSD. I guess it's because of the i386 arch.
+
+The <b>second</b> problem appeared when I halt the system use `halt -p` command.
