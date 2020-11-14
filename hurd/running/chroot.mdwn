@@ -24,7 +24,7 @@ It can be a good idea to put the chroot on a separate translator, for instance:
 
 Debootstrap should be able to build the content:
 
-    # debootstrap sid chroot
+    # debootstrap --keyring=/usr/share/keyrings/debian-ports-archive-keyring.gpg --extra-suites=unreleased sid chroot http://deb.debian.org/debian-ports/
 
 # Tricks
 
