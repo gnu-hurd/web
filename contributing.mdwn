@@ -91,6 +91,7 @@ with".
 
 * Teach rsync to use `*getxattr` and friends on GNU/Hurd too, to enable the -X option, so as to preserve translator entries.
 * Add a `name` field to `thread` structure in Mach, and `thread_set_name` (like `task_set_name`), and use it to add `pthread_setname_np` to glibc.
+* Avoid GCC trampolines: as discussed in <https://gcc.gnu.org/onlinedocs/gccint/Trampolines.html> these happen when we pass the address of a local function to another function. This can be seen by running `readelf -S file.o | grep GNU-stack | grep X`, for instance that happens in libdiskfs/file-exec.c, libdiskfs/io-revoke.c. We can't really use -fno-trampoline, we should instead add `void *data` parameters to iterators such as `ports_class_iterate` or `fshelp_exec_reauth`.
 * Implement `pthread_setschedparam` and `sched_setscheduler` in glibc by calling mach's `thread_policy` and `thread_priority`.
 * Strengthen httpfs: it should append '/' to URL automatically, it should not fallback index.html itself, etc. probably a lot more small easy issues.
 * Create a Wiki page with all presentations about the Hurd.  Many are referenced here in the Wiki, but they are not easy to find.
