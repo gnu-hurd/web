@@ -19,9 +19,7 @@ Hurd servers / VFS libraries are multithreaded.  They can even be said to be
 
   * well-known threading libraries
 
-      * [[hurd/libthreads]]
-
-      * [[hurd/libpthread]]
+      * [[/libpthread]]
 
 ## IRC, freenode, #hurd, 2011-04-20
 

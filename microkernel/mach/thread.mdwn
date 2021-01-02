@@ -32,6 +32,6 @@ Threads have scheduling parameters and maintain various statistics about
 themselves.
 
 On GNU/Hurd, APIs for Mach threads and thereabouts are provided by the
-[[hurd/libthreads]] (cthreads), and [[libpthread]] (POSIX Threads) packages.
+[[/libpthread]] (POSIX Threads) package.
 
 A task backing a thread is the basis for a [[UNIX process|unix/process]].

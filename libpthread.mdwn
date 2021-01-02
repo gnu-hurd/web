@@ -58,8 +58,6 @@ the next thread.  So the issue is that the shrinkage of resource consumption
 never happens, but it doesn't grow without bounds; it just stays at the maximum
 even if the current number of threads is lower.
 
-The same issue exists in [[hurd/libthreads]].
-
 The current implementation in libpthread is
 [[buggy|open_issues/libpthread/t/fix_have_kernel_resources]].
 

@@ -16,8 +16,8 @@ ports|microkernel/mach/port]].  It is documented in the [[Reference_Manual]].
 Mach ports to the functionality the Hurd needs, that is, it is not meant to
 provide an interface independently of the underlying [[microkernel]].
 
-*libports* does not itself depend on *[[libthreads]]*, but the appropriate
-threading hooks are used if present, that is if *[[libthreads]]* is used by
+*libports* does not itself depend on *[[/libpthread]]*, but the appropriate
+threading hooks are used if present, that is if *[[/libpthread]]* is used by
 another component.
 
 
