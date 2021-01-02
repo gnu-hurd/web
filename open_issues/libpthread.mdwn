@@ -13,20 +13,7 @@ License|/fdl]]."]]"""]]
 
 [[!toc]]
 
-
-# cthreads -> pthreads
-
-Get rid of cthreads; switch to pthreads.
-Most of the issues raised on this page has been resolved, a few remain.
-
-
-## IRC, freenode, #hurd, 2012-04-26
-
-    <pinotree> youpi: just to be sure: even if libpthread is compiled inside
-      glibc (with proper symbols forwarding etc), it doesn't change that you
-      cannot use both cthreads and pthreads in the same app, right?
-
-[[Packaging_libpthread]].
+# Packaging_libpthread.
 
     <youpi> it's the same libpthread
     <youpi> symbol forwarding does not magically resolve that libpthread lacks
