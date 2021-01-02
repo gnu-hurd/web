@@ -9,10 +9,10 @@ Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
 is included in the section entitled
 [[GNU Free Documentation License|/fdl]]."]]"""]]
 
-[[!meta title="CVS tasks file"]]
+[[!meta title="TODO file"]]
 
 [[!tag open_issue_hurd]]
 
-The canonical [tasks
-file](http://savannah.gnu.org/cgi-bin/viewcvs/~checkout~/hurd/hurd/tasks?rev=HEAD&content-type=text/plain)
-from the CVS archive.
+The canonical [TODO
+file](http://git.savannah.gnu.org/cgit/hurd/hurd.git/plain/TODO)
+from the git archive.
