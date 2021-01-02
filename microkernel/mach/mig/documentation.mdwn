@@ -57,7 +57,9 @@ November 1989.  Department of Computer Science, Carnegie-Mellon University.
 
 See the citations about [Mach and matchmaker: kernel and language support for
 objectoriented distributed
-systems](http://citeseer.ist.psu.edu/context/93073/0). "M. B. Jones and
+systems](http://citeseer.ist.psu.edu/context/93073/0)
+[(pdf)](https://kilthub.cmu.edu/ndownloader/files/12097610).
+"M. B. Jones and
 R. F. Rashid, *Mach and matchmaker: kernel and language support for
 objectoriented distributed systems*, Proceedings of the Conference on
 Object-Oriented Programming Systems, Languages, and Applications, October 1986,
