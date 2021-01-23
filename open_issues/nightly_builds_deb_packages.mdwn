@@ -71,7 +71,7 @@ See also [[nightly_builds]].
 
 For d-i purposes, you'll additionally need:
 
-    $ wget http://people.debian.org/~sthibault/hurd-i386/installer/cdimage/current/initrd.gz
+    $ wget https://cdimage.debian.org/cdimage/ports/stable/hurd-i386/initrd.gz
 
 ..., and to the `--initrd` option prepend `'initrd.gz $(ramdisk-create)',`
 before the `ext2fs.static`, and refer the latter to `gunzip:device:rd0` instead

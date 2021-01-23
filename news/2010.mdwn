@@ -65,7 +65,7 @@ the previous CD images, which were using an installer based on the old
 Debian boot floppies (and running under the Linux kernel)---Philip
 Charles has been maintaining these single-handedly for almost ten
 years!  The new installer images are available from
-<http://people.debian.org/~sthibault/hurd-i386/installer/cdimage/>.
+<https://cdimage.debian.org/cdimage/ports/stable/hurd-i386>.
 
     Emilio Pozuelo Monfort was investigating specific compatibility
 problems exposed by the extensive test suites coming with some

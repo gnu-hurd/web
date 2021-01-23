@@ -34,7 +34,7 @@ Samuel Thibault
 [created](http://lists.gnu.org/archive/html/bug-hurd/2011-05/msg00189.html) the
 first Debian GNU/Hurd CD set with a graphical installer.  You can dowload it at
 [the usual place for Debian CD
-images](http://people.debian.org/~sthibault/hurd-i386/installer/cdimage/).
+images](https://cdimage.debian.org/cdimage/ports/stable/hurd-i386).
 
 Amongst others, Samuel also [tracked down and
 fixed](http://lists.gnu.org/archive/html/bug-hurd/2011-05/msg00025.html) a port

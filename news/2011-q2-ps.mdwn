@@ -102,7 +102,7 @@ the more common misunderstandings.
 
   * **Installation can still be challenging**:
     Please [[take notice|http://xkcd.com/293/]] of the
-    [README file](http://people.debian.org/~sthibault/hurd-i386/installer/cdimage/YES_REALLY_README.txt) --
+    [README file](https://cdimage.debian.org/cdimage/ports/stable/hurd-i386/YES_REALLY_README.txt) --
     just like with any software in development,
     there are some known pitfalls to avoid.
     (Or better yet, help to fix.)  :-)

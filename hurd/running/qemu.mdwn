@@ -50,7 +50,7 @@ volunteers and may not have been tested extensively.
 
 ## Debian Installer
 
-Instructions for creating a qemu image from the install CDs from debian installer can be found in the README alongside the d-i Hurd images: <http://people.debian.org/~sthibault/hurd-i386/installer/cdimage/>
+Instructions for creating a qemu image from the install CDs from debian installer can be found in the README alongside the d-i Hurd images: <https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/>
 
 ---
 # KVM acceleration
@@ -362,7 +362,9 @@ See "Linux/Multiboot boot specific" section on QEMU manpage.
 Get the multiboot modules.  Either extract them from the disk image, or,
 download:
 
-    $ wget http://people.debian.org/~sthibault/hurd-i386/installer/cdimage/current/{gnumach.gz,ext2fs.static,ld.so.1}
+    $ wget https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/gnumach.gz
+    $ wget https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/ext2fs.static
+    $ wget https://cdimage.debian.org/cdimage/ports/latest/hurd-i386/exec.static
 
 Generally, these files need to correspond to the ones in the disk image, so
 don't forget to keep them up to date.
@@ -374,7 +376,7 @@ you'll get told: *qemu: linux kernel too old to load a ram disk*.
     > --kernel gnumach \
     > --initrd \
     > 'ext2fs.static --multiboot-command-line=${kernel-command-line} --host-priv-port=${host-port} --device-master-port=${device-port} --exec-server-task=${exec-task} -T typed device:hd0s1 $(task-create) $(task-resume)',\
-    > 'ld.so.1 /hurd/exec $(exec-task=task-create)'
+    > 'exec.static $(exec-task=task-create)'
 
 Note that, contrary to [[GRUB]]'s configuration file, you don't specify
 "`argv[0]`" here, and it's fortunate that neither ext2fs nor exec need a comma
