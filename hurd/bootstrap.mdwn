@@ -83,12 +83,6 @@ ext2fs then calls `diskfs_startup_diskfs` to really run the startup.
 Since the bootstrap port is `MACH_PORT_NULL`, `diskfs_startup_diskfs` calls
 `diskfs_start_bootstrap`.
 
-TODO: we want `diskfs_startup_diskfs` to also call `task_get_bootstrap_port` to
-call `fsys_startup` on its real bootstrap port once `diskfs_start_bootstrap` is
-finished, for bootstrap translators before the root filesystem to know when the
-root filesystem is ready, and register themselves as translators in the root
-filesystem, register for shutdown notification, etc.
-
 `diskfs_start_bootstrap` starts by creating a open port on itself for the
 current and root directory, all other processes will inherit it.
 
@@ -125,11 +119,22 @@ it to `/servers/exec`.
 be specified on the multiboot command line, but otherwise it will default to
 `/hurd/startup`.
 
-Now that exec is up and running, the startup process can be created with
+Now that exec is up and running, the `startup` process can be created with
 `exec_exec`. `diskfs_start_bootstrap` takes a lot of care in this: this is
 the first unix-looking process, it notably inherits the root directory and
 current working directory initialized above, it gets stdin/out/err on the mach
 console. It is passed as bootstrap port a port from the `diskfs_control_class`.
+
+`diskfs_start_bootstrap` is complete, we are back to `diskfs_startup_diskfs`,
+which checks whether ext2fs was given a bootstrap port, i.e. a translator
+was started before ext2fs. If so, it calls `diskfs_call_fsys_startup` which
+creates a new control port and passes it do a call to `fsys_startup` on the
+bootstrap port, so the translator that was started before ext2fs gets access to
+the ext2fs filesystem. That translator however does not return any real port,
+since we are not exposing the ext2fs filesystem in that translator's filesystem,
+but rather the converse. That translator will wait for an `fsys_init` call to
+complete its own initialization and set itself as an active translator within
+the ext2fs filesystem.
 
 # startup 
 
