@@ -87,7 +87,8 @@ documents.
 
 Here is a list of small hacks, which can serve as entries into the Hurd code for
 people who would like to dive into the code but just lack a "somewhere to begin
-with".
+with". Make sure to check out the most up-to-date version on
+<https://darnassus.sceen.net/~hurd-web/contributing>
 
 * Teach rsync to use `*getxattr` and friends on GNU/Hurd too, to enable the -X option, so as to preserve translator entries.
 * Add a `name` field to `thread` structure in Mach, and `thread_set_name` (like `task_set_name`), and use it to add `pthread_setname_np` to glibc.
