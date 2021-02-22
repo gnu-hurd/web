@@ -18,7 +18,7 @@ microkernel currently used by the [[Hurd]].
   * [[Documentation]]
   * [[History]]
       * [Torvalds, Tanenbaum
-        Debate](http://www.dina.dk/~abraham/Linus_vs_Tanenbaum.html)
+        Debate](http://choices.cs.illinois.edu/cache/Linus_vs_Tanenbaum.html)
 
 
 # Implementations
