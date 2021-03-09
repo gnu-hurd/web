@@ -10,7 +10,7 @@ License|/fdl]]."]]"""]]
 
 [[!meta title="Mach"]]
 
-Mach is a so-called first generation [[microkernel]]. Originally developed by Carnegie Mellon University (MCU) from 1985 to 1994, which was then forked and carried from 1996 onward by GNU. It is the
+Mach is a so-called first generation [[microkernel]]. Originally developed by Carnegie Mellon University (CMU) from 1985 to 1994, which was then forked and carried from 1996 onward by GNU. It is the
 microkernel currently used by the [[Hurd]].
 
   * [[Concepts]]
