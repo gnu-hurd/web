@@ -95,6 +95,18 @@ forwarding them.
 With that in mind, the dance between the bootstrap translators is happening as
 described in the next sections.
 
+# Initialization of translators before ext2fs
+
+We plan to start pci-arbiter and rumpdisk translators before ext2fs.
+
+pci-arbiter's `main` function parses the arguments, and since it is given a disk
+task port, it knows it is a bootstrap translator and thus initializes the
+machdev library. `machdev_trivfs_init` resumes the disk task.
+
+rumpdisk's `main` function parses the arguments, and since it is given a FS task
+port, it knows it is a bootstrap translator, and thus `machdev_trivfs_init`
+resumes the FS task.
+
 # ext2fs initialization
 
 ext2fs's `main` function starts by calling `diskfs_init_main`.
@@ -164,15 +176,14 @@ current working directory initialized above, it gets stdin/out/err on the mach
 console. It is passed as bootstrap port a port from the `diskfs_control_class`.
 
 `diskfs_start_bootstrap` is complete, we are back to `diskfs_startup_diskfs`,
-which checks whether ext2fs was given a bootstrap port, i.e. a translator
-was started before ext2fs. If so, it calls `diskfs_call_fsys_startup` which
-creates a new control port and passes it do a call to `fsys_startup` on the
-bootstrap port, so the translator that was started before ext2fs gets access to
-the ext2fs filesystem. That translator however does not return any real port,
-since we are not exposing the ext2fs filesystem in that translator's filesystem,
-but rather the converse. That translator will wait for an `fsys_init` call to
-complete its own initialization and set itself as an active translator within
-the ext2fs filesystem.
+which checks whether ext2fs was given a bootstrap port, i.e. whether
+the rumpdisk translator was started before ext2fs. If so, it
+calls `diskfs_call_fsys_startup` which creates a new control port and passes
+it do a call to `fsys_startup` on the bootstrap port, so rumpdisk gets access
+to the ext2fs filesystem. Rumpdisk however does not return any `realnode` port,
+since we are not exposing the ext2fs filesystem in rumpdisk, but rather the
+converse. TODO: Rumpdisk forwards this `fsys_startup` call to pci-arbiter, so
+the latter also gets access to the ext2fs filesystem.
 
 # startup 
 
@@ -230,9 +241,11 @@ give ext2fs the proc and auth ports.
 
 # libdiskfs taking back control
 
-diskfs' `diskfs_S_fsys_init` thus gets called, it thus knows that proc and auth are
-ready, and can call `exec_init` on the exec port. It initializes the default proc and auth ports
-to be given to processes.
+diskfs' `diskfs_S_fsys_init` thus gets called, it thus knows that proc and auth
+are ready, and can call `exec_init` on the exec port. It also calls `fsys_init`
+on its bootstrap port, i.e. rumpdisk.
+
+It initializes the default proc and auth ports to be given to processes.
 
 diskfs calls `startup_essential_task` on the startup port to tell startup that
 it is ready.
@@ -241,10 +254,25 @@ Eventually, it calls `_diskfs_init_completed` to finish its initialization, and
 notably call `startup_request_notification` to get notified by startup when the
 system is shutting down.
 
-# exec taking back control
+# rumpdisk getting initialized
 
-exec's `S_exec_init` gets called, it can register itself with proc, and
-eventually call `startup_essential_task` to tell startup that it is ready.
+rumpdisk's `trivfs_S_fsys_init` gets called from the `fsys_init` call from
+ext2fs. It gets the root node of ext2fs, sets all common ports, and install
+rumpdisk in the ext2fs FS as translator for `/dev/disk`.
+
+TODO: rumpdisk calls `fsys_init` on its bootstrap port, i.e. pci-arbiter.
+
+# pci-arbiter getting initialized
+
+pci-arbiter's `trivfs_S_fsys_init` gets called from the `fsys_init` call from
+rumpdisk. It gets the root node of ext2fs, sets all common ports, and install
+pci-arbiter in the ext2fs FS as translator for `/servers/bus/pci`.
+
+# exec getting initialized
+
+exec's `S_exec_init` gets called from the `exec_init` call from ext2fs. Exec can
+register itself with proc, and eventually call `startup_essential_task` to tell
+startup that it is ready.
 
 # startup monitoring bootstrap progress
 
