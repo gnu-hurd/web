@@ -58,6 +58,37 @@ it to load `/hurd/exec`)
 GNU Mach will eventually make the `$(task-resume)` function calls, and thus
 resume the ext2fs task only.
 
+This starts a dance between the bootstrap processes: `ext2fs`, `exec`, `startup`,
+`proc`, and `auth`. Indeed, there are a few dependencies between them: `exec` needs
+`ext2fs` working to be able to start `startup`, `proc` and `auth`, and `ext2fs` needs to
+register itself to `startup`, `proc` and `auth` so as to appear as a normal process,
+running under uid 0.
+
+The base principle is that `ext2fs` has a nul bootstrap port set to while other
+translators will have a non-nul bootstrap port, with which they will discuss. We
+thus have a hierarchy between the bootstrap processes. `ext2fs` is at the root,
+`exec` and `startup` are its direct children, and `auth` and `port` are direct
+children of `startup`.
+
+Usually the bootstrap port is used when starting a translator, see
+`fshelp_start_translator_long`: the parent translator starts the child and sets
+its bootstrap port. The parent then waits for the child to call `fsys_startup`
+on the bootstrap port, for the child to provide its control port, and for the
+parent to provide the FS node that the child is translator for.
+
+For the bootstrap translators, the story is extended:
+
+* Between `ext2fs` and `startup`: `startup` additionally calls `fsys_init`, to
+provide `ext2fs` with `proc` and `auth` ports.
+* Between `startup` and `proc`: `proc` just calls `startup_procinit` to hand
+over a `proc` port and get `auth` and `priv` ports.
+* Between `startup` and `auth`: `auth` calls `startup_authinit` to hand over an
+`auth` port and get a `proc` port, then calls `startup_essential_task` to notify
+`startup` that the boot can proceed.
+
+With that in mind, the dance between the bootstrap translators is happening as
+described in the next sections.
+
 # ext2fs initialization
 
 ext2fs's `main` function starts by calling `diskfs_init_main`.
@@ -68,7 +99,7 @@ opening the Mach console.
 
 Since the multiboot command line is available, `diskfs_init_main` sets the
 ext2fs bootstrap port to `MACH_PORT_NULL`: it is the bootstrap filesystem which
-will be in charge of dancing with the exec translator.
+will be in charge of dancing with the exec and startup translator.
 
 `diskfs_init_main` then initializes the libdiskfs library and spawns a thread to
 manage libdiskfs RPCs.
@@ -76,9 +107,10 @@ manage libdiskfs RPCs.
 ext2fs continues its initialization: creating a pager, opening the
 hypermetadata, opening the root inode to be set as root by libdiskfs.
 
-ext2fs then calls `diskfs_startup_diskfs` to really run the startup.
+ext2fs then calls `diskfs_startup_diskfs` to really run the startup, implemented
+by the libdiskfs library.
 
-# diskfs bootstrap
+# libdiskfs bootstrap
 
 Since the bootstrap port is `MACH_PORT_NULL`, `diskfs_startup_diskfs` calls
 `diskfs_start_bootstrap`.
@@ -105,11 +137,11 @@ its bootstrap port.
 the control port, and get back a port on the underlying node for the exec
 translator (we want to make it show up on `/servers/exec`).
 
-# diskfs taking back control
+# libdiskfs taking back control
 
 `diskfs_execboot_fsys_startup` is thus called. It calls `dir_lookup` on
 `/servers/exec` to return the underlying node for the exec translator, and
-stores the control port in `diskfs_exec_ctl`. It can then signal `execstarted`.
+stores the `exec` control port in `diskfs_exec_ctl`. It can then signal `execstarted`.
 
 `diskfs_start_bootstrap` thus takes back control, It calls `fsys_getroot` on the
 control port of exec, and uses `dir_lookup` and `file_set_translator` to attach
@@ -139,7 +171,8 @@ the ext2fs filesystem.
 # startup 
 
 startup's `main` function starts and calls `task_get_bootstrap_port` to get its
-bootstrap port, and `fsys_getpriv` to get a port on the ext2fs translator. It
+bootstrap port, i.e. the control port of ext2fs, and `fsys_getpriv` on it to get
+the host privileged port and device master port. It
 clears the bootstrap port so children do not inherit it. It sets itself up with
 output on the Mach console, and wires itself against swapping. It requests
 notification for ext2fs translator dying to detect it and print a warning in
@@ -153,7 +186,7 @@ startup can then complete the unixish initialization, and run `/hurd/proc` and
 
 proc's `main` function starts. It initializes itself, and calls
 `task_get_bootstrap_port` to get a port on startup. It can then call
-`startup_procinit` to pass it the proc port that will represent the startup
+`startup_procinit` on it to pass it the proc port that will represent the startup
 task, and get ports on the auth server, the host privileged port, and device
 master port.
 
@@ -164,7 +197,7 @@ ready.
 
 auth's `main` function starts. It creates the initial root auth handle (all
 permissions allowed). It calls `task_get_bootstrap_port` to get a port on
-startup.  It can then call `startup_authinit` to pass the initial root auth
+startup.  It can then call `startup_authinit` on it to pass the initial root auth
 handle, and get a port on the proc server. It can then register itself to proc.
 
 Eventually, auth calls `startup_essential_task` to tell startup that it is ready.
@@ -186,16 +219,17 @@ filesystem on `/servers/startup`.
 `launch_core_servers` calls `startup_authinit_reply` to actually reply to the
 `startup_authinit` RPC with a port on proc. 
 
-`launch_core_servers` eventually calls `fsys_init` on its bootstrap port
+`launch_core_servers` eventually calls `fsys_init` on its bootstrap port, to
+give ext2fs the proc and auth ports.
 
-# diskfs taking back control
+# libdiskfs taking back control
 
-diskfs' `diskfs_S_fsys_init` gets called, it thus knows that proc and auth are
-ready, and can call `exec_init`. It initializes the default proc and auth ports
+diskfs' `diskfs_S_fsys_init` thus gets called, it thus knows that proc and auth are
+ready, and can call `exec_init` on the exec port. It initializes the default proc and auth ports
 to be given to processes.
 
-diskfs calls `startup_essential_task` to tell startup that it is
-ready.
+diskfs calls `startup_essential_task` on the startup port to tell startup that
+it is ready.
 
 Eventually, it calls `_diskfs_init_completed` to finish its initialization, and
 notably call `startup_request_notification` to get notified by startup when the
