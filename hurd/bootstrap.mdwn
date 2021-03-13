@@ -85,6 +85,12 @@ over a `proc` port and get `auth` and `priv` ports.
 * Between `startup` and `auth`: `auth` calls `startup_authinit` to hand over an
 `auth` port and get a `proc` port, then calls `startup_essential_task` to notify
 `startup` that the boot can proceed.
+* For translators before `ext2fs`, the child calls `fsys_startup` to pass over
+the control port of `ext2fs` (instead of its own control port, which is useless
+for its parent). This is typically done in the `S_fsys_startup` stub, simply
+forwarding it. The child also calls `fsys_init` to pass over the `proc` and
+`auth` ports. Again, this is typically done in the `S_fsys_init` stub, simply
+forwarding them.
 
 With that in mind, the dance between the bootstrap translators is happening as
 described in the next sections.
@@ -134,7 +140,7 @@ its bootstrap port.
 
 `trivfs_startup` creates a control port for the exec translator, and calls
 `fsys_startup` on the bootstrap port to notify ext2fs that it is ready, give it
-the control port, and get back a port on the underlying node for the exec
+its exec control port, and get back a port on the underlying node for the exec
 translator (we want to make it show up on `/servers/exec`).
 
 # libdiskfs taking back control
