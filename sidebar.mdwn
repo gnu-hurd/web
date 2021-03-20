@@ -13,7 +13,7 @@ License|/fdl]]."]]"""]]
 
 ---
 
-  * **[[Home|/njaelani]]**
+  * **[[Home|/index]]**
   * **[[Community]]**
       * [[Contact_Us]]
   * **[[Donate]]**
