@@ -40,6 +40,8 @@ pthread_setcanceltype glibc/libpthread hook in the forward structure, but we are
 not using it: the LIBC_CANCEL_ASYNC macros are void, and we're not using them in
 the mig msg call either.
 
+Update: As of glibc 2.33, some cancellation implementation was added. The test
+above seems to be working fine.
 
 # Provenance
 
