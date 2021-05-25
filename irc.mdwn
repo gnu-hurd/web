@@ -44,12 +44,13 @@ everyone, take your chance to chat with GNU Hurd developers!
 
 # Channels
 
-## Freenode
+## Libera.Chat
 
-`irc.freenode.net`, <http://freenode.net/>
+`irc.libera.chat`, <http://libera.chat/>
 
   * `#hurd`, the official GNU Hurd IRC channel.  Some of the Hurd developers
-    and users hang out there.  [Logs](http://richtlijn.be/~larstiq/hurd/).
+    and users hang out there.  [Old logs](http://richtlijn.be/~larstiq/hurd/).
+    [New logs](https://logs.guix.gnu.org/hurd).
 
   * `#hurdfr`, the French chapter.
 
