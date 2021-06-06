@@ -284,6 +284,7 @@ system.
 
 Once all of proc, auth, exec have called `startup_essential_task`, startup
 replies to their respective RPCs, so they actually start working altogether. It
-also calls `launch_system`, which calls `launch_something`, which "launches
+also calls `init_stdarrays` which sets the initial values of the standard exec data, and `frob_kernel_process` to plug the kernel task into the picture.
+It eventually calls `launch_something`, which "launches
 something", which by default is `/libexec/runsystem`, but if that can not be
 found, launches a shell instead, so the user can fix it.
