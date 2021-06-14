@@ -242,31 +242,7 @@ give ext2fs the proc and auth ports.
 # libdiskfs taking back control
 
 diskfs' `diskfs_S_fsys_init` thus gets called, it thus knows that proc and auth
-are ready, and can call `exec_init` on the exec port. It also calls `fsys_init`
-on its bootstrap port, i.e. rumpdisk.
-
-It initializes the default proc and auth ports to be given to processes.
-
-diskfs calls `startup_essential_task` on the startup port to tell startup that
-it is ready.
-
-Eventually, it calls `_diskfs_init_completed` to finish its initialization, and
-notably call `startup_request_notification` to get notified by startup when the
-system is shutting down.
-
-# rumpdisk getting initialized
-
-rumpdisk's `trivfs_S_fsys_init` gets called from the `fsys_init` call from
-ext2fs. It gets the root node of ext2fs, sets all common ports, and install
-rumpdisk in the ext2fs FS as translator for `/dev/disk`.
-
-TODO: rumpdisk calls `fsys_init` on its bootstrap port, i.e. pci-arbiter.
-
-# pci-arbiter getting initialized
-
-pci-arbiter's `trivfs_S_fsys_init` gets called from the `fsys_init` call from
-rumpdisk. It gets the root node of ext2fs, sets all common ports, and install
-pci-arbiter in the ext2fs FS as translator for `/servers/bus/pci`.
+are ready, and can call `exec_init` on the exec port.
 
 # exec getting initialized
 
@@ -274,9 +250,49 @@ exec's `S_exec_init` gets called from the `exec_init` call from ext2fs. Exec can
 register itself with proc, and eventually call `startup_essential_task` to tell
 startup that it is ready.
 
+# back to libdiskfs initialization
+
+It also calls `fsys_init`
+on its bootstrap port, i.e. rumpdisk.
+
+# rumpdisk getting initialized
+
+rumpdisk's `trivfs_S_fsys_init` gets called from the `fsys_init` call from
+ext2fs. It calls `fsys_init` on its bootstrap port.
+
+# pci-arbiter getting initialized
+
+pci-arbiter's `trivfs_S_fsys_init` gets called from the `fsys_init` call from
+rumpdisk.
+
+It gets the root node of ext2fs, sets all common ports, and install
+pci-arbiter in the ext2fs FS as translator for `/servers/bus/pci`.
+
+It eventually calls `startup_essential_task` to tell startup that it is ready,
+and requests shutdown notifications.
+
+# back to rumpdisk initialization
+
+It gets the root node of ext2fs, sets all common ports, and install
+rumpdisk in the ext2fs FS as translator for `/dev/disk`.
+
+It eventually calls `startup_essential_task` to tell startup that it is ready,
+and requests shutdown notifications.
+
+# back to libdiskfs initialization
+
+It initializes the default proc and auth ports to be given to processes.
+
+It calls `startup_essential_task` on the startup port to tell startup that
+it is ready.
+
+Eventually, it calls `_diskfs_init_completed` to finish its initialization, and
+notably call `startup_request_notification` to get notified by startup when the
+system is shutting down.
+
 # startup monitoring bootstrap progress
 
-As mentioned above, the different essential tasks (ext2fs, proc, auth, exec)
+As mentioned above, the different essential tasks (pci-arbiter, rumpdisk, ext2fs, proc, auth, exec)
 call `startup_essential_task` when they are ready. startup's
 `S_startup_essential_task` function thus gets called each time, and startup
 records each of them as essential, monitoring their death to crash the whole
