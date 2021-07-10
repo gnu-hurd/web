@@ -239,10 +239,15 @@ filesystem on `/servers/startup`.
 `launch_core_servers` eventually calls `fsys_init` on its bootstrap port, to
 give ext2fs the proc and auth ports.
 
+diskfs' `diskfs_S_fsys_init` thus gets called. It first replies to startup, so
+startup is not stuck in its `fsys_init` call and not able to reply to RPCs. From
+then on, startup will be watching for `startup_essential_task` calls from the
+various bootstrap processes. 
+
 # libdiskfs taking back control
 
-diskfs' `diskfs_S_fsys_init` thus gets called, it thus knows that proc and auth
-are ready, and can call `exec_init` on the exec port.
+In diskfs' `diskfs_S_fsys_init`, diskfs now knows that proc and auth are ready,
+and can call `exec_init` on the exec port.
 
 # exec getting initialized
 
