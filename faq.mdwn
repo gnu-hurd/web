@@ -18,6 +18,8 @@ feeds=no
 actions=yes
 rootpage="faq" postformtext="Add a new item titled:"]]
 
+Note: the most up-to-date version version of this FAQ is available on <http://darnassus.sceen.net/~hurd-web/faq/>
+
 This page [[with all items inlined|faq_inlined]].
 
 
