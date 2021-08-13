@@ -27,7 +27,7 @@ sources. It is not an official Debian release, but it is an official
 [[Debian GNU/Hurd|hurd/running/debian]] port release.
 
 Read the [[!message-id desc="announcement email"
-"20190706235704.4g2avoeswgoe6g7b@function"]].
+"20210813220130.bqo6spytsy33gbgt@begin"]].
 
 ---
 
