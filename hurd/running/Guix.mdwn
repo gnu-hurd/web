@@ -10,3 +10,8 @@ Guix also has support for GNU/Hurd in its master branch.
 # Documentation
 
 As Hurd support is integrated in Guix in the master branch, the official documentation (<https://guix.gnu.org/en/manual/devel/>) also  works for Hurd. It has even support in its configuration language for creating Hurd VMs from a running Guix system (<https://guix.gnu.org/en/manual/devel/en/guix.html#The-Hurd-in-a-Virtual-Machine>).
+
+---
+# Status
+
+At the time of writing, the official Guix manual says that "This configuration is experimental and under development. The easiest way for you to give it a try is by setting up an instance of hurd-vm-service-type on your GNU/Linux machine (see hurd-vm-service-type). See Contributing, on how to help!" (<https://guix.gnu.org/en/manual/devel/en/guix.html#GNU-Distribution>).
