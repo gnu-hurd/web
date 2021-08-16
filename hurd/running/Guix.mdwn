@@ -1,6 +1,6 @@
 [[!meta title="Guix"]]
 
-Guix also has support for GNU/Hurd in its master branch.
+GNU/Hurd support has been integrated in Guix.
 
 ---
 # QEMU Image
@@ -9,7 +9,9 @@ Guix also has support for GNU/Hurd in its master branch.
 ---
 # Documentation
 
-As Hurd support is integrated in Guix in the master branch, the official documentation (<https://guix.gnu.org/en/manual/devel/>) also  works for Hurd. It has even support in its configuration language for creating Hurd VMs from a running Guix system (<https://guix.gnu.org/en/manual/devel/en/guix.html#The-Hurd-in-a-Virtual-Machine>).
+As Hurd support is integrated in Guix, the official documentation (<https://guix.gnu.org/en/manual/devel/>) also works for Hurd. 
+
+Guix has even support in its configuration language for creating Hurd VMs from a running Guix system (<https://guix.gnu.org/en/manual/devel/en/guix.html#The-Hurd-in-a-Virtual-Machine>).
 
 ---
 # Status
