@@ -14,6 +14,7 @@ There are several GNU distributions that are built on the Hurd. If you develop a
 ###Working distributions of GNU/Hurd: 
 
 * [[Debian]]
+* [[Guix]]
 
 ###GNU/Hurd distributions in early stages of development: 
 
