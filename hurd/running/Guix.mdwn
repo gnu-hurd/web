@@ -4,4 +4,4 @@ Guix also has support for GNU/Hurd in its master branch.
 
 ---
 # QEMU Image
-[[!inline pages=hurd/running/guix/qemu_image raw=yes feeds=no]]
+[[!inline pages=hurd/running/Guix/qemu_image raw=yes feeds=no]]
