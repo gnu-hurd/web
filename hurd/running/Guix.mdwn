@@ -1,0 +1,7 @@
+[[!meta title="Guix"]]
+
+Guix also has support for GNU/Hurd in its master branch.
+
+---
+# QEMU Image
+[[!inline pages=hurd/running/guix/qemu_image raw=yes feeds=no]]
