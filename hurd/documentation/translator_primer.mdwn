@@ -84,7 +84,7 @@ What you do here is setting up the translator /hurd/hostmux on ftp: and passing 
 
 Now that we can access ftp.gnu.org transparently, let's mount a remote ISO file:
 
-	$ settrans -c mnt /hurd/iso9660fs ftp://ftp.gnu.org/old-gnu/gnu-f2/hurd-F2-main.iso
+	$ settrans -c mnt /hurd/iso9660fs $PWD/ftp://ftp.gnu.org/old-gnu/gnu-f2/hurd-F2-main.iso
 	$ ls mnt/
 
 It is interesting to note that since the ISO9660 format is indexed, ftpfs does not have to download the whole ISO file, it merely fetches what iso9660fs requests.
