@@ -26,8 +26,7 @@ This is a snapshot of Debian "sid" at the time of the stable Debian
 sources. It is not an official Debian release, but it is an official
 [[Debian GNU/Hurd|hurd/running/debian]] port release.
 
-Read the [[!message-id desc="announcement email"
-"20210813220130.bqo6spytsy33gbgt@begin"]].
+Read the [announcement email](https://lists.debian.org/debian-hurd/2021/08/msg00040.html).
 
 ---
 
