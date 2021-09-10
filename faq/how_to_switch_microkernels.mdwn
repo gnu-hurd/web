@@ -13,6 +13,14 @@ License|/fdl]]."]]"""]]
 
 [[!meta title="How difficult would it be to switch to another microkernel?"]]
 
-One would have to reimplement the `mach/` and `sysdeps/mach/` parts of
-[[glibc]] and [[libpthread]].  Quite a few other Hurd tools also assume a
-[[microkernel/Mach]] kernel and would have to be adapted or rewritten.
+The microkernel has to provide memory management and user-level-managed page
+faulting, thread scheduling, and IPC.
+
+One would have to reimplement the `mach/` and `sysdeps/mach/` parts of [[glibc]]
+and [[libpthread]].  One would have to rewrite mig to generate the new IPCs. One
+would have to rewrite libpager to handle paging.
+
+All `mach_` calls in glibc and hurd would need to be updated.
+
+Quite a few other Hurd tools also assume a [[microkernel/Mach]] kernel and
+would have to be adapted or rewritten.
