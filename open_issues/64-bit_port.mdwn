@@ -13,8 +13,7 @@ License|/fdl]]."]]"""]]
 
 [[!inline pages="title(Is there a 64-bit version?)" feeds="no" raw="yes"]]
 
-There is a `master-x86_64` [[GNU Mach
-branch|http://git.savannah.gnu.org/cgit/hurd/gnumach.git/log/?h=master-x86_64]].
+There is some initial support in the master branch.
 As of 2012-11-20, it only supports the [[microkernel/mach/gnumach/ports/Xen]] platform for now.
 
 **What is left for initial support (32-on-64) is**
