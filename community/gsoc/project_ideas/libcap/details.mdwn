@@ -586,11 +586,11 @@ The replacing work could then be made a more gradual process.  Steps:
   iouser as mentioned in the details.
 
 * fsys_getroot.  Implement fsys_getroot_caps in libdiskfs, trans,
-  libtreefs, libtrivs, libnetfs.  Fix users of function in libdiskfs,
-  libfshelp, settrans, libtreefs, clookup.
+  libtrivs, libnetfs.  Fix users of function in libdiskfs,
+  libfshelp, settrans, clookup.
 
 * io_restrict_auth.  Implement io_restrict_auth_caps in libdiskfs,
-  libtreefs, libtrivfs, libnetfs, boot.  Fix users in utils(symlink,
+  libtrivfs, libnetfs, boot.  Fix users in utils(symlink,
   firmlink), libtrivs, term, clookup
 
 Among the problems might be that there are a lot of arguments that
