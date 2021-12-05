@@ -102,7 +102,7 @@ with". Make sure to check out the most up-to-date version on
 * Extend `device_read`/`device_write` into supporting > 2TiB disk sizes.
 * Make `host_get_time` much more precise by using the TSC.
 * Make the Hurd [[hurd/console]]'s configuration use [[xkb layout/variant instead of keymap|hurd/console/discussion]].
-* Add NX protection support to GNU Mach.
+* Add NX / SMEP / SMAP protection support to GNU Mach.
 * Add use of PCID in GNU Mach.
 * Write a partfs translator, to which one gives a disk image, and
 which exposes the partitions of the disk image, using parted, and
