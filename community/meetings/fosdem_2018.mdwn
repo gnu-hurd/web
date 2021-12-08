@@ -30,6 +30,6 @@ Bruxelles.
 
 thibault_hurd:
 
-  "presentation by Samuel Thibault: [*Hurd's PCI arbiter*](https://archive.fosdem.org/2018/schedule/event/microkernel_hurd_pci_arbiter/) ([slides](https://archive.fosdem.org/2018/schedule/event/microkernel_hurd_pci_arbiter/attachments/slides/2323/export/events/attachments/microkernel_hurd_pci_arbiter/slides/2323/2018_02_03_fosdem_pci.pdf))"
+  "presentation (including video) by Samuel Thibault: [*Hurd's PCI arbiter*](https://archive.fosdem.org/2018/schedule/event/microkernel_hurd_pci_arbiter/) ([slides](https://archive.fosdem.org/2018/schedule/event/microkernel_hurd_pci_arbiter/attachments/slides/2323/export/events/attachments/microkernel_hurd_pci_arbiter/slides/2323/2018_02_03_fosdem_pci.pdf))"
 
 """]]

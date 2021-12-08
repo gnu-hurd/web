@@ -51,6 +51,6 @@ ragkousis_guix_hurd:
 
 thibault_hurd:
 
-  "presentation by Samuel Thibault: [*Hurd, Rump kernel, sound, and USB*](https://fosdem.org/2016/schedule/event/microkernels_hurd_rump_sound_usb/) ([slides](https://fosdem.org/2016/schedule/event/microkernels_hurd_rump_sound_usb/attachments/slides/951/export/events/attachments/microkernels_hurd_rump_sound_usb/slides/951/2016_01_30_fosdem.pdf))"
+  "presentation (including video) by Samuel Thibault: [*Hurd, Rump kernel, sound, and USB*](https://fosdem.org/2016/schedule/event/microkernels_hurd_rump_sound_usb/) ([slides](https://fosdem.org/2016/schedule/event/microkernels_hurd_rump_sound_usb/attachments/slides/951/export/events/attachments/microkernels_hurd_rump_sound_usb/slides/951/2016_01_30_fosdem.pdf))"
 
 """]]
