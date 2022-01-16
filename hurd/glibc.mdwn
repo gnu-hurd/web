@@ -34,6 +34,8 @@ glibc. This should be working as per the following:
 
 Currently the master branch builds that way without any testsuite issue.
 
+To save some disk space, after the compilers stage you can remove src/mpc, src/mpfr, src/binutils, src/linux.
+
 # Building
 
 One of the tests really put boxes on its knees:
