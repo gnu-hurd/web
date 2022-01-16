@@ -52,3 +52,7 @@ One can build libc this way:
 One can run tests with the new libc by hand:
 
     $ ./testrun.sh ~/test
+
+One can build by hand some target with e.g.:
+
+    $ make -C ../htl subdir=htl objdir=$PWD ..=../ $PWD/htl/libpthread.so
