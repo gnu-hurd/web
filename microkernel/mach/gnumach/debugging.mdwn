@@ -77,7 +77,53 @@ and then type continue, to let Mach continue execution. The debugger will be ent
 
 When you're [[running_a_system_in_QEMU|hurd/running/qemu]] you can directly
 [use GDB on the running
-kernel](http://www.nongnu.org/qemu/qemu-doc.html#SEC48).
+kernel](https://www.qemu.org/docs/master/system/gdb.html).
+
+When debugggin 32-bit gnumach, you can specify the kernel file in the
+command line with the `-kernel` option and the boot modules with
+`-initrd`, as described in [[hurd/running/qemu]].  This however does
+not work for 64-bit gnumach, due to a [limitation in
+qemu](https://gitlab.com/qemu-project/qemu/-/issues/243).  To overcome
+this, you can either patch qemu to enable multiboot also for 64-bit
+ELF, or build a bootable ISO image with `grub-mkrescue`.
+
+To enable the gdbserver on a running instance, you need to access the
+qemu monitor and use the `gdbserver` command. For example, with
+libvirt/virt-manager
+
+    $ virsh --connect qemu:///session qemu-monitor-command --domain hurd --hmp --cmd gdbserver
+
+Otherwise, if you start qemu manually, you can use the `-s` and `-S`
+shortcuts, that will open a tcp connection on port 1234 and wait for
+gdb to attach before starting the vm.
+
+If you don't need a graphical interface, e.g. you're working on the
+boot process, you could use stdio as an emulated serial port with
+`-nographic`, and append `console=com0` to the kernel command line,
+either in grub or with the `-append` option.
+
+Once qemu has started, you can connect to the gdbserver with
+
+    $ gdb gnumach
+    ...
+    (gdb) target remote :1234
+    (gdb) c
+
+You can also automate some steps with a `.gdbinit` file in your
+working directory. For example:
+
+    set print pretty
+    target remote :1234
+    # let's set some breakpoints
+    b Panic
+    b c_boot_entry
+    b user_bootstrap
+    b ../i386/intel/pmap.c:1981
+    # we can also refer to virtual addresses in userspace
+    b *0x804901d
+    # this shows the instruction being executed
+    display/i $pc
+    layout asm
 
 
 ## [[open_issues/debugging_gnumach_startup_qemu_gdb]]
