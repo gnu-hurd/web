@@ -11,7 +11,7 @@ License|/fdl]]."]]"""]]
 
 [[!tag open_issue_gnumach]]
 
-There currently is no kernel preemption in GNU Mach.
+There currently is no kernel-land preemption in GNU Mach, only user-land preemption.
 
 If GNU Mach were made a a preemptive kernel, using [[continuation]]s would
 probably no longer make sense as the kernel itself, that is, kernel threads can
