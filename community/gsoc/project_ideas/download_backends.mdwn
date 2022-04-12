@@ -29,11 +29,11 @@ redirects etc.)
 
 A new interface providing all this additional information (either as an
 extension to the existing translators, or as distinct translators) is required
-to make such translators usable as backends for programs like apt-get for
+to make such translators usable as backends for programs like apt for
 example.
 
 The goal of this project is to design a suitable interface, implement it for at
-least one download protocol, and adapt apt-get (or some other program) to use
+least one download protocol, and adapt apt (or some other program) to use
 this as a backend.
 
 This task requires some design skills and some knowledge of internet protocols,

@@ -7,18 +7,18 @@ For that I want to use:
 * An up to date debian image (no longer online, but I have a copy here). 
 * My [Hurd Intro](http://bitbucket.org/ArneBab/hurd_intro), 
 * Translators from [hurd-extras](http://www.nongnu.org/hurdextras/) and the [incubator](http://git.savannah.gnu.org/cgit/hurd/incubator.git/), and naturally
-* a lot of apt-get update; apt-get upgrade and apt-get dist-upgrade :) (all worked flawlessly). 
+* a lot of apt update; apt upgrade and apt dist-upgrade :) (all worked flawlessly). 
 
 ## Working
 
 ### Generally
 
     # ssh with public key
-    apt-get install random-egd
+    apt install random-egd
     ssh-keygen 
     
     # build tools
-    apt-get install build-essential
+    apt install build-essential
 
 ### StoreIO
 
@@ -42,7 +42,7 @@ For that I want to use:
 
     # pkg-config is needed to avoid “PKG_CHECK_MODULES syntax error near unexpected token `HTTPFS,'”
     # pkg-config must be installed before you run autoreconf.
-    apt-get install autoconf autoconf-archive libxml2-dev pkg-config
+    apt install autoconf autoconf-archive libxml2-dev pkg-config
     autoreconf -i -f
     ./configure
     make
@@ -55,7 +55,7 @@ For that I want to use:
 
 ### Tarfs
 
-    apt-get install zip libz-dev libbz2-dev
+    apt install zip libz-dev libbz2-dev
     git clone git://git.sv.gnu.org/hurd/incubator.git tarfs
     cd tarfs/
     git checkout tarfs/master
@@ -80,7 +80,7 @@ For that I want to use:
     cd nsmux/
     git checkout -b nsmux origin/nsmux
 
-    apt-get install autoconf autoconf-archive
+    apt install autoconf autoconf-archive
     autoreconf -i -f
     ./configure
     make
@@ -101,7 +101,7 @@ For that I want to use:
     cd clisp/
     git checkout -b clisp origin/clisp
 
-    apt-get install texi2html
+    apt install texi2html
     make
     make install
     

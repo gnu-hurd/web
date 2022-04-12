@@ -51,7 +51,7 @@ Ada4Hurd provides tools and examples to ease Ada development in Hurd. It is at a
 
   * Install the build dependencies as root
 
-    $ apt-get install gnat libopentoken4-dev libxmlada5-dev libasis2014-dev
+    $ apt install gnat libopentoken4-dev libxmlada5-dev libasis2014-dev
 
   * Build
 

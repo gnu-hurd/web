@@ -4,10 +4,10 @@
 
 ### <a name="Debian_Grub"> Debian Grub </a>
 
-The Debian grub packages do not have networking enabled, so you have to apt-get the source, modify the debian/rules file to include --enable-network-card and dpkg-buildpackage to get a .deb of grub that supports TFTP.
+The Debian grub packages do not have networking enabled, so you have to apt the source, modify the debian/rules file to include --enable-network-card and dpkg-buildpackage to get a .deb of grub that supports TFTP.
 
 1. cd /usr/src/debian
-2. apt-get source grub
+2. apt source grub
 3. cd grub-\_VERSION\_
 4. Add `--enable-tulip` or similar for your NIC to the `./configure` line of the `configure-stamp` target in the `debian/rules` file.
 5. `dpkg-buildpackage` (as `root`)

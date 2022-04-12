@@ -24,11 +24,11 @@ As root on the internet connected OS:
 
     # mount /dev/DEBIAN_GNU_HURD_PARTITON /mnt
     # cd /mnt
-    # apt-get -c etc/apt/apt.conf.offline {update, upgrade, install foo, etc.}
+    # apt -c etc/apt/apt.conf.offline {update, upgrade, install foo, etc.}
 
 Then, reboot into your Debian GNU/Hurd installation and as root, run:
 
-    # apt-get {update, upgrade, install foo, etc.}
+    # apt {update, upgrade, install foo, etc.}
 
 ## If you _cannot_ mount your Debian GNU/Hurd partition under another OS.
 
@@ -47,7 +47,7 @@ From the remote sytem, as any user, run:
     $ cd myhurd
     $ tar -xf myhurdsconf.tar
     $ mkdir -p var/lib/apt/lists/partial var/cache/apt/archives/partial tmp
-    $ apt-get -c etc/apt/apt.conf.offline {update, upgrade, install foo, etc.}
+    $ apt -c etc/apt/apt.conf.offline {update, upgrade, install foo, etc.}
     $ tar cf myhurdsconf.tar etc/apt/{apt.conf.offline,sources.list} var/
 
 Copy _myhurdsconf.tar_ back to your Debian GNU/Hurd system.
@@ -59,4 +59,4 @@ Finally, from your Debian GNU/Hurd installation as the root user:
     # tar -xf myhurdsconf.tar
     # mv var/cache/apt/archives/*.deb /var/cache/apt/archives/
     # mv var/lib/apt/lists/*_* /var/lib/apt/lists/
-    # apt-get {update, upgrade, install foo, etc.}
+    # apt {update, upgrade, install foo, etc.}

@@ -11,7 +11,7 @@ License|/fdl]]."]]"""]]
 
 [[!tag faq/debian]]
 
-If you want to use the `apt-get source` facility, make sure that
+If you want to use the `apt source` facility, make sure that
 `/etc/apt/sources.list` contains a line like
 
     deb-src http://ftp.de.debian.org/debian unstable main

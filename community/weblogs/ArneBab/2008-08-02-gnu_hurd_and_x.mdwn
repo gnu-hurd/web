@@ -18,7 +18,7 @@ I worked as root.
 
 First I installed xorg, x-window-system-code, rxvt and twm: 
 
-    apt-get install xserver-xorg x-window-system-core rxvt twm
+    apt install xserver-xorg x-window-system-core rxvt twm
 
 Then I set the LD_LIBRARY_PATH and DISPLAY
 

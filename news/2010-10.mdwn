@@ -53,7 +53,7 @@ Thomas Schwinge:
 > [[flubber|public_hurd_boxen]]'s root file system is totally hosed, and thus
 > needs to be
 > [re-installed](http://lists.gnu.org/archive/html/bug-hurd/2010-10/msg00003.html).
-> (I've been running `apt-get dist-upgrade` when the box apparently crashed.)
+> (I've been running `apt dist-upgrade` when the box apparently crashed.)
 > Running `e2fsck` on it spew out over 50.000 lines of illegal and
 > multiply-claimed block lists, before I terminated it, so no chance.  I'll do
 > this over the weekend.  `/home/` etc. are not affected, thanks to being on a

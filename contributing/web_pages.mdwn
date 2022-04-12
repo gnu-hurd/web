@@ -101,7 +101,7 @@ editing.
 
 ### Debian Wheezy
 
-    $ apt-get install ikiwiki libyaml-syck-perl markdown libsearch-xapian-perl texinfo
+    $ apt install ikiwiki libyaml-syck-perl markdown libsearch-xapian-perl texinfo
 
 ## Identifying Yourself
 

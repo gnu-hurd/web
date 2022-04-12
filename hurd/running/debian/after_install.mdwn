@@ -11,7 +11,7 @@ typing a boring arcane.  There are Debian-specific scripts that may help
 you.  See [[GRUB]]'s page for this.
 
 
-# Setup `apt-get`
+# Setup `apt
 
 Installing packages without having a network connection is described
 [[DebianAptOffline]].

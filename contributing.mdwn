@@ -186,9 +186,9 @@ First run the hurd in [[qemu|hurd/running/qemu#index1h2]]
 
 After you have a Hurd vm set up and running:
 
-* `apt-get update`
-* `apt-get install -y git mercurial emacs vim`
-* `apt-get build-dep -y hurd gnumach`
+* `apt update`
+* `apt install -y git mercurial emacs vim`
+* `apt build-dep -y hurd gnumach`
 * `git clone git://git.sv.gnu.org/hurd/hurd.git`
 * `git clone git://git.sv.gnu.org/hurd/gnumach.git`
 * `git clone git://git.sv.gnu.org/hurd/incubator.git`

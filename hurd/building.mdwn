@@ -24,8 +24,8 @@ Building the Hurd requires the *build-essential* and *fakeroot* packages, their
 dependencies and additional packages that are specified by the source hurd
 package:
 
-    # apt-get install build-essential fakeroot
-    # apt-get build-dep hurd
+    # apt install build-essential fakeroot
+    # apt build-dep hurd
 
 ## ... on non-Debian systems
 
@@ -41,9 +41,9 @@ git](http://savannah.gnu.org/git/?group=hurd):
 ... or (if you are working on a Debian system) the ones that are used for the
 [current Debian hurd package](http://packages.debian.net/source/unstable/hurd):
 
-    $ apt-get source hurd
+    $ apt source hurd
 
-Please see the Debian [[FAQ]] before using `apt-get source`.
+Please see the Debian [[FAQ]] before using `apt source`.
 
 The unpacked source tree is around 20 MiB, and the build tree (configured with
 `--disable-profile`) is around 100 MiB.

@@ -87,7 +87,7 @@ Steps for *install_crosshurd*:
 
           * if it's a Xen domU:
 
-                # sudo apt-get --purge install libc0.3-xen libc0.3-i686-
+                # sudo apt --purge install libc0.3-xen libc0.3-i686-
 
       * As needed:
 

@@ -58,11 +58,11 @@ Download the packages for offline installation:
 
 	$ cd /mnt
 
-	$ apt-get -c etc/apt/apt.conf.offline update
+	$ apt -c etc/apt/apt.conf.offline update
 
-	$ apt-get -c etc/apt/apt.conf.offline build-dep hurd gnumach
+	$ apt -c etc/apt/apt.conf.offline build-dep hurd gnumach
 
-	$ apt-get -c etc/apt/apt.conf.offline install git-core build-essential libpciaccess-dev libpcap0.8-dev hurd-dev zlib1g-dev
+	$ apt -c etc/apt/apt.conf.offline install git-core build-essential libpciaccess-dev libpcap0.8-dev hurd-dev zlib1g-dev
 
 Get DDE code:
 
@@ -117,9 +117,9 @@ so we can boot into Hurd to do the actual work.
 
 Once there, install the packages previously downloaded (again as root):
 
-	$ apt-get build-dep hurd gnumach
+	$ apt build-dep hurd gnumach
 
-	$ apt-get install git-core build-essential libpciaccess-dev libpcap0.8-dev hurd-dev zlib1g-dev
+	$ apt install git-core build-essential libpciaccess-dev libpcap0.8-dev hurd-dev zlib1g-dev
 
 Make sure we can build stuff as normal user:
 

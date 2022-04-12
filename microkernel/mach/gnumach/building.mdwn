@@ -26,7 +26,7 @@ You can either use the git repository (see <http://git.savannah.gnu.org/git/hurd
 ... or get the Debian sources, if you're using Debian. (See
 [here](http://packages.debian.net/source/unstable/gnumach).)
 
-    $ apt-get source gnumach
+    $ apt source gnumach
 
 ## On Debian Systems:
 
@@ -35,8 +35,8 @@ You can either use the git repository (see <http://git.savannah.gnu.org/git/hurd
 Building GNU Mach requires the *build-essential* and *fakeroot* packages,
 and some additional dependencies specified by the gnumach source package:
 
-    # apt-get install build-essential fakeroot
-    # apt-get build-dep gnumach
+    # apt install build-essential fakeroot
+    # apt build-dep gnumach
 
 ### Building and Installing ... Debian `.deb` files
 

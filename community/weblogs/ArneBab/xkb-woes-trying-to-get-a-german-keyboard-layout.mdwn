@@ -31,7 +31,7 @@ First I got the needed apt-sources:
 
 Then I installed the xkb console: 
 
-- `apt-get install console-driver-xkb`
+- `apt install console-driver-xkb`
 
 
 And set it in the file /etc/default/hurd-console

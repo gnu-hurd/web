@@ -14,7 +14,7 @@ License|/fdl]]."]]"""]]
 currently leads to: *Could not perform immediate configuration on 'perl'*.
 Easy workaround:
 
-    # apt-get install perl perl-base -o APT::Immediate-Configure=false
+    # apt install perl perl-base -o APT::Immediate-Configure=false
 
 """]]
 

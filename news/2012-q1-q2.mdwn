@@ -84,10 +84,10 @@ took a dive into the core of the Hurd. Ludovic
 and
 [made console-run resilient against missing /dev/console](http://lists.gnu.org/archive/html/bug-hurd/2012-03/msg00002.html). Maksym
 [tested the performance of tmpfs](http://lists.gnu.org/archive/html/bug-hurd/2012-03/msg00040.html),
-showing a speedup for apt-get calls from 22 seconds with
+showing a speedup for apt calls from 22 seconds with
 [[hurd/libstore/examples/ramdisk]] and 32 seconds with
 [[hurd/translator/ext2fs]] to 16 seconds with [[hurd/translator/tmpfs]] for
-apt-get invocations, showing the possible wins due to going deep. An obvious
+apt invocations, showing the possible wins due to going deep. An obvious
 use case for tmpfs are
 [faster Hurd LiveCDs](http://lists.gnu.org/archive/html/bug-hurd/2012-03/msg00050.html). Samuel
 made it easier to dive in by

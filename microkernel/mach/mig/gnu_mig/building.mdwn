@@ -24,7 +24,7 @@ RCS](https://git.savannah.gnu.org/git/hurd/):
 ... or (if you are working on a Debian system) get the sources that are used for the
 [current Debian mig package](http://packages.debian.net/source/unstable/mig):
 
-    $ apt-get source mig
+    $ apt source mig
 
 The unpacked source tree is around 1 MiB, and the build tree also is around 1 MiB.
 
@@ -35,8 +35,8 @@ The unpacked source tree is around 1 MiB, and the build tree also is around 1 Mi
 Building MIG requires the *build-essential* and *fakeroot* packages,
 and some additional dependencies specified by the mig source package:
 
-    # apt-get install build-essential fakeroot
-    # apt-get build-dep mig
+    # apt install build-essential fakeroot
+    # apt build-dep mig
 
 ### <a name="Building_and_Installing"> Building and Installing </a> <a name="_a_deb_file"> ... a _.deb_ file </a>
 

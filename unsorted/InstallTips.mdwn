@@ -73,8 +73,8 @@ You should have booted the kernel now, check output to see if it detects your ne
 
 Be sure to issue
 
-    apt-get update
-    apt-get upgrade
+    apt update
+    apt upgrade
 
 Before running x run the console
 

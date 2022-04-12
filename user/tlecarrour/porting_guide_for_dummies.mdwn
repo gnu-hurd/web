@@ -27,12 +27,12 @@ Test on Hurd
 
 ### Installing the required files
 
-As `apt-get source` will download and extract many files, you may want to create a dedicated folder for the package and work from there.
+As `apt source` will download and extract many files, you may want to create a dedicated folder for the package and work from there.
 
     mkdir PACKAGE
     cd PACKAGE
-    sudo apt-get build-dep PACKAGE
-    apt-get source PACKAGE
+    sudo apt build-dep PACKAGE
+    apt source PACKAGE
 
 
 ### Trying to build the package
