@@ -27,6 +27,8 @@ Usage:
 * Log in as root (the root password is empty)
 * Set up a root password with `passwd`
 
+* update the system with `apt update && apt upgrade`
+
 * Log in as demo (the demo password is empty)
 * Set up a demo password with `passwd`
 
