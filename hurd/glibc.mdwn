@@ -27,9 +27,9 @@ glibc. This should be working as per the following:
     $ mkdir -p /tmp/build/src
     $ cp -a /usr/src/glibc /tmp/build/src/
     $ unset CFLAGS
-    $ /tmp/build/src/glibc/scripts/build-many-glibcs.py /tmp/build checkout
-    $ /tmp/build/src/glibc/scripts/build-many-glibcs.py /tmp/build host-libraries
-    $ /tmp/build/src/glibc/scripts/build-many-glibcs.py /tmp/build compilers i686-gnu
+    $ /tmp/build/src/glibc/scripts/build-many-glibcs.py --shallow /tmp/build checkout
+    $ /tmp/build/src/glibc/scripts/build-many-glibcs.py --strip /tmp/build host-libraries
+    $ /tmp/build/src/glibc/scripts/build-many-glibcs.py --strip /tmp/build compilers i686-gnu
     $ /tmp/build/src/glibc/scripts/build-many-glibcs.py /tmp/build glibcs i686-gnu
 
 Currently the master branch builds that way without any testsuite issue.
