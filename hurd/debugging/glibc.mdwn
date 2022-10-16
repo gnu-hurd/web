@@ -44,23 +44,25 @@ testsuite, use:
 To save even more build, stop the build after configure has run, and then you
 can restart the build of only libc.so and libc.a with:
 
-    cd build-tree/hurd-i386-libc
-    make lib
+    make -C build-tree/hurd-i386-libc lib
 
 or of only libc.so with:
 
-    make objdir=$PWD/build-tree/hurd-i386-libc $PWD/build-tree/hurd-i386-libc/libc.so
+    make -C build-tree/hurd-i386-libc objdir=$PWD/build-tree/hurd-i386-libc $PWD/build-tree/hurd-i386-libc/libc.so
 
 or of the whole tree with:
 
-    cd build-tree/hurd-i386-libc
-    make
+    make -C build-tree/hurd-i386-libc
 
 or of just one subdir with for instance:
 
-    make subdir=libpthread -C libpthread ..=../ objdir=$PWD/build-tree/hurd-i386-libc
+    make -C htl subdir=htl ..=../ objdir=$PWD/build-tree/hurd-i386-libc
 
 (note that most subdirs need libc.so built)
+
+Similarly, you can run the testsuite of a single directory the same way:
+
+    make check -C htl subdir=htl ..=../ objdir=$PWD/build-tree/hurd-i386-libc
 
 ---
 

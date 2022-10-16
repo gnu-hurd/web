@@ -57,4 +57,4 @@ One can run tests with the new libc by hand:
 
 One can build by hand some target with e.g.:
 
-    $ make -C ../htl subdir=htl objdir=$PWD ..=../ $PWD/htl/libpthread.so
+    $ make $PWD/htl/libpthread.so -C ../htl subdir=htl objdir=$PWD ..=../
