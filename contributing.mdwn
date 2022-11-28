@@ -120,6 +120,7 @@ part:1:file:/home/samy/tmp/foo`). This would be libnetfs-based.
 * Implement `lsof'. One can get inspiration from `libshouldbeinlibc/portinfo.c' for the details.
 * Add `VSTATUS` support to `term`. Essentially in `term/munge.c`, `input_character`, just like the `VINTR`, `VQUIT`, `VSUSP`, collect a few stats from the system, and put them into the output queue.
 * Make mig use the `access` function attribute to properly express accesses in arrays, e.g. for `device_read/write_inband`.
+* Add a limitation in the number of a process that a given uid can run. That would be in the `proc` translator. That will allow to avoid crashes when an application goes crazy with forking. Setting a hardcoded limitation would thus already be useful.
 
 <a name="porting"></a>
 ## Porting Packages
