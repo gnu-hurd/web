@@ -14,7 +14,6 @@ For that I want to use:
 ### Generally
 
     # ssh with public key
-    apt install random-egd
     ssh-keygen 
     
     # build tools

@@ -252,7 +252,7 @@ If you are on [[Debian GNU/Hurd|debian]], you can even use [[debian/DHCP]].
 
 To get ssh working:
 
-    # apt install random-egd openssh-server (Similarly for telnet if preferred)
+    # apt install openssh-server (Similarly for telnet if preferred)
 
 (See also <http://www.nongnu.org/qemu/qemu-doc.html#SEC32>.)
 
