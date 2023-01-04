@@ -16,13 +16,18 @@ License|/fdl]]."]]"""]]
 Currently, for disks Mach integrates old drivers from Linux through some
 [[community/gsoc/project_ideas/driver_glue_code]], which provide
 IDE disk support, and we have an AHCI driver which provides [[SATA
-support|faq/sata_disk_drives]]. For network boards, we use the [[DDE]] toolkit
+support|faq/sata_disk_drives]].
+
+For network boards, we use the [[DDE]] toolkit
 to run linux 2.6.32 drivers in userland processes, which provides both long-term
 support for new hardware and safety against driver bugs.  Note however that we
 have of course not tested all drivers, we obviously don't even have all kinds of
 hardware.  So we can not promise that they will all work. What probably
 works for sure is what we usually use: the rtl8139 and e1000 drivers for
 instance. Firmware loading is not implemented yet.
+
+For graphical mode, Xorg is supported, e.g. with the vesa driver. DRM is not
+supported yet.
 
 [[microkernel/mach/gnumach/ports/Xen]] is also supported, both blkfront and
 netfront.
