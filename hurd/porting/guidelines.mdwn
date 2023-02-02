@@ -142,10 +142,10 @@ for a potential corresponding `PATH_MAX` macro.  They are not a replacement for
 
 Note 2: Yes, some POSIX functions such as `realpath()` actually assume that
 `PATH_MAX` is defined.  This is a bug of the POSIX standard, which got fixed in
-POSIX 2001, in which one can simply pass `NULL` to get a dynamically
+POSIX 2008, in which one can simply pass `NULL` to get a dynamically
 allocated buffer. One can thus use:
 
-    #if _POSIX_VERSION >= 200112 || defined(__GLIBC__)
+    #if _POSIX_VERSION >= 200809 || defined(__GLIBC__)
         char *path = realpath(orig, NULL);
     #else
         char path[PATH_MATH];
