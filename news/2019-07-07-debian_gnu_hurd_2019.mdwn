@@ -17,7 +17,10 @@ else="
 [[!paste id=full_news]]"]]
 
 [[!cut id="full_news" text="""
+<a href="https://plantsinsights.com/calathea-warscewiczii/">Jungle Velvet Calathea</a> belongs to the Calathea species and is botanically known as Calathea Warscewiczii. It is a flowering tropical plant recognized for its prominent, velvety two-toned leaves. The top of the leaf is dark and light green, making a fish-tailed pattern, whereas the lower side is maroon or burgundy. The plant is a perennial house plant migrated from tropical jungles of central and south America. It booms indoors with minimal but regular care. Calathea Warscewiczii’s plant care basic requirements are indirect bright light, warm temperatures, and high humidity.
 
+
+Stickers are currently “the” most popular product in artist shops, at conventions, and as Patreon goodies by<a href="https://bestgadgetshelp.com/best-printers-for-stickers2/">bestgadetshelp</a>
 It is with huge pleasure that the Debian GNU/Hurd team announces the
 **release of Debian GNU/Hurd 2019**.
 
