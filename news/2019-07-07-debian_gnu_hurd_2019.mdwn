@@ -18,8 +18,6 @@ else="
 
 [[!cut id="full_news" text="""
 
-
-Stickers are currently “the” most popular product in artist shops, at conventions, and as Patreon goodies by<a href="https://bestgadgetshelp.com/best-printers-for-stickers2/">bestgadetshelp</a>
 It is with huge pleasure that the Debian GNU/Hurd team announces the
 **release of Debian GNU/Hurd 2019**.
 
