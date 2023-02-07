@@ -44,9 +44,9 @@ Possible mentors: [[Samuel Thibault (youpi)|samuelthibault]]
 Exercise: Building the Debian rustc package on Debian GNU/Linux.
 Building some Debian package (not rustc) on Debian GNU/Hurd.
 
-https://www.rust-lang.org/
+[Rust language](https://www.rust-lang.org/)
 
-https://rustc-dev-guide.rust-lang.org/building/how-to-build-and-run.html
+[How to build and run Rust](https://rustc-dev-guide.rust-lang.org/building/how-to-build-and-run.html)
 
 ---
 
