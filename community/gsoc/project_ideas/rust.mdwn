@@ -1,0 +1,49 @@
+[[!meta copyright="Copyright © 2023 Free Software Foundation, Inc."]]
+
+[[!meta license="""[[!toggle id="license" text="GFDL 1.2+"]][[!toggleable
+id="license" text="Permission is granted to copy, distribute and/or modify this
+document under the terms of the GNU Free Documentation License, Version 1.2 or
+any later version published by the Free Software Foundation; with no Invariant
+Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
+is included in the section entitled [[GNU Free Documentation
+License|/fdl]]."]]"""]]
+
+[[!meta title="Porting Rust"]]
+
+The goal of this project is to make the [Rust
+language](https://www.rust-lang.org/) available on GNU/Hurd.
+
+Presumably less work will be needed on the language's frontend itself, but
+rather on the supporting libraries.
+
+
+The Rust language is being used more and more widely, and notably in
+rather fundamental libraries such as librsvg or python-cryptography. It
+is thus more and more pressing for GNU/Hurd to have a compiler for Rust.
+
+The Rust compiler itself is quite portable, but its runtime library
+needs to be ported to the GNU/Hurd system. This essentially consists in
+telling Rust how the standard C library functions can be called.
+
+And example of the main part of such port can be seen for the [VxWorks
+port](https://github.com/rust-lang/libc/blob/master/src/vxworks/mod.rs)
+
+The bulk of such a file can be mostly generated from the libc C
+headers thanks to the bindgen tool, it then needs to be cleaned up and
+integrated into the Rust build infrastructure, some preliminary work had
+already been investigated in that part.
+
+A good level of C programming will be welcome to understand the
+questions of ABI and the libc C functions being bound.
+
+Knowing the Rust language is not required: it can be learnt along the
+way, this can be a good occasion.
+
+Possible mentors: [[Samuel Thibault (youpi)|youpi]]
+
+Exercise: building rust on Linux.
+
+---
+
+[[Open Issue page|open_issues/gccgo]].  [Entry in the GCC
+wiki](http://gcc.gnu.org/wiki/SummerOfCode#gccgo_hurd).
