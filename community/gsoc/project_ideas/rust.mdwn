@@ -21,9 +21,9 @@ The Rust language is being used more and more widely, and notably in
 rather fundamental libraries such as librsvg or python-cryptography. It
 is thus more and more pressing for GNU/Hurd to have a compiler for Rust.
 
-The Rust compiler itself is quite portable, but its runtime library
-needs to be ported to the GNU/Hurd system. This essentially consists in
-telling Rust how the standard C library functions can be called.
+The Rust compiler itself is quite portable, but its runtime library, libstd,
+needs to be ported to the GNU/Hurd system. This essentially consists in telling
+Rust how the standard C library functions can be called.
 
 And example of the main part of such port can be seen for the [VxWorks
 port](https://github.com/rust-lang/libc/blob/master/src/vxworks/mod.rs)
@@ -39,9 +39,14 @@ questions of ABI and the libc C functions being bound.
 Knowing the Rust language is not required: it can be learnt along the
 way, this can be a good occasion.
 
-Possible mentors: [[Samuel Thibault (youpi)|youpi]]
+Possible mentors: [[Samuel Thibault (youpi)|samuelthibault]]
 
-Exercise: building rust on Linux.
+Exercise: Building the Debian rustc package on Debian GNU/Linux.
+Building some Debian package (not rustc) on Debian GNU/Hurd.
+
+https://www.rust-lang.org/
+
+https://rustc-dev-guide.rust-lang.org/building/how-to-build-and-run.html
 
 ---
 
