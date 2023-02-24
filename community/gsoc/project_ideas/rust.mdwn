@@ -25,7 +25,7 @@ The Rust compiler itself is quite portable, but its runtime library, libstd,
 needs to be ported to the GNU/Hurd system. This essentially consists in telling
 Rust how the standard C library functions can be called.
 
-And example of the main part of such port can be seen for the [VxWorks
+An example of the main part of such port can be seen for the [VxWorks
 port](https://github.com/rust-lang/libc/blob/master/src/vxworks/mod.rs)
 
 The bulk of such a file can be mostly generated from the libc C
