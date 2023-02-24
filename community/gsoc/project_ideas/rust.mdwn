@@ -63,8 +63,3 @@ Building some Debian package (not rustc) on Debian GNU/Hurd.
 [Rust language](https://www.rust-lang.org/)
 
 [How to build and run Rust](https://rustc-dev-guide.rust-lang.org/building/how-to-build-and-run.html)
-
----
-
-[[Open Issue page|open_issues/gccgo]].  [Entry in the GCC
-wiki](http://gcc.gnu.org/wiki/SummerOfCode#gccgo_hurd).
