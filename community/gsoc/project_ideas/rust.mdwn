@@ -23,9 +23,13 @@ is thus more and more pressing for GNU/Hurd to have a compiler for Rust.
 
 The Rust compiler itself is quite portable, but its runtime library, libstd,
 needs to be ported to the GNU/Hurd system. This essentially consists in telling
-Rust how the standard C library functions can be called.
+Rust how the standard C library functions can be called, i.e. the C ABI.
 
-An example of the main part of such port can be seen for the [VxWorks
+There as an [initial attempt against rustc 1.30](https://people.debian.org/~sthibault/hurd-i386/rustc-1.30-patch) that was enough to get rustc
+to crossbuild, but it was missing most of what libstd needs. It is most probably
+very outdated nowadays, but that gives an idea.
+
+An example of the main part of the libstd port can be seen for the [VxWorks
 port](https://github.com/rust-lang/libc/blob/master/src/vxworks/mod.rs)
 
 The bulk of such a file can be mostly generated from the libc C
@@ -39,9 +43,21 @@ questions of ABI and the libc C functions being bound.
 Knowing the Rust language is not required: it can be learnt along the
 way, this can be a good occasion.
 
-Possible mentors: [[Samuel Thibault (youpi)|samuelthibault]]
+Possible mentors: [[Samuel Thibault (youpi)|samuelthibault]] samuel.thibault@gnu.org
 
-Exercise: Building the Debian rustc package on Debian GNU/Linux.
+For somebody who has already a very good level of C programming and good Rust
+programming skills, this can probably be a 175-hour project. Otherwise it will
+be a good occasion to learn, and can then be a 350-hour project.
+
+It is expected to be of medium difficulty: a fair part of the port is about
+mimicing other ports. Deciding how to mimic can be discussed with the community
+anyway. The other part is about expressing the C ABI. This requires to properly
+understand what that means, but once that is understood, it should be relatively
+straightforward to implement.
+
+You can contact the bug-hurd@gnu.org mailing list to discuss about this project.
+
+Bonding exercise: Building the Debian rustc package on Debian GNU/Linux.
 Building some Debian package (not rustc) on Debian GNU/Hurd.
 
 [Rust language](https://www.rust-lang.org/)
