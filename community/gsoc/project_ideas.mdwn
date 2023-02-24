@@ -98,7 +98,8 @@ All project ideas inlined:
 
 project_ideas:
 
-  "community/gsoc/project_ideas/virtualization
+  "community/gsoc/project_ideas/rust
+  community/gsoc/project_ideas/virtualization
   community/gsoc/project_ideas/secure_chroot
   community/gsoc/project_ideas/package_manager
   community/gsoc/project_ideas/driver_glue_code
