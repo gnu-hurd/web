@@ -59,6 +59,7 @@ You can contact the bug-hurd@gnu.org mailing list to discuss about this project.
 
 Bonding exercise: Building the Debian rustc package on Debian GNU/Linux.
 Building some Debian package (not rustc) on Debian GNU/Hurd.
+Have a look at the [initial attempt against rustc 1.30](https://people.debian.org/~sthibault/hurd-i386/rustc-1.30-patch) to get an idea how it looks like, how the ABI gets expressed in Rust.
 
 [Rust language](https://www.rust-lang.org/)
 
