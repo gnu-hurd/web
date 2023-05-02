@@ -20,7 +20,7 @@ A lot of stuff is missing here.
 
 ## February
 
-  * FOSDEM: {{$community/meetings/fosdem_2021#zammit_hurd}}
+  * FOSDEM: {{$community/meetings/fosdem_2022#zammit_hurd}}
 
 
 # 2019
