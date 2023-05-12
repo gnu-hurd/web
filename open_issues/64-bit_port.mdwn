@@ -26,6 +26,16 @@ License|/fdl]]."]]"""]]
 
     sudo debootstrap --foreign --verbose --arch hurd-amd64 --keyring=/usr/share/keyrings/debian-keyring.gpg  sid chroot-hurd-amd64 https://people.debian.org/~sthibault/tmp/hurd-amd64
 
+That will however not be bootable (missing translators etc.
+
+**Installing a 64bit system**
+
+In principle crosshurd should be working, one however needs to add this source:
+
+    deb http://people.debian.org/~sthibault/tmp/hurd-amd64 unstable
+
+into /etc/crosshurd/sources.list/gnu
+
 # IRC, freenode, #hurd, 2011-10-16
 
     <youpi> it'd be really good to have a 64bit kernel, no need to care about
